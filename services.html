@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services — The Growth Union</title>
+<meta name="description" content="The Growth Union — Where Strategy Meets Execution. Strategy-led growth consultancy in Delhi NCR."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --primary:#5046E5;--primary-dk:#3730B0;--primary-lt:#EEF2FF;
+  --secondary:#FF6B35;--dark:#0A0F1E;--heading:#1a1f36;
+  --body:#4A5568;--muted:#718096;--border:#E2E8F0;
+  --bg-light:#F7F9FC;--bg-white:#FFFFFF;--white:#FFFFFF;--success:#38A169;
+  --font-head:'Raleway',sans-serif;--font-body:'Nunito',sans-serif;
+  --radius:8px;--radius-lg:16px;
+  --shadow-sm:0 2px 8px rgba(80,70,229,.08);
+  --shadow:0 4px 20px rgba(10,15,30,.1);
+  --shadow-lg:0 12px 40px rgba(10,15,30,.15);
+  --transition:.3s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--body);background:var(--bg-white);line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+h1,h2,h3,h4,h5{font-family:var(--font-head);color:var(--heading);line-height:1.25;font-weight:700}
+h1{font-size:clamp(2.4rem,5.5vw,3.8rem)}
+h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
+h3{font-size:clamp(1.1rem,2vw,1.4rem)}
+p{font-size:1rem;line-height:1.75}
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.section{padding:5.5rem 0}
+.section-sm{padding:3.5rem 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem}
+.tag{display:inline-block;font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);background:var(--primary-lt);padding:.35rem .9rem;border-radius:50px;margin-bottom:1rem}
+.text-center{text-align:center}
+.section-desc{color:var(--body);max-width:600px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-head);font-size:.88rem;font-weight:700;padding:.85rem 2rem;border-radius:50px;transition:var(--transition);cursor:pointer;border:2px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--primary);color:var(--white)}
+.btn-primary:hover{background:var(--primary-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(80,70,229,.35)}
+.btn-outline{background:transparent;color:var(--primary);border-color:var(--primary)}
+.btn-outline:hover{background:var(--primary);color:var(--white)}
+.btn-white{background:var(--white);color:var(--primary)}
+.btn-white:hover{background:var(--primary-lt)}
+.btn-sm{padding:.6rem 1.5rem;font-size:.8rem}
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--border);transition:box-shadow .3s}
+.navbar.shadow{box-shadow:var(--shadow)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 1.5rem;max-width:1200px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo-icon{width:40px;height:40px;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--white)}
+.nav-logo-text{font-family:var(--font-head);font-weight:800;font-size:1.1rem;color:var(--heading)}
+.nav-logo-sub{font-size:.65rem;color:var(--muted);letter-spacing:.08em;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-family:var(--font-head);font-size:.83rem;font-weight:600;color:var(--muted);transition:color .25s}
+.nav-links a:hover,.nav-links a.active{color:var(--primary)}
+.nav-cta{font-family:var(--font-head);font-size:.82rem;font-weight:700;background:var(--primary);color:var(--white);padding:.65rem 1.5rem;border-radius:50px;transition:var(--transition)}
+.nav-cta:hover{background:var(--primary-dk);transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--heading);border-radius:2px;transition:.3s}
+/* PAGE HERO */
+.page-hero{background:var(--dark);padding:8rem 0 4rem;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(80,70,229,.3) 0%,transparent 70%);top:-20%;right:-10%;pointer-events:none}
+.page-hero-inner{text-align:center;position:relative;z-index:1}
+.page-hero h1{color:var(--white);margin-bottom:1rem}
+.page-hero h1 em{font-style:normal;background:linear-gradient(135deg,#a5b4fc,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{color:rgba(255,255,255,.55);max-width:560px;margin:0 auto 1.5rem}
+.breadcrumb{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:1.25rem}
+.breadcrumb a{font-size:.82rem;color:rgba(255,255,255,.35);transition:.25s}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb span{font-size:.82rem;color:rgba(255,255,255,.2)}
+.breadcrumb .current{font-size:.82rem;color:rgba(255,255,255,.5)}
+/* CARDS */
+.card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all .3s}
+.card:hover{border-color:var(--primary);box-shadow:var(--shadow);transform:translateY(-3px)}
+.card-icon{width:54px;height:54px;background:var(--primary-lt);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.card-icon svg{width:24px;height:24px;stroke:var(--primary);fill:none;stroke-width:1.8}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+/* MOBILE MENU */
+.mobile-menu{position:fixed;inset:0;background:var(--dark);z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-menu a{font-family:var(--font-head);font-size:1.8rem;font-weight:700;color:var(--white)}
+.mobile-menu a:hover{color:var(--primary)}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer}
+/* FOOTER */
+.footer{background:#060B18;padding:4rem 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.footer-brand-name{font-family:var(--font-head);font-weight:800;font-size:1.15rem;color:var(--white)}
+.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.35);line-height:1.7;margin:.75rem 0 1.5rem;max-width:260px}
+.footer-socials{display:flex;gap:.75rem}
+.footer-social{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.4);transition:.25s}
+.footer-social:hover{background:var(--primary);color:var(--white)}
+.footer-col h4{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
+.footer-col ul{display:flex;flex-direction:column;gap:.6rem}
+.footer-col ul li a{font-size:.85rem;color:rgba(255,255,255,.3);transition:.25s;display:flex;align-items:center;gap:.5rem}
+.footer-col ul li a::before{content:'›';color:var(--primary);font-size:1rem}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-bottom{padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between}
+.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.2)}
+.footer-bottom-links{display:flex;gap:1.75rem}
+.footer-bottom-links a{font-size:.77rem;color:rgba(255,255,255,.2);transition:.25s}
+.footer-bottom-links a:hover{color:var(--white)}
+/* WA float + scroll top */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:50px;height:50px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:.25s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:24px;height:24px;fill:#fff}
+.scroll-top{position:fixed;bottom:5.5rem;right:2rem;z-index:999;width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1rem;cursor:pointer;opacity:0;transition:.3s;border:none;box-shadow:var(--shadow)}
+.scroll-top.visible{opacity:1}
+.scroll-top:hover{background:var(--primary-dk);transform:translateY(-3px)}
+/* RESPONSIVE */
+@media(max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">TG</div>
+      <div>
+        <div class="nav-logo-text">The Growth Union</div>
+        <div class="nav-logo-sub">Where Strategy Meets Execution</div>
+      </div>
+    </a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="team.html">Team</a></li><li><a href="faq.html">FAQ</a></li><li><a href="insights.html">Insights</a></li></ul>
+    <a href="contact.html" class="nav-cta">Request a Quote</a>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="insights.html">Insights</a>
+  <a href="contact.html" style="color:var(--primary);font-size:1.2rem">Request a Quote →</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="tag">Our Services</div>
+      <h1>Four Pillars.<br/><em>One Growth System.</em></h1>
+      <p>We don't offer services in isolation. Every engagement is a connected system — designed to compound and scale without breaking.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Services</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-white)">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:3.5rem">
+      <div class="tag">What We Do</div>
+      <h2>Everything your business needs to grow</h2>
+      <p class="section-desc" style="margin-top:.75rem">Strategy without execution is a slide deck. Execution without strategy is a waste of budget. We do both — under one roof.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem" id="strategy">
+      <div style="background:var(--dark);border-radius:var(--radius-lg);padding:3rem;position:relative;overflow:hidden" class="reveal">
+        <div style="position:absolute;top:-1rem;right:-1rem;font-family:var(--font-head);font-size:8rem;font-weight:800;color:rgba(255,255,255,.04);line-height:1">01</div>
+        <div style="width:52px;height:52px;background:rgba(255,255,255,.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem">
+          <svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:#a5b4fc;fill:none;stroke-width:1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#818cf8;margin-bottom:.75rem">Pillar 01</div>
+        <h3 style="color:var(--white);font-size:1.6rem;margin-bottom:1rem">Strategy &amp; Positioning</h3>
+        <p style="color:rgba(255,255,255,.55);margin-bottom:1.75rem">The foundation of everything. Before we run any campaign or build anything, we make sure you have absolute clarity on who you are, who you're selling to, and why you win.</p>
+        <ul style="display:flex;flex-direction:column;gap:.6rem">
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Growth strategy &amp; roadmap</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Brand positioning &amp; messaging architecture</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>ICP definition &amp; targeting</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Market &amp; competitive intelligence</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Founder-led authority positioning</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Go-to-market strategy</li>
+        </ul>
+      </div>
+      <div style="background:var(--bg-light);border-radius:var(--radius-lg);padding:3rem;position:relative;overflow:hidden;border:1px solid var(--border)" class="reveal" id="acquisition">
+        <div style="position:absolute;top:-1rem;right:-1rem;font-family:var(--font-head);font-size:8rem;font-weight:800;color:rgba(80,70,229,.06);line-height:1">02</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div style="font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);margin-bottom:.75rem">Pillar 02</div>
+        <h3 style="font-size:1.6rem;margin-bottom:1rem">Acquisition Systems</h3>
+        <p style="color:var(--body);margin-bottom:1.75rem">Structured systems that bring in qualified leads and customers — consistently. Not one-time campaigns that spike and die, but compounding acquisition channels.</p>
+        <ul style="display:flex;flex-direction:column;gap:.6rem">
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Performance marketing (Meta, Google)</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>SEO / AEO / GEO / SXO / AIO</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Lead generation funnels</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>B2B cold outreach frameworks</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>LinkedIn authority building</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Social media management</li>
+        </ul>
+      </div>
+      <div style="background:var(--bg-light);border-radius:var(--radius-lg);padding:3rem;position:relative;overflow:hidden;border:1px solid var(--border)" class="reveal" id="digital">
+        <div style="position:absolute;top:-1rem;right:-1rem;font-family:var(--font-head);font-size:8rem;font-weight:800;color:rgba(80,70,229,.06);line-height:1">03</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+        <div style="font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);margin-bottom:.75rem">Pillar 03</div>
+        <h3 style="font-size:1.6rem;margin-bottom:1rem">Digital Infrastructure</h3>
+        <p style="color:var(--body);margin-bottom:1.75rem">The technology stack that makes everything else work. Conversion-first websites, CRMs, automation flows — built to turn traffic into paying customers, consistently.</p>
+        <ul style="display:flex;flex-direction:column;gap:.6rem">
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Conversion-optimised websites</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Web &amp; mobile app development</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>CRM setup &amp; automation</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Landing pages &amp; funnel ecosystems</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Legal &amp; compliance setup</li>
+          <li style="font-size:.88rem;color:var(--body);display:flex;align-items:center;gap:.6rem"><span style="color:var(--primary)">→</span>Digital systems architecture</li>
+        </ul>
+      </div>
+      <div style="background:var(--dark);border-radius:var(--radius-lg);padding:3rem;position:relative;overflow:hidden" class="reveal" id="revenue">
+        <div style="position:absolute;top:-1rem;right:-1rem;font-family:var(--font-head);font-size:8rem;font-weight:800;color:rgba(255,255,255,.04);line-height:1">04</div>
+        <div style="width:52px;height:52px;background:rgba(255,255,255,.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem">
+          <svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:#a5b4fc;fill:none;stroke-width:1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#818cf8;margin-bottom:.75rem">Pillar 04</div>
+        <h3 style="color:var(--white);font-size:1.6rem;margin-bottom:1rem">Revenue &amp; Scale Systems</h3>
+        <p style="color:rgba(255,255,255,.55);margin-bottom:1.75rem">The systems that turn growth into compounding revenue. Sales process design, pricing strategy, retention — so every new customer generates more value over time.</p>
+        <ul style="display:flex;flex-direction:column;gap:.6rem">
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Sales strategy &amp; process design</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Revenue operations architecture</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Pricing &amp; packaging strategy</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Retention &amp; expansion systems</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Scale &amp; market expansion planning</li>
+          <li style="font-size:.88rem;color:rgba(255,255,255,.55);display:flex;align-items:center;gap:.6rem"><span style="color:#818cf8">→</span>Performance tracking &amp; scaling loops</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-light)">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:3rem">
+      <div class="tag">Proven Results</div>
+      <h2>What our systems have delivered</h2>
+    </div>
+    <div class="grid-4">
+      <div style="text-align:center;padding:2rem;background:var(--bg-white);border-radius:var(--radius-lg);border:1px solid var(--border)" class="reveal">
+        <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--primary)">600%</div>
+        <div style="font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:.35rem 0 .5rem">ROI — Google Ads</div>
+        <div style="font-size:.82rem;color:var(--body)">Chauffeurs on Demand, Melbourne</div>
+      </div>
+      <div style="text-align:center;padding:2rem;background:var(--bg-white);border-radius:var(--radius-lg);border:1px solid var(--border)" class="reveal">
+        <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--primary)">1,625</div>
+        <div style="font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:.35rem 0 .5rem">Leads in 1 Month</div>
+        <div style="font-size:.82rem;color:var(--body)">Frankfinn Institute — Meta + Google</div>
+      </div>
+      <div style="text-align:center;padding:2rem;background:var(--bg-white);border-radius:var(--radius-lg);border:1px solid var(--border)" class="reveal">
+        <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--primary)">93.4K</div>
+        <div style="font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:.35rem 0 .5rem">Instagram Followers</div>
+        <div style="font-size:.82rem;color:var(--body)">Cellecor Gadgets — verified brand page</div>
+      </div>
+      <div style="text-align:center;padding:2rem;background:var(--bg-white);border-radius:var(--radius-lg);border:1px solid var(--border)" class="reveal">
+        <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--primary)">4.5×</div>
+        <div style="font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:.35rem 0 .5rem">ROAS — Meta Ads</div>
+        <div style="font-size:.82rem;color:var(--body)">RCasa — ₹13.5L from ₹3L spend</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="contact.html" class="btn btn-primary">Get Similar Results for Your Business →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">The Growth Union</div>
+        <p>Strategy-led growth consultancy bridging strategy and execution — for founders serious about structured, long-term growth.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/thegrowth.union" target="_blank" class="footer-social">ig</a>
+          <a href="https://linkedin.com/company/thegrowthunion" target="_blank" class="footer-social">in</a>
+          <a href="https://wa.me/919518604324" target="_blank" class="footer-social">wa</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About TGU</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="The_Growth_Union.pdf" download>Download Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#strategy">Strategy & Positioning</a></li>
+          <li><a href="services.html#acquisition">Acquisition Systems</a></li>
+          <li><a href="services.html#digital">Digital Infrastructure</a></li>
+          <li><a href="services.html#revenue">Revenue & Scale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:Hello@thegrowthunion.com">Hello@thegrowthunion.com</a></li>
+          <li><a href="tel:+919518604324">+91 95186-04324</a></li>
+          <li><a href="#">A-43, Malviya Nagar, Delhi</a></li>
+          <li><a href="contact.html">Request a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The Growth Union. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919518604324" target="_blank" class="wa-float" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{
+  navbar.classList.toggle('shadow',window.scrollY>60);
+  document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>400);
+});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);observer.unobserve(e.target)}
+  });
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

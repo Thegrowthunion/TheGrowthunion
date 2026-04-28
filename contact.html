@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Request a Quote — The Growth Union</title>
+<meta name="description" content="The Growth Union — Where Strategy Meets Execution. Strategy-led growth consultancy in Delhi NCR."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --primary:#5046E5;--primary-dk:#3730B0;--primary-lt:#EEF2FF;
+  --secondary:#FF6B35;--dark:#0A0F1E;--heading:#1a1f36;
+  --body:#4A5568;--muted:#718096;--border:#E2E8F0;
+  --bg-light:#F7F9FC;--bg-white:#FFFFFF;--white:#FFFFFF;--success:#38A169;
+  --font-head:'Raleway',sans-serif;--font-body:'Nunito',sans-serif;
+  --radius:8px;--radius-lg:16px;
+  --shadow-sm:0 2px 8px rgba(80,70,229,.08);
+  --shadow:0 4px 20px rgba(10,15,30,.1);
+  --shadow-lg:0 12px 40px rgba(10,15,30,.15);
+  --transition:.3s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--body);background:var(--bg-white);line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+h1,h2,h3,h4,h5{font-family:var(--font-head);color:var(--heading);line-height:1.25;font-weight:700}
+h1{font-size:clamp(2.4rem,5.5vw,3.8rem)}
+h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
+h3{font-size:clamp(1.1rem,2vw,1.4rem)}
+p{font-size:1rem;line-height:1.75}
+.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.section{padding:5.5rem 0}
+.section-sm{padding:3.5rem 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem}
+.tag{display:inline-block;font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);background:var(--primary-lt);padding:.35rem .9rem;border-radius:50px;margin-bottom:1rem}
+.text-center{text-align:center}
+.section-desc{color:var(--body);max-width:600px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-head);font-size:.88rem;font-weight:700;padding:.85rem 2rem;border-radius:50px;transition:var(--transition);cursor:pointer;border:2px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--primary);color:var(--white)}
+.btn-primary:hover{background:var(--primary-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(80,70,229,.35)}
+.btn-outline{background:transparent;color:var(--primary);border-color:var(--primary)}
+.btn-outline:hover{background:var(--primary);color:var(--white)}
+.btn-white{background:var(--white);color:var(--primary)}
+.btn-white:hover{background:var(--primary-lt)}
+.btn-sm{padding:.6rem 1.5rem;font-size:.8rem}
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--border);transition:box-shadow .3s}
+.navbar.shadow{box-shadow:var(--shadow)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 1.5rem;max-width:1200px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:.75rem}
+.nav-logo-icon{width:40px;height:40px;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--white)}
+.nav-logo-text{font-family:var(--font-head);font-weight:800;font-size:1.1rem;color:var(--heading)}
+.nav-logo-sub{font-size:.65rem;color:var(--muted);letter-spacing:.08em;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-family:var(--font-head);font-size:.83rem;font-weight:600;color:var(--muted);transition:color .25s}
+.nav-links a:hover,.nav-links a.active{color:var(--primary)}
+.nav-cta{font-family:var(--font-head);font-size:.82rem;font-weight:700;background:var(--primary);color:var(--white);padding:.65rem 1.5rem;border-radius:50px;transition:var(--transition)}
+.nav-cta:hover{background:var(--primary-dk);transform:translateY(-1px)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--heading);border-radius:2px;transition:.3s}
+/* PAGE HERO */
+.page-hero{background:var(--dark);padding:8rem 0 4rem;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(80,70,229,.3) 0%,transparent 70%);top:-20%;right:-10%;pointer-events:none}
+.page-hero-inner{text-align:center;position:relative;z-index:1}
+.page-hero h1{color:var(--white);margin-bottom:1rem}
+.page-hero h1 em{font-style:normal;background:linear-gradient(135deg,#a5b4fc,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{color:rgba(255,255,255,.55);max-width:560px;margin:0 auto 1.5rem}
+.breadcrumb{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:1.25rem}
+.breadcrumb a{font-size:.82rem;color:rgba(255,255,255,.35);transition:.25s}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb span{font-size:.82rem;color:rgba(255,255,255,.2)}
+.breadcrumb .current{font-size:.82rem;color:rgba(255,255,255,.5)}
+/* CARDS */
+.card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;transition:all .3s}
+.card:hover{border-color:var(--primary);box-shadow:var(--shadow);transform:translateY(-3px)}
+.card-icon{width:54px;height:54px;background:var(--primary-lt);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.card-icon svg{width:24px;height:24px;stroke:var(--primary);fill:none;stroke-width:1.8}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+/* MOBILE MENU */
+.mobile-menu{position:fixed;inset:0;background:var(--dark);z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-menu a{font-family:var(--font-head);font-size:1.8rem;font-weight:700;color:var(--white)}
+.mobile-menu a:hover{color:var(--primary)}
+.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer}
+/* FOOTER */
+.footer{background:#060B18;padding:4rem 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.footer-brand-name{font-family:var(--font-head);font-weight:800;font-size:1.15rem;color:var(--white)}
+.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.35);line-height:1.7;margin:.75rem 0 1.5rem;max-width:260px}
+.footer-socials{display:flex;gap:.75rem}
+.footer-social{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.4);transition:.25s}
+.footer-social:hover{background:var(--primary);color:var(--white)}
+.footer-col h4{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
+.footer-col ul{display:flex;flex-direction:column;gap:.6rem}
+.footer-col ul li a{font-size:.85rem;color:rgba(255,255,255,.3);transition:.25s;display:flex;align-items:center;gap:.5rem}
+.footer-col ul li a::before{content:'›';color:var(--primary);font-size:1rem}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-bottom{padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between}
+.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.2)}
+.footer-bottom-links{display:flex;gap:1.75rem}
+.footer-bottom-links a{font-size:.77rem;color:rgba(255,255,255,.2);transition:.25s}
+.footer-bottom-links a:hover{color:var(--white)}
+/* WA float + scroll top */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:50px;height:50px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:.25s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:24px;height:24px;fill:#fff}
+.scroll-top{position:fixed;bottom:5.5rem;right:2rem;z-index:999;width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1rem;cursor:pointer;opacity:0;transition:.3s;border:none;box-shadow:var(--shadow)}
+.scroll-top.visible{opacity:1}
+.scroll-top:hover{background:var(--primary-dk);transform:translateY(-3px)}
+/* RESPONSIVE */
+@media(max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">TG</div>
+      <div>
+        <div class="nav-logo-text">The Growth Union</div>
+        <div class="nav-logo-sub">Where Strategy Meets Execution</div>
+      </div>
+    </a>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="team.html">Team</a></li><li><a href="faq.html">FAQ</a></li><li><a href="insights.html">Insights</a></li></ul>
+    <a href="contact.html" class="nav-cta">Request a Quote</a>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="insights.html">Insights</a>
+  <a href="contact.html" style="color:var(--primary);font-size:1.2rem">Request a Quote →</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="tag">Request a Quote</div>
+      <h1>Let's build something<br/><em>together.</em></h1>
+      <p>Fill in the form below and Neeraj will personally review your request and get back within one business day.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Request a Quote</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-white)">
+  <div class="container">
+    <div class="grid-2" style="gap:5rem;align-items:start">
+      <!-- CONTACT FORM -->
+      <div class="reveal">
+        <div class="tag">Send Us a Message</div>
+        <h2 style="margin-bottom:.5rem;font-size:2rem">Tell us about your growth challenge</h2>
+        <p style="margin-bottom:2rem;color:var(--body)">The more detail you share, the better we can prepare for our first conversation.</p>
+
+        <!-- Web3Forms powered form — sends to Neeraj@thegrowthunion.com -->
+        <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)">
+          <!-- Web3Forms access key — replace with your key from https://web3forms.com -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
+          <input type="hidden" name="to" value="Neeraj@thegrowthunion.com"/>
+          <input type="hidden" name="subject" value="New Growth Enquiry — The Growth Union Website"/>
+          <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
+          <input type="checkbox" name="botcheck" style="display:none"/>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem">
+            <div>
+              <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">First Name *</label>
+              <input name="first_name" required type="text" placeholder="Neeraj" style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);outline:none;transition:border-color .25s" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"/>
+            </div>
+            <div>
+              <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">Last Name *</label>
+              <input name="last_name" required type="text" placeholder="Grover" style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);outline:none;transition:border-color .25s" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"/>
+            </div>
+          </div>
+          <div style="margin-bottom:1.25rem">
+            <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">Email Address *</label>
+            <input name="email" required type="email" placeholder="you@yourcompany.com" style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);outline:none;transition:border-color .25s" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"/>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem">
+            <div>
+              <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">Phone / WhatsApp *</label>
+              <input name="phone" required type="tel" placeholder="+91 98765 43210" style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);outline:none;transition:border-color .25s" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"/>
+            </div>
+            <div>
+              <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">Company Name</label>
+              <input name="company" type="text" placeholder="Your company" style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);outline:none;transition:border-color .25s" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"/>
+            </div>
+          </div>
+          <div style="margin-bottom:1.25rem">
+            <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">What do you need help with? *</label>
+            <select name="service" required style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);outline:none;transition:border-color .25s" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'">
+              <option value="">Select a service...</option>
+              <option>Strategy &amp; Positioning</option>
+              <option>Performance Marketing (Meta / Google Ads)</option>
+              <option>SEO / Organic Growth</option>
+              <option>Website Development</option>
+              <option>Social Media Management</option>
+              <option>B2B Sales System</option>
+              <option>Full Growth System</option>
+              <option>Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <div style="margin-bottom:1.25rem">
+            <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">Monthly Budget Range</label>
+            <select name="budget" style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);outline:none">
+              <option value="">Prefer not to say</option>
+              <option>Below ₹25,000/month</option>
+              <option>₹25,000 – ₹50,000/month</option>
+              <option>₹50,000 – ₹1,00,000/month</option>
+              <option>₹1,00,000 – ₹2,50,000/month</option>
+              <option>Above ₹2,50,000/month</option>
+            </select>
+          </div>
+          <div style="margin-bottom:1.25rem">
+            <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem">Tell us about your business &amp; challenge *</label>
+            <textarea name="message" required rows="5" placeholder="Brief description of your business, what you're trying to achieve, and what's getting in the way..." style="width:100%;background:var(--bg-light);border:1px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.92rem;padding:.8rem 1rem;border-radius:var(--radius);resize:vertical;outline:none;transition:border-color .25s;line-height:1.65" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+          </div>
+          <div style="margin-bottom:1.75rem">
+            <label style="display:block;font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);margin-bottom:.75rem">Preferred way to connect</label>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap">
+              <label style="display:flex;align-items:center;gap:.5rem;cursor:pointer;font-size:.9rem;color:var(--body)"><input type="radio" name="contact_method" value="WhatsApp" style="accent-color:var(--primary)"/> WhatsApp</label>
+              <label style="display:flex;align-items:center;gap:.5rem;cursor:pointer;font-size:.9rem;color:var(--body)"><input type="radio" name="contact_method" value="Phone Call"/> Phone Call</label>
+              <label style="display:flex;align-items:center;gap:.5rem;cursor:pointer;font-size:.9rem;color:var(--body)"><input type="radio" name="contact_method" value="Video Call"/> Video Call</label>
+              <label style="display:flex;align-items:center;gap:.5rem;cursor:pointer;font-size:.9rem;color:var(--body)"><input type="radio" name="contact_method" value="In-Office Meeting"/> In-Office Meeting</label>
+            </div>
+          </div>
+          <button id="submitBtn" type="submit" style="width:100%;background:var(--primary);color:var(--white);font-family:var(--font-head);font-size:.95rem;font-weight:700;padding:1.1rem;border:none;border-radius:50px;cursor:pointer;transition:var(--transition)">
+            Send My Request →
+          </button>
+          <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-top:.75rem">We respond within 1 business day. Your information is kept confidential.</p>
+        </form>
+
+        <!-- Success message -->
+        <div id="successMsg" style="display:none;text-align:center;padding:3rem;background:var(--bg-light);border-radius:var(--radius-lg);border:1px solid rgba(56,161,105,.2)">
+          <div style="font-size:3rem;margin-bottom:1rem">✅</div>
+          <h3 style="color:var(--heading);margin-bottom:.75rem">Message sent successfully!</h3>
+          <p style="color:var(--body);margin-bottom:1.5rem">Thank you for reaching out. Neeraj will personally review your enquiry and respond within one business day.</p>
+          <a href="index.html" class="btn btn-primary btn-sm">Back to Home →</a>
+        </div>
+      </div>
+
+      <!-- SIDE INFO -->
+      <div class="reveal">
+        <div style="background:var(--dark);border-radius:var(--radius-lg);padding:2.5rem;margin-bottom:1.5rem">
+          <h3 style="color:var(--white);margin-bottom:2rem">Contact Information</h3>
+          <div style="display:flex;flex-direction:column;gap:1.5rem">
+            <div style="display:flex;align-items:flex-start;gap:1rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.08)">
+              <div style="width:44px;height:44px;background:rgba(80,70,229,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#818cf8;flex-shrink:0">✉</div>
+              <div>
+                <div style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.3rem">Email</div>
+                <a href="mailto:Neeraj@thegrowthunion.com" style="color:var(--white);font-size:.95rem;display:block">Neeraj@thegrowthunion.com</a>
+                <a href="mailto:Hello@thegrowthunion.com" style="color:rgba(255,255,255,.4);font-size:.83rem">Hello@thegrowthunion.com</a>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.08)">
+              <div style="width:44px;height:44px;background:rgba(80,70,229,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#818cf8;flex-shrink:0">📱</div>
+              <div>
+                <div style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.3rem">Phone / WhatsApp</div>
+                <a href="tel:+919518604324" style="color:var(--white);font-size:.95rem">+91 95186-04324</a>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:1rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.08)">
+              <div style="width:44px;height:44px;background:rgba(80,70,229,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#818cf8;flex-shrink:0">📍</div>
+              <div>
+                <div style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.3rem">Office</div>
+                <span style="color:var(--white);font-size:.95rem">A-43, Malviya Nagar<br/>New Delhi — 110017</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:1rem">
+              <div style="width:44px;height:44px;background:rgba(80,70,229,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#818cf8;flex-shrink:0">in</div>
+              <div>
+                <div style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:.3rem">LinkedIn</div>
+                <a href="https://linkedin.com/in/neerajgrover007" target="_blank" style="color:var(--white);font-size:.95rem">linkedin.com/in/neerajgrover007</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--primary-lt);border-radius:var(--radius-lg);padding:2rem;border:1px solid rgba(80,70,229,.15)">
+          <h4 style="margin-bottom:.75rem">What happens after you submit?</h4>
+          <div style="display:flex;flex-direction:column;gap:1rem">
+            <div style="display:flex;align-items:flex-start;gap:.75rem">
+              <div style="width:28px;height:28px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--white);flex-shrink:0">1</div>
+              <div style="font-size:.88rem;color:var(--body)">Neeraj personally reviews your submission within 1 business day</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:.75rem">
+              <div style="width:28px;height:28px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--white);flex-shrink:0">2</div>
+              <div style="font-size:.88rem;color:var(--body)">You receive a WhatsApp or email with a suggested time for a 30-minute strategy call</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:.75rem">
+              <div style="width:28px;height:28px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--white);flex-shrink:0">3</div>
+              <div style="font-size:.88rem;color:var(--body)">On the call — no pitch, no pressure, just an honest conversation about your growth challenge</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:.75rem">
+              <div style="width:28px;height:28px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:var(--white);flex-shrink:0">4</div>
+              <div style="font-size:.88rem;color:var(--body)">If there's a fit, we send a tailored proposal within 48 hours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+async function handleSubmit(e){
+  e.preventDefault();
+  const btn=document.getElementById('submitBtn');
+  btn.textContent='Sending...';btn.disabled=true;
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{
+      method:'POST',body:new FormData(e.target)
+    });
+    const data=await res.json();
+    if(data.success){
+      document.getElementById('quoteForm').style.display='none';
+      document.getElementById('successMsg').style.display='block';
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch(err){
+    btn.textContent='Send My Request →';btn.disabled=false;
+    alert('Something went wrong. Please email us directly at Neeraj@thegrowthunion.com or WhatsApp +91 95186-04324');
+  }
+}
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">The Growth Union</div>
+        <p>Strategy-led growth consultancy bridging strategy and execution — for founders serious about structured, long-term growth.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/thegrowth.union" target="_blank" class="footer-social">ig</a>
+          <a href="https://linkedin.com/company/thegrowthunion" target="_blank" class="footer-social">in</a>
+          <a href="https://wa.me/919518604324" target="_blank" class="footer-social">wa</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About TGU</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="The_Growth_Union.pdf" download>Download Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#strategy">Strategy & Positioning</a></li>
+          <li><a href="services.html#acquisition">Acquisition Systems</a></li>
+          <li><a href="services.html#digital">Digital Infrastructure</a></li>
+          <li><a href="services.html#revenue">Revenue & Scale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:Hello@thegrowthunion.com">Hello@thegrowthunion.com</a></li>
+          <li><a href="tel:+919518604324">+91 95186-04324</a></li>
+          <li><a href="#">A-43, Malviya Nagar, Delhi</a></li>
+          <li><a href="contact.html">Request a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The Growth Union. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919518604324" target="_blank" class="wa-float" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{
+  navbar.classList.toggle('shadow',window.scrollY>60);
+  document.getElementById('scrollTop').classList.toggle('visible',window.scrollY>400);
+});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);observer.unobserve(e.target)}
+  });
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
