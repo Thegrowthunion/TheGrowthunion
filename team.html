@@ -55,7 +55,7 @@ p{font-size:1rem;line-height:1.75}
 .navbar.shadow{box-shadow:var(--shadow)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 1.5rem;max-width:1200px;margin:0 auto}
 .nav-logo{display:flex;align-items:center;gap:.75rem}
-.nav-logo-icon{width:40px;height:40px;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--white)}
+.nav-logo img{height:44px;width:auto;display:block}.nav-logo-icon{width:40px;height:40px;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--white)}
 .nav-logo-text{font-family:var(--font-head);font-weight:800;font-size:1.1rem;color:var(--heading)}
 .nav-logo-sub{font-size:.65rem;color:var(--muted);letter-spacing:.08em;margin-top:1px}
 .nav-links{display:flex;align-items:center;gap:2rem}
@@ -133,11 +133,7 @@ p{font-size:1rem;line-height:1.75}
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">TG</div>
-      <div>
-        <div class="nav-logo-text">The Growth Union</div>
-        <div class="nav-logo-sub">Where Strategy Meets Execution</div>
-      </div>
+      <img src="logo.png" alt="The Growth Union" style="height:44px;width:auto;object-fit:contain"/>
     </a>
     <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="team.html" class="active">Team</a></li><li><a href="faq.html">FAQ</a></li><li><a href="insights.html">Insights</a></li></ul>
     <a href="contact.html" class="nav-cta">Request a Quote</a>
@@ -166,8 +162,8 @@ p{font-size:1rem;line-height:1.75}
 <section class="section" style="background:var(--bg-white)">
   <div class="container">
     <div class="grid-2" style="gap:5rem;align-items:center">
-      <div style="background:linear-gradient(135deg,var(--primary-lt),#ddd6fe);border-radius:var(--radius-lg);height:480px;display:flex;align-items:center;justify-content:center;position:relative" class="reveal">
-        <span style="font-family:var(--font-head);font-size:9rem;font-weight:800;color:rgba(80,70,229,.12)">NG</span>
+      <div style="border-radius:var(--radius-lg);height:480px;overflow:hidden;position:relative;box-shadow:0 12px 40px rgba(10,15,30,.15)" class="reveal">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=85" alt="Neeraj Grover - Founder, The Growth Union" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
         <div style="position:absolute;top:1.5rem;left:1.5rem;background:var(--primary);color:var(--white);font-size:.7rem;font-weight:700;padding:.35rem 1rem;border-radius:50px">Founder &amp; Principal Consultant</div>
       </div>
       <div class="reveal">
@@ -203,6 +199,15 @@ p{font-size:1rem;line-height:1.75}
   </div>
 </section>
 
+<div style="height:260px;overflow:hidden;position:relative">
+  <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=85" alt="Team strategy session" style="width:100%;height:100%;object-fit:cover"/>
+  <div style="position:absolute;inset:0;background:rgba(10,15,30,.55);display:flex;align-items:center;justify-content:center">
+    <div style="text-align:center">
+      <div style="font-family:var(--font-head);font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:.5rem">30–35 Specialists. Every Discipline Covered.</div>
+      <div style="font-size:.95rem;color:rgba(255,255,255,.6)">Curated experts brought in exactly when and where they're needed.</div>
+    </div>
+  </div>
+</div>
 <section class="section" style="background:var(--bg-light)">
   <div class="container">
     <div class="text-center reveal" style="margin-bottom:3.5rem">

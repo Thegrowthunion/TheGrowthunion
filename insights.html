@@ -55,7 +55,7 @@ p{font-size:1rem;line-height:1.75}
 .navbar.shadow{box-shadow:var(--shadow)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 1.5rem;max-width:1200px;margin:0 auto}
 .nav-logo{display:flex;align-items:center;gap:.75rem}
-.nav-logo-icon{width:40px;height:40px;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--white)}
+.nav-logo img{height:44px;width:auto;display:block}.nav-logo-icon{width:40px;height:40px;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--white)}
 .nav-logo-text{font-family:var(--font-head);font-weight:800;font-size:1.1rem;color:var(--heading)}
 .nav-logo-sub{font-size:.65rem;color:var(--muted);letter-spacing:.08em;margin-top:1px}
 .nav-links{display:flex;align-items:center;gap:2rem}
@@ -133,11 +133,7 @@ p{font-size:1rem;line-height:1.75}
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">TG</div>
-      <div>
-        <div class="nav-logo-text">The Growth Union</div>
-        <div class="nav-logo-sub">Where Strategy Meets Execution</div>
-      </div>
+      <img src="logo.png" alt="The Growth Union" style="height:44px;width:auto;object-fit:contain"/>
     </a>
     <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="team.html">Team</a></li><li><a href="faq.html">FAQ</a></li><li><a href="insights.html" class="active">Insights</a></li></ul>
     <a href="contact.html" class="nav-cta">Request a Quote</a>
@@ -174,7 +170,7 @@ p{font-size:1rem;line-height:1.75}
     </div>
     <div class="grid-3" id="posts-grid">
       <div class="post-card card reveal" data-cat="gtm" style="padding:0;overflow:hidden">
-        <div style="height:200px;background:linear-gradient(135deg,var(--primary-lt),#ddd6fe);position:relative;display:flex;align-items:center;justify-content:center">
+        <div style="height:200px;background:#000;position:relative;display:flex;align-items:center;justify-content:center">
           <span style="font-family:var(--font-head);font-size:4rem;font-weight:800;color:rgba(80,70,229,.15)">01</span>
           <span style="position:absolute;top:.75rem;left:.75rem;background:var(--primary);color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px">GTM Strategy</span>
         </div>
@@ -189,7 +185,7 @@ p{font-size:1rem;line-height:1.75}
         </div>
       </div>
       <div class="post-card card reveal" data-cat="marketing" style="padding:0;overflow:hidden">
-        <div style="height:200px;background:linear-gradient(135deg,#FFF7ED,#FED7AA);position:relative;display:flex;align-items:center;justify-content:center">
+        <div style="height:200px;background:#000;position:relative;display:flex;align-items:center;justify-content:center">
           <span style="font-family:var(--font-head);font-size:4rem;font-weight:800;color:rgba(255,107,53,.15)">02</span>
           <span style="position:absolute;top:.75rem;left:.75rem;background:var(--secondary);color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px">Performance Marketing</span>
         </div>
@@ -204,7 +200,7 @@ p{font-size:1rem;line-height:1.75}
         </div>
       </div>
       <div class="post-card card reveal" data-cat="brand" style="padding:0;overflow:hidden">
-        <div style="height:200px;background:linear-gradient(135deg,#F0FDF4,#BBF7D0);position:relative;display:flex;align-items:center;justify-content:center">
+        <div style="height:200px;background:#000;position:relative;display:flex;align-items:center;justify-content:center">
           <span style="font-family:var(--font-head);font-size:4rem;font-weight:800;color:rgba(56,161,105,.15)">03</span>
           <span style="position:absolute;top:.75rem;left:.75rem;background:#38A169;color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px">Brand Strategy</span>
         </div>
@@ -234,7 +230,7 @@ p{font-size:1rem;line-height:1.75}
         </div>
       </div>
       <div class="post-card card reveal" data-cat="gtm" style="padding:0;overflow:hidden">
-        <div style="height:200px;background:linear-gradient(135deg,#FFF7ED,#FED7AA);position:relative;display:flex;align-items:center;justify-content:center">
+        <div style="height:200px;background:#000;position:relative;display:flex;align-items:center;justify-content:center">
           <span style="font-family:var(--font-head);font-size:4rem;font-weight:800;color:rgba(255,107,53,.15)">05</span>
           <span style="position:absolute;top:.75rem;left:.75rem;background:var(--secondary);color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px">GTM Strategy</span>
         </div>
@@ -249,7 +245,7 @@ p{font-size:1rem;line-height:1.75}
         </div>
       </div>
       <div class="post-card card reveal" data-cat="marketing" style="padding:0;overflow:hidden">
-        <div style="height:200px;background:linear-gradient(135deg,#F0FDF4,#BBF7D0);position:relative;display:flex;align-items:center;justify-content:center">
+        <div style="height:200px;background:#000;position:relative;display:flex;align-items:center;justify-content:center">
           <span style="font-family:var(--font-head);font-size:4rem;font-weight:800;color:rgba(56,161,105,.15)">06</span>
           <span style="position:absolute;top:.75rem;left:.75rem;background:#38A169;color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px">SEO</span>
         </div>
