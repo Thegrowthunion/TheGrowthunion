@@ -4,632 +4,680 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>The Growth Union — Where Strategy Meets Execution</title>
-<meta name="description" content="The Growth Union is a strategy-led growth consultancy that bridges strategy and execution for founders and growing businesses in Delhi NCR."/>
+<meta name="description" content="The Growth Union is a strategy-led growth consultancy. Not a consultant. Not an agency. A growth partner."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   WEBLITE EXACT COLOUR PALETTE
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-:root {
-  --primary:     #5046E5;   /* indigo/violet - template primary */
-  --primary-dk:  #3730B0;   /* darker primary */
-  --primary-lt:  #EEF2FF;   /* light primary bg */
-  --secondary:   #FF6B35;   /* orange accent */
-  --dark:        #0A0F1E;   /* near black */
-  --heading:     #1a1f36;   /* heading color */
-  --body:        #4A5568;   /* body text */
-  --muted:       #718096;   /* muted text */
-  --border:      #E2E8F0;   /* border color */
-  --bg-light:    #F7F9FC;   /* light section bg */
-  --bg-white:    #FFFFFF;
-  --white:       #FFFFFF;
-  --success:     #38A169;
+/* ═══════════════════════════════════════════════════════════════
+   INCONSL / ICONSL EXACT PALETTE
+   ═══════════════════════════════════════════════════════════════ */
+:root{
+  --black:     #0a0d17;   /* deepest bg */
+  --dark:      #0e1220;   /* section dark bg */
+  --dark2:     #141829;   /* cards on dark */
+  --dark3:     #1c2236;   /* borders on dark */
+  --orange:    #f47c20;   /* PRIMARY accent */
+  --orange-dk: #d96b10;   /* hover */
+  --orange-lt: #fff3e8;   /* light tint */
+  --white:     #ffffff;
+  --off:       #f8f9fc;   /* light section bg */
+  --light:     #f2f4f8;
+  --border:    #e8eaef;
+  --text:      #5a6275;   /* body on light */
+  --heading:   #0e1220;
+  --muted:     rgba(255,255,255,.5);
+  --muted2:    rgba(255,255,255,.25);
 
-  --font-head:   'Raleway', sans-serif;
-  --font-body:   'Nunito', sans-serif;
-  --radius:      8px;
-  --radius-lg:   16px;
-  --shadow-sm:   0 2px 8px rgba(80,70,229,.08);
-  --shadow:      0 4px 20px rgba(10,15,30,.1);
-  --shadow-lg:   0 12px 40px rgba(10,15,30,.15);
-  --transition:  .3s ease;
+  --font-head: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+  --r: 4px;
+  --r2: 8px;
+  --shadow: 0 8px 40px rgba(10,13,23,.18);
+  --shadow-sm: 0 4px 16px rgba(10,13,23,.1);
+  --t: .3s ease;
 }
 
-/* ━━━ RESET ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ── RESET ─────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--body);background:var(--bg-white);line-height:1.7;overflow-x:hidden}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.7}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
-h1,h2,h3,h4,h5{font-family:var(--font-head);color:var(--heading);line-height:1.25;font-weight:700}
-h1{font-size:clamp(2.4rem,5.5vw,4rem)}
-h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
-h3{font-size:clamp(1.2rem,2vw,1.5rem)}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.1;color:var(--heading);text-transform:uppercase;letter-spacing:.02em}
+h1{font-size:clamp(3rem,6vw,5.5rem);font-weight:800}
+h2{font-size:clamp(2.2rem,4vw,3.6rem)}
+h3{font-size:clamp(1.3rem,2vw,1.8rem)}
+h4{font-size:1.1rem}
 p{font-size:1rem;line-height:1.75}
 
-/* ━━━ LAYOUT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
-.section{padding:5.5rem 0}
-.section-sm{padding:3.5rem 0}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem}
+/* ── LAYOUT ──────────────────────────────────────────────────────── */
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section{padding:100px 0}
+.section-sm{padding:60px 0}
+.row{display:grid;align-items:center;gap:4rem}
+.col-2{grid-template-columns:1fr 1fr}
+.col-3{grid-template-columns:repeat(3,1fr)}
+.col-4{grid-template-columns:repeat(4,1fr)}
 
-/* ━━━ TYPOGRAPHY HELPERS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.tag{display:inline-block;font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);background:var(--primary-lt);padding:.35rem .9rem;border-radius:50px;margin-bottom:1rem}
-.section-title{margin-bottom:1rem}
-.section-desc{color:var(--body);max-width:600px;margin:0 auto}
+/* ── TYPOGRAPHY HELPERS ─────────────────────────────────────────── */
+.section-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem}
+.section-tag::before{content:'';width:28px;height:2px;background:var(--orange)}
+.section-tag-white{color:var(--white)}
+.section-tag-white::before{background:var(--white)}
+.section-title{margin-bottom:1.25rem}
+.section-desc{max-width:580px;font-size:1.05rem}
 .text-center{text-align:center}
+.text-center .section-tag{justify-content:center}
+.text-center .section-desc{margin:0 auto}
+.text-white h2,.text-white h3,.text-white h4{color:var(--white)}
+.text-white p{color:var(--muted)}
+.text-white .section-tag{color:var(--orange)}
+em-orange{color:var(--orange);font-style:normal}
 
-/* ━━━ BUTTONS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-head);font-size:.88rem;font-weight:700;padding:.85rem 2rem;border-radius:50px;transition:var(--transition);cursor:pointer;border:2px solid transparent;white-space:nowrap}
-.btn-primary{background:var(--primary);color:var(--white)}
-.btn-primary:hover{background:var(--primary-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(80,70,229,.35)}
-.btn-outline{background:transparent;color:var(--primary);border-color:var(--primary)}
-.btn-outline:hover{background:var(--primary);color:var(--white)}
-.btn-white{background:var(--white);color:var(--primary)}
-.btn-white:hover{background:var(--primary-lt)}
-.btn-orange{background:var(--secondary);color:var(--white)}
-.btn-orange:hover{background:#e55a2a;transform:translateY(-2px)}
-.btn-sm{padding:.6rem 1.5rem;font-size:.8rem}
-.btn svg{width:16px;height:16px;flex-shrink:0}
+/* ── BUTTONS ─────────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-head);font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 2.2rem;border-radius:var(--r);border:2px solid transparent;transition:var(--t);cursor:pointer;white-space:nowrap}
+.btn svg{width:16px;height:16px;flex-shrink:0;transition:transform var(--t)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-orange{background:var(--orange);color:var(--white);border-color:var(--orange)}
+.btn-orange:hover{background:var(--orange-dk);border-color:var(--orange-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(244,124,32,.35)}
+.btn-outline-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.4)}
+.btn-outline-white:hover{background:var(--orange);border-color:var(--orange);color:var(--white)}
+.btn-outline-dark{background:transparent;color:var(--heading);border-color:var(--heading)}
+.btn-outline-dark:hover{background:var(--orange);border-color:var(--orange);color:var(--white)}
+.btn-sm{padding:.65rem 1.6rem;font-size:.76rem}
 
-/* ━━━ NAVBAR ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--border);transition:box-shadow .3s}
-.navbar.shadow{box-shadow:var(--shadow)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 1.5rem;max-width:1200px;margin:0 auto}
-.nav-logo{display:flex;align-items:center;gap:.75rem}
-.nav-logo img{height:44px;width:auto;display:block}.nav-logo-icon{width:40px;height:40px;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--white)}
-.nav-logo-text{font-family:var(--font-head);font-weight:800;font-size:1.1rem;color:var(--heading)}
-.nav-logo-sub{font-size:.65rem;color:var(--muted);letter-spacing:.08em;margin-top:1px}
-.nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{font-family:var(--font-head);font-size:.83rem;font-weight:600;color:var(--muted);transition:color .25s}
-.nav-links a:hover{color:var(--primary)}
-.nav-cta{font-family:var(--font-head);font-size:.82rem;font-weight:700;background:var(--primary);color:var(--white);padding:.65rem 1.5rem;border-radius:50px;transition:var(--transition)}
-.nav-cta:hover{background:var(--primary-dk);transform:translateY(-1px)}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.nav-hamburger span{display:block;width:24px;height:2px;background:var(--heading);border-radius:2px;transition:.3s}
+/* ── NAV ─────────────────────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,13,23,.0);transition:background .4s,box-shadow .4s,padding .3s}
+.nav.scrolled{background:var(--black);box-shadow:0 2px 24px rgba(0,0,0,.4)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px;max-width:1200px;margin:0 auto;padding:0 2rem}
+.nav-logo img{height:48px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+.nav-links a{font-family:var(--font-head);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--white);transition:color var(--t);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--orange);transition:width var(--t)}
+.nav-links a:hover{color:var(--orange)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--orange)}
+.nav-cta{font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:var(--white);padding:.75rem 1.75rem;border-radius:var(--r);transition:var(--t)}
+.nav-cta:hover{background:var(--orange-dk);transform:translateY(-1px)}
+.nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+.nav-ham span{display:block;width:24px;height:2px;background:var(--white);transition:.3s}
 
-/* ━━━ MOBILE MENU ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.mobile-menu{position:fixed;inset:0;background:var(--dark);z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
-.mobile-menu.open{opacity:1;pointer-events:all}
-.mobile-menu a{font-family:var(--font-head);font-size:1.8rem;font-weight:700;color:var(--white)}
-.mobile-menu a:hover{color:var(--primary)}
-.mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--white);font-size:1.6rem;cursor:pointer}
+/* ── MOBILE MENU ──────────────────────────────────────────────────── */
+.mob-menu{position:fixed;inset:0;background:var(--black);z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;opacity:0;pointer-events:none;transition:.3s}
+.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--font-head);font-size:2rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--white)}
+.mob-menu a:hover{color:var(--orange)}
+.mob-close{position:absolute;top:1.5rem;right:1.5rem;font-size:1.75rem;color:var(--white);border:none;background:none;cursor:pointer}
 
-/* ━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.hero{min-height:100vh;background:var(--dark);position:relative;overflow:hidden;display:flex;align-items:center;padding:8rem 0 5rem}.hero-bg{position:absolute;inset:0;background-image:url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=85");background-size:cover;background-position:center;opacity:.12;z-index:0}.hero>.container{position:relative;z-index:1}
-/* gradient blob */
-.hero::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(80,70,229,.35) 0%,transparent 70%);top:-15%;right:-10%;pointer-events:none}
-.hero::after{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.15) 0%,transparent 70%);bottom:5%;left:5%;pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center}
-.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(80,70,229,.2);border:1px solid rgba(80,70,229,.4);color:#a5b4fc;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.45rem 1rem;border-radius:50px;margin-bottom:1.5rem}
-.hero-tag span{width:6px;height:6px;background:#a5b4fc;border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{color:var(--white);margin-bottom:1.25rem}
-.hero h1 em{font-style:normal;background:linear-gradient(135deg,#a5b4fc,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{color:rgba(255,255,255,.6);font-size:1.05rem;max-width:500px;margin-bottom:2rem}
-.hero-actions{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.hero-social-proof{display:flex;align-items:center;gap:1rem}
-.hero-avatars{display:flex}
-.hero-avatars span{width:36px;height:36px;border-radius:50%;border:2px solid var(--dark);background:var(--primary);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;color:var(--white);margin-right:-8px}
-.hero-avatars span:nth-child(2){background:#7C3AED}
-.hero-avatars span:nth-child(3){background:#DB2777}
-.hero-avatars span:nth-child(4){background:#D97706}
-.hero-social-text{font-size:.82rem;color:rgba(255,255,255,.5)}
-.hero-social-text strong{color:var(--white)}
-/* Right card */
-.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:2rem;position:relative}
-.hero-card::before{content:'Get a Quote';position:absolute;top:-1rem;left:2rem;background:var(--primary);color:var(--white);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.35rem 1rem;border-radius:50px}
-.hero-card h3{color:var(--white);font-size:1.2rem;margin-bottom:.35rem;margin-top:.5rem}
-.hero-card-sub{font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:1.5rem}
-.form-row{margin-bottom:1rem}
-.form-label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:.4rem}
-.form-input{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);font-family:var(--font-body);font-size:.9rem;padding:.75rem 1rem;border-radius:var(--radius);transition:border-color .25s;outline:none}
-.form-input::placeholder{color:rgba(255,255,255,.2)}
-.form-input:focus{border-color:rgba(80,70,229,.7)}
-.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.form-submit{width:100%;background:var(--primary);color:var(--white);font-family:var(--font-head);font-size:.88rem;font-weight:700;padding:.9rem;border:none;border-radius:50px;cursor:pointer;transition:var(--transition);margin-top:.75rem}
-.form-submit:hover{background:var(--primary-dk);transform:translateY(-1px)}
-.hero-rating-bar{display:flex;align-items:center;gap:.75rem;padding-top:1rem;margin-top:1rem;border-top:1px solid rgba(255,255,255,.08)}
-.hero-stars{color:#F59E0B;font-size:.9rem;letter-spacing:2px}
-.hero-rating-text{font-size:.78rem;color:rgba(255,255,255,.4)}
+/* ═══ HERO ════════════════════════════════════════════════════════ */
+.hero{min-height:100vh;background:var(--black);position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;opacity:.12}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,13,23,.97) 45%,rgba(10,13,23,.75) 100%)}
+.hero-content{position:relative;z-index:2;padding:140px 0 100px}
+.hero-pretitle{display:flex;align-items:center;gap:.75rem;font-family:var(--font-head);font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1.5rem}
+.hero-pretitle::before{content:'';width:32px;height:2px;background:var(--orange)}
+.hero h1{color:var(--white);margin-bottom:1.5rem;max-width:800px}
+.hero h1 span{color:var(--orange)}
+.hero-sub{color:var(--muted);font-size:1.1rem;max-width:520px;margin-bottom:2.5rem;line-height:1.8}
+.hero-btns{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.hero-stats{display:flex;align-items:center;gap:3rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.hero-stat-num{font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--orange);line-height:1;display:flex;align-items:flex-end;gap:2px}
+.hero-stat-num sup{font-size:1.2rem;margin-bottom:.3rem}
+.hero-stat-label{font-size:.82rem;color:var(--muted);margin-top:.3rem;letter-spacing:.05em}
+.hero-img-col{position:relative;z-index:2}
+.hero-img-wrap{position:relative}
+.hero-img-main{width:100%;height:580px;object-fit:cover;object-position:top;border-radius:var(--r2)}
+.hero-img-badge{position:absolute;bottom:2rem;left:-2rem;background:var(--orange);padding:1.5rem 2rem;border-radius:var(--r2)}
+.hero-img-badge-num{font-family:var(--font-head);font-size:2.4rem;font-weight:800;color:var(--white);line-height:1}
+.hero-img-badge-txt{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.1em;margin-top:.25rem}
+.hero-deco{position:absolute;top:2rem;right:-1rem;width:4px;height:120px;background:var(--orange)}
 
-/* ━━━ VIDEO STRIP ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.video-strip{background:var(--bg-light);padding:3.5rem 0}
-.video-strip-inner{display:grid;grid-template-columns:auto 1fr;gap:4rem;align-items:center}
-.video-play-btn{width:72px;height:72px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;box-shadow:0 0 0 12px rgba(80,70,229,.12)}
-.video-play-btn svg{width:22px;height:22px;fill:var(--white);margin-left:3px}
-.video-services{display:flex;gap:3rem}
-.video-service{display:flex;align-items:flex-start;gap:.75rem}
-.vs-num{width:32px;height:32px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;color:var(--white);flex-shrink:0;margin-top:.2rem}
-.vs-title{font-family:var(--font-head);font-weight:700;color:var(--heading);font-size:1rem;margin-bottom:.2rem}
-.vs-desc{font-size:.85rem;color:var(--body);line-height:1.5;max-width:180px}
-
-/* ━━━ ABOUT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.about{background:var(--bg-white)}
-.about-img-wrap{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-light)}
-.about-img-placeholder{height:480px;background:linear-gradient(135deg,var(--primary-lt),#fff);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);position:relative;overflow:hidden}
-.about-img-placeholder::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(80,70,229,.04) 20px,rgba(80,70,229,.04) 21px)}
-.about-exp-badge{position:absolute;bottom:2rem;right:-1.5rem;background:var(--primary);color:var(--white);padding:1.25rem 1.5rem;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow-lg)}
-.about-exp-num{font-family:var(--font-head);font-size:2.5rem;font-weight:800;line-height:1}
-.about-exp-label{font-size:.75rem;font-weight:600;opacity:.8;margin-top:.2rem}
-.about-content h2{margin-bottom:1rem}
-.about-content p{margin-bottom:1.25rem;color:var(--body)}
-.about-quote{border-left:3px solid var(--primary);padding:1rem 1.25rem;background:var(--primary-lt);border-radius:0 var(--radius) var(--radius) 0;margin:1.5rem 0;font-style:italic;color:var(--heading);font-family:var(--font-head);font-size:1rem}
-.about-blocks{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
-.about-block{background:var(--bg-light);border-radius:var(--radius);padding:1.25rem}
-.about-block h4{font-size:.95rem;margin-bottom:.4rem;color:var(--heading)}
-.about-block p{font-size:.83rem;color:var(--body)}
-
-/* ━━━ SPONSORS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.sponsors{background:var(--bg-light);padding:3rem 0;overflow:hidden}
-.sponsors-label{text-align:center;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:2rem}
-.sponsors-track-wrap{overflow:hidden}
-.sponsors-track{display:flex;gap:3rem;animation:marquee 24s linear infinite;white-space:nowrap;width:max-content}
-.sponsors-item{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);padding:.75rem 2rem;font-family:var(--font-head);font-size:.85rem;font-weight:700;color:var(--muted);flex-shrink:0;display:flex;align-items:center;gap:.5rem}
-.sponsors-item svg{width:16px;height:16px;fill:var(--primary)}
+/* ═══ MARQUEE ════════════════════════════════════════════════════ */
+.marquee-strip{background:var(--orange);padding:1.25rem 0;overflow:hidden}
+.marquee-track{display:flex;gap:0;animation:marquee 28s linear infinite;width:max-content}
+.marquee-item{display:flex;align-items:center;gap:2rem;padding:0 2.5rem;font-family:var(--font-head);font-size:.88rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--white);white-space:nowrap;flex-shrink:0}
+.marquee-item::after{content:'◆';opacity:.5;font-size:.5rem}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ━━━ WORKFLOW ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.workflow{background:var(--bg-white)}
-.workflow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
-.workflow-card{text-align:center;padding:2.5rem 1.75rem;border:1px solid var(--border);border-radius:var(--radius-lg);transition:border-color .3s,box-shadow .3s,transform .3s}
-.workflow-card:hover{border-color:var(--primary);box-shadow:var(--shadow);transform:translateY(-4px)}
-.wf-icon{width:68px;height:68px;background:var(--primary-lt);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem}
-.wf-icon svg{width:28px;height:28px;stroke:var(--primary);fill:none;stroke-width:1.8}
-.wf-num{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--primary);background:var(--primary-lt);padding:.2rem .75rem;border-radius:50px;display:inline-block;margin-bottom:.75rem}
-.workflow-card h3{font-size:1.15rem;margin-bottom:.75rem}
-.workflow-card p{font-size:.88rem;color:var(--body)}
+/* ═══ ABOUT ══════════════════════════════════════════════════════ */
+.about{background:var(--white)}
+.about-img-wrap{position:relative}
+.about-img{width:100%;height:560px;object-fit:cover;border-radius:var(--r2)}
+.about-exp{position:absolute;bottom:-2rem;right:-2rem;background:var(--orange);padding:2rem 2.25rem;border-radius:var(--r2);text-align:center;box-shadow:var(--shadow)}
+.about-exp-num{font-family:var(--font-head);font-size:4rem;font-weight:800;color:var(--white);line-height:1}
+.about-exp-txt{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.8);margin-top:.25rem}
+.about-checks{display:flex;flex-direction:column;gap:.75rem;margin:1.75rem 0}
+.about-check{display:flex;align-items:center;gap:.75rem;font-weight:600;color:var(--heading);font-family:var(--font-head);font-size:.9rem;letter-spacing:.03em;text-transform:uppercase}
+.about-check::before{content:'';width:20px;height:20px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:12px;background-repeat:no-repeat;background-position:center;background-color:var(--orange)}
+.about-quote{background:var(--dark);border-left:4px solid var(--orange);padding:1.5rem 2rem;border-radius:0 var(--r) var(--r) 0;margin:2rem 0}
+.about-quote p{color:rgba(255,255,255,.75);font-style:italic;font-size:1.05rem}
+.about-quote cite{font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);display:block;margin-top:.5rem}
 
-/* ━━━ TESTIMONIALS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.testimonials{background:var(--bg-light)}
-.testi-header{display:flex;align-items:center;gap:3rem;margin-bottom:3rem}
-.testi-rating-big{display:flex;align-items:center;gap:1rem;background:var(--bg-white);border-radius:var(--radius-lg);padding:1.25rem 1.75rem;box-shadow:var(--shadow-sm)}
-.testi-num{font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--heading)}
-.testi-stars{color:#F59E0B;font-size:1rem;letter-spacing:2px;margin-bottom:.2rem}
-.testi-sub{font-size:.78rem;color:var(--muted)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
-.testi-card{background:var(--bg-white);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow-sm);transition:box-shadow .3s}
-.testi-card:hover{box-shadow:var(--shadow)}
-.testi-quote-icon{font-size:2.5rem;color:var(--primary-lt);line-height:1;margin-bottom:.75rem;font-family:Georgia,serif}
-.testi-text{font-size:.92rem;color:var(--body);line-height:1.75;margin-bottom:1.5rem}
-.testi-author{display:flex;align-items:center;gap:.75rem}
-.testi-avatar{width:44px;height:44px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;color:var(--white);font-size:.9rem;flex-shrink:0}
-.testi-name{font-family:var(--font-head);font-weight:700;font-size:.9rem;color:var(--heading)}
-.testi-role{font-size:.77rem;color:var(--muted)}
+/* ═══ SERVICES ════════════════════════════════════════════════════ */
+.services{background:var(--off)}
+.service-card{background:var(--white);border-radius:var(--r2);padding:2.5rem;border:1px solid var(--border);transition:var(--t);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--orange);transition:width .4s ease}
+.service-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:transparent}
+.service-card:hover::before{width:100%}
+.service-num{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem}
+.service-icon{width:60px;height:60px;background:var(--orange-lt);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;transition:background var(--t)}
+.service-icon svg{width:28px;height:28px;stroke:var(--orange);fill:none;stroke-width:1.6;transition:stroke var(--t)}
+.service-card:hover .service-icon{background:var(--orange)}
+.service-card:hover .service-icon svg{stroke:var(--white)}
+.service-card h3{font-size:1.3rem;margin-bottom:.75rem;transition:color var(--t)}
+.service-card:hover h3{color:var(--orange)}
+.service-card p{font-size:.92rem}
+.service-link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-top:1.25rem;transition:gap var(--t)}
+.service-link:hover{gap:.8rem}
+.service-link svg{width:14px;height:14px}
 
-/* ━━━ SERVICES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.services{background:var(--bg-white)}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
-.service-card{border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;display:flex;gap:1.25rem;transition:all .3s;cursor:default}
-.service-card:hover{border-color:var(--primary);box-shadow:var(--shadow)}
-.service-icon{width:52px;height:52px;background:var(--primary-lt);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.service-icon svg{width:22px;height:22px;stroke:var(--primary);fill:none;stroke-width:1.8}
-.service-body h3{font-size:1.05rem;margin-bottom:.5rem}
-.service-body p{font-size:.85rem;color:var(--body);margin-bottom:.75rem}
-.service-link{font-size:.78rem;font-weight:700;color:var(--primary);display:inline-flex;align-items:center;gap:.35rem}
-.service-link:hover{gap:.6rem}
+/* ═══ PROCESS (DARK) ══════════════════════════════════════════════ */
+.process{background:var(--dark)}
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.process-grid::before{content:'';position:absolute;top:52px;left:10%;right:10%;height:2px;background:rgba(255,255,255,.08);z-index:0}
+.process-step{text-align:center;padding:0 1rem;position:relative;z-index:1}
+.process-num{width:52px;height:52px;background:var(--dark3);border:2px solid rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--font-head);font-size:1rem;font-weight:800;color:var(--orange);transition:var(--t)}
+.process-step:hover .process-num{background:var(--orange);border-color:var(--orange);color:var(--white)}
+.process-step h4{font-family:var(--font-head);font-size:1rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--white);margin-bottom:.5rem}
+.process-step p{font-size:.83rem;color:rgba(255,255,255,.45);line-height:1.6}
+.process-step:nth-child(2) .process-num,
+.process-step:nth-child(4) .process-num{background:var(--orange);border-color:var(--orange);color:var(--white)}
 
-/* ━━━ VIDEO SECTION ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.video-section{position:relative;background:var(--dark);padding:5rem 0;overflow:hidden;margin:3rem 0}
-.video-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 50%,rgba(80,70,229,.2),transparent)}
-.video-content{text-align:center;position:relative;z-index:1}
-.video-content h2{color:var(--white);margin-bottom:1rem}
-.video-content p{color:rgba(255,255,255,.55);max-width:520px;margin:0 auto 2rem}
+/* ═══ WHY US ══════════════════════════════════════════════════════ */
+.why{background:var(--white)}
+.why-img{position:relative}
+.why-img-main{width:100%;height:520px;object-fit:cover;border-radius:var(--r2)}
+.why-img-over{position:absolute;bottom:2rem;right:-2rem;background:var(--dark);padding:2rem;border-radius:var(--r2);border-left:4px solid var(--orange)}
+.why-img-over-num{font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--orange);line-height:1}
+.why-img-over-txt{font-size:.78rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.1em;margin-top:.3rem}
+.why-list{display:flex;flex-direction:column;gap:1.5rem;margin:2rem 0}
+.why-item{display:flex;gap:1.25rem;align-items:flex-start}
+.why-item-icon{width:48px;height:48px;background:var(--orange-lt);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--t)}
+.why-item-icon svg{width:22px;height:22px;stroke:var(--orange);fill:none;stroke-width:1.6}
+.why-item:hover .why-item-icon{background:var(--orange)}
+.why-item:hover .why-item-icon svg{stroke:var(--white)}
+.why-item h4{font-family:var(--font-head);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.35rem;color:var(--heading)}
+.why-item p{font-size:.9rem}
 
-/* ━━━ TEAM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.team{background:var(--bg-light)}
-.team-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:3rem;flex-wrap:gap}
-.team-rating{display:flex;align-items:center;gap:.75rem;background:var(--bg-white);padding:.75rem 1.25rem;border-radius:50px;box-shadow:var(--shadow-sm)}
-.team-rating-num{font-family:var(--font-head);font-weight:800;font-size:1.2rem;color:var(--heading)}
-.team-rating-stars{color:#F59E0B;font-size:.85rem;letter-spacing:1px}
-.team-rating-txt{font-size:.75rem;color:var(--muted)}
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.team-card{background:var(--bg-white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .3s,transform .3s}
-.team-card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
-.team-img{height:240px;background:linear-gradient(135deg,var(--primary-lt),#ddd6fe);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.team-img-text{font-family:var(--font-head);font-size:4.5rem;font-weight:800;color:rgba(80,70,229,.2)}
-.team-role-badge{position:absolute;bottom:.75rem;left:.75rem;background:var(--primary);color:var(--white);font-size:.68rem;font-weight:700;padding:.3rem .85rem;border-radius:50px;letter-spacing:.05em}
+/* ═══ STATS DARK ══════════════════════════════════════════════════ */
+.stats-dark{background:var(--dark);padding:80px 0}
+.stat-item{text-align:center;padding:2rem;border-right:1px solid rgba(255,255,255,.08)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--font-head);font-size:4rem;font-weight:800;color:var(--orange);line-height:1;margin-bottom:.5rem}
+.stat-num span{font-size:2rem}
+.stat-label{font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.stat-desc{font-size:.83rem;color:rgba(255,255,255,.3);margin-top:.35rem}
+
+/* ═══ TESTIMONIALS ════════════════════════════════════════════════ */
+.testi{background:var(--off)}
+.testi-card{background:var(--white);border-radius:var(--r2);padding:2.5rem;border:1px solid var(--border);transition:var(--t)}
+.testi-card:hover{box-shadow:var(--shadow);border-color:transparent}
+.testi-stars{display:flex;gap:3px;margin-bottom:1.25rem}
+.testi-stars span{color:var(--orange);font-size:1rem}
+.testi-text{font-size:.95rem;color:var(--text);line-height:1.8;font-style:italic;margin-bottom:1.75rem;position:relative}
+.testi-text::before{content:'"';font-family:Georgia,serif;font-size:4rem;color:var(--orange);opacity:.2;line-height:1;display:block;margin-bottom:-.5rem}
+.testi-author{display:flex;align-items:center;gap:.875rem}
+.testi-av{width:48px;height:48px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;color:var(--white);font-size:1rem;flex-shrink:0}
+.testi-name{font-family:var(--font-head);font-weight:700;font-size:.95rem;color:var(--heading);text-transform:uppercase;letter-spacing:.03em}
+.testi-role{font-size:.8rem;color:var(--text);margin-top:2px}
+
+/* ═══ TEAM ════════════════════════════════════════════════════════ */
+.team{background:var(--white)}
+.team-card{border-radius:var(--r2);overflow:hidden;border:1px solid var(--border);transition:var(--t)}
+.team-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:transparent}
+.team-img{height:300px;position:relative;overflow:hidden;background:var(--dark)}
+.team-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease}
+.team-card:hover .team-img img{transform:scale(1.05)}
+.team-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,13,23,.8),transparent 50%);opacity:0;transition:.3s}
+.team-card:hover .team-img-overlay{opacity:1}
+.team-socials{position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%) translateY(10px);display:flex;gap:.5rem;opacity:0;transition:.3s}
+.team-card:hover .team-socials{opacity:1;transform:translateX(-50%) translateY(0)}
+.team-social{width:36px;height:36px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.75rem;font-weight:700;transition:background .25s}
+.team-social:hover{background:var(--orange-dk)}
 .team-body{padding:1.5rem}
-.team-body h3{font-size:1.15rem;margin-bottom:.5rem}
-.team-skills{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.25rem}
-.team-skill{font-size:.82rem;color:var(--body);display:flex;align-items:center;gap:.5rem}
-.team-skill::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--primary);flex-shrink:0}
-.team-social-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;color:var(--primary)}
+.team-role{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem}
+.team-body h3{font-size:1.25rem;color:var(--heading)}
+.team-skills{margin-top:.75rem;display:flex;flex-direction:column;gap:.3rem}
+.team-skill{font-size:.82rem;color:var(--text);display:flex;align-items:center;gap:.5rem}
+.team-skill::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0}
 
-/* ━━━ CTA MID ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.cta-mid{background:linear-gradient(135deg,var(--primary),#7C3AED);padding:5rem 0;position:relative;overflow:hidden}
-.cta-mid::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;position:relative;z-index:1}
-.cta-text h2{color:var(--white);font-size:clamp(1.6rem,3vw,2.4rem)}
-.cta-text p{color:rgba(255,255,255,.7);margin-top:.5rem}
-.cta-links{display:flex;flex-direction:column;gap:.5rem;align-items:flex-start}
-.cta-links a:last-child{font-size:.78rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.35rem}
-
-/* ━━━ PRICING (→ RESULTS) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.pricing{background:var(--bg-white)}
-.pricing-tabs{display:flex;gap:.5rem;background:var(--bg-light);border-radius:50px;padding:.4rem;width:fit-content;margin:0 auto 3rem}
-.pricing-tab{font-family:var(--font-head);font-size:.82rem;font-weight:600;padding:.55rem 1.5rem;border-radius:50px;cursor:pointer;border:none;background:transparent;color:var(--muted);transition:.25s}
-.pricing-tab.active{background:var(--primary);color:var(--white)}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
-.pricing-card{border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem 2rem;text-align:center;transition:all .3s;position:relative}
-.pricing-card.featured{border-color:var(--primary);box-shadow:var(--shadow);transform:translateY(-8px)}
-.pricing-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--primary);color:var(--white);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .9rem;border-radius:50px;white-space:nowrap}
-.pricing-plan{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem}
-.pricing-val{font-family:var(--font-head);font-size:3rem;font-weight:800;color:var(--heading);line-height:1;margin-bottom:.25rem}
-.pricing-period{font-size:.82rem;color:var(--muted);margin-bottom:.35rem}
-.pricing-desc{font-size:.82rem;color:var(--body);margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--border)}
-.pricing-features{display:flex;flex-direction:column;gap:.65rem;margin-bottom:2rem;text-align:left}
-.pricing-feat{font-size:.85rem;color:var(--body);display:flex;align-items:center;gap:.6rem}
-.pricing-feat::before{content:'✓';width:20px;height:20px;background:rgba(56,161,105,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--success);flex-shrink:0;font-weight:700}
-
-/* ━━━ FAQ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.faq{background:var(--bg-light)}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+/* ═══ FAQ ════════════════════════════════════════════════════════ */
+.faq-section{background:var(--dark)}
 .faq-list{display:flex;flex-direction:column;gap:.75rem}
-.faq-item{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:1.25rem 1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-family:var(--font-head);font-size:.92rem;font-weight:700;color:var(--heading);transition:.25s}
-.faq-q:hover{background:var(--primary-lt)}
-.faq-q.open{background:var(--primary);color:var(--white)}
-.faq-q.open .faq-icon{transform:rotate(45deg);color:var(--white)}
-.faq-icon{font-size:1.2rem;color:var(--muted);transition:.3s;flex-shrink:0}
-.faq-a{display:none;padding:0 1.5rem 1.25rem;font-size:.88rem;color:var(--body);line-height:1.7}
+.faq-item{border:1px solid rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:1.5rem 2rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-family:var(--font-head);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--white);transition:.25s}
+.faq-q:hover{background:rgba(255,255,255,.04)}
+.faq-q.open{background:var(--orange);color:var(--white)}
+.faq-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;transition:.3s}
+.faq-q.open .faq-icon{border-color:rgba(255,255,255,.4);transform:rotate(45deg)}
+.faq-a{display:none;padding:0 2rem 1.5rem;font-size:.92rem;color:rgba(255,255,255,.55);line-height:1.8;border-top:1px solid rgba(255,255,255,.08)}
 .faq-a.open{display:block}
-.faq-side{background:var(--primary);border-radius:var(--radius-lg);padding:2.5rem;color:var(--white);position:sticky;top:90px}
-.faq-side h3{font-size:1.5rem;margin-bottom:.75rem}
-.faq-side p{font-size:.9rem;opacity:.75;margin-bottom:2rem}
-.faq-side-img{width:100%;height:180px;background:rgba(255,255,255,.1);border-radius:var(--radius);margin-bottom:2rem;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.faq-side{background:var(--dark2);border-radius:var(--r2);padding:2.5rem;border:1px solid rgba(255,255,255,.06)}
+.faq-side h3{color:var(--white);font-size:1.8rem;margin-bottom:1rem}
+.faq-side p{color:rgba(255,255,255,.5);font-size:.9rem;margin-bottom:2rem}
+.faq-contact-item{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.faq-contact-item:last-child{border-bottom:none}
+.faq-ci{width:40px;height:40px;background:rgba(244,124,32,.15);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--orange);flex-shrink:0}
+.faq-cl{font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.2rem}
+.faq-cv{font-size:.9rem;color:var(--white)}
 
-/* ━━━ BLOG ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.blog{background:var(--bg-white)}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
-.blog-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .3s,transform .3s}
-.blog-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-.blog-img{height:200px;background:linear-gradient(135deg,var(--primary-lt),#ddd6fe);position:relative;display:flex;align-items:center;justify-content:center}
-.blog-img-text{font-family:var(--font-head);font-size:3.5rem;font-weight:800;color:rgba(80,70,229,.15)}
-.blog-cat{position:absolute;top:.75rem;left:.75rem;background:var(--primary);color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px}
-.blog-body{padding:1.5rem}
-.blog-meta{display:flex;align-items:center;gap:1rem;margin-bottom:.75rem}
-.blog-date{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:.4rem}
-.blog-date::before{content:'';width:16px;height:1px;background:var(--primary)}
-.blog-body h3{font-size:1.05rem;margin-bottom:.6rem;line-height:1.4}
-.blog-body h3 a:hover{color:var(--primary)}
-.blog-body p{font-size:.83rem;color:var(--body)}
-.blog-footer{padding:.75rem 1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.blog-author{font-size:.77rem;color:var(--muted)}
-.blog-link{font-size:.75rem;font-weight:700;color:var(--primary);display:flex;align-items:center;gap:.3rem}
+/* ═══ INSIGHTS ════════════════════════════════════════════════════ */
+.insights{background:var(--off)}
+.insight-card{background:var(--white);border-radius:var(--r2);overflow:hidden;border:1px solid var(--border);transition:var(--t)}
+.insight-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:transparent}
+.insight-img{height:220px;overflow:hidden;position:relative;background:var(--dark)}
+.insight-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.insight-card:hover .insight-img img{transform:scale(1.06)}
+.insight-cat{position:absolute;top:.875rem;left:.875rem;background:var(--orange);color:var(--white);font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .85rem;border-radius:var(--r)}
+.insight-body{padding:1.75rem}
+.insight-meta{display:flex;align-items:center;gap:1rem;margin-bottom:.875rem;font-size:.78rem;color:var(--text)}
+.insight-meta::before{content:'';width:20px;height:2px;background:var(--orange)}
+.insight-body h3{font-size:1.1rem;margin-bottom:.75rem;line-height:1.35;transition:color var(--t)}
+.insight-card:hover .insight-body h3{color:var(--orange)}
+.insight-body p{font-size:.88rem}
+.insight-footer{padding:.75rem 1.75rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.insight-author{font-size:.78rem;color:var(--text)}
+.insight-more{font-family:var(--font-head);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:.35rem;transition:gap var(--t)}
+.insight-more:hover{gap:.6rem}
 
-/* ━━━ CONTACT / FOOTER CTA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.footer-cta{background:var(--dark);padding:4.5rem 0;position:relative;overflow:hidden}
-.footer-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 0% 50%,rgba(80,70,229,.2),transparent)}
-.footer-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;position:relative;z-index:1}
-.footer-cta h2{color:var(--white);margin-bottom:.75rem}
-.footer-cta p{color:rgba(255,255,255,.5);max-width:440px}
-.footer-cta-links{display:flex;flex-direction:column;gap:.75rem;min-width:220px}
-.footer-cta-link{font-size:.77rem;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:.5rem}
-.footer-cta-link::before{content:'→';color:var(--primary)}
+/* ═══ CTA SECTION ════════════════════════════════════════════════ */
+.cta-section{background:var(--dark);position:relative;overflow:hidden;padding:100px 0}
+.cta-section::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;opacity:.07}
+.cta-section .container{position:relative;z-index:1}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap}
+.cta-text h2{color:var(--white);font-size:clamp(2.2rem,4vw,3.2rem)}
+.cta-text h2 span{color:var(--orange)}
+.cta-text p{color:var(--muted);margin-top:.75rem;font-size:1rem;max-width:480px}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;align-items:flex-end;flex-shrink:0}
 
-/* ━━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.footer{background:#060B18;padding:4rem 0 0}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
-.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.35);line-height:1.7;margin:.75rem 0 1.5rem;max-width:260px}
-.footer-brand-name{font-family:var(--font-head);font-weight:800;font-size:1.15rem;color:var(--white)}
-.footer-socials{display:flex;gap:.75rem}
-.footer-social{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.4);transition:.25s}
-.footer-social:hover{background:var(--primary);color:var(--white)}
-.footer-col h4{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
-.footer-col ul{display:flex;flex-direction:column;gap:.6rem}
-.footer-col ul li a{font-size:.85rem;color:rgba(255,255,255,.3);transition:.25s;display:flex;align-items:center;gap:.5rem}
-.footer-col ul li a::before{content:'›';color:var(--primary);font-size:1rem}
-.footer-col ul li a:hover{color:var(--white)}
-.footer-bottom{padding:1.5rem 0;display:flex;align-items:center;justify-content:space-between}
-.footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.2)}
-.footer-bottom-links{display:flex;gap:1.75rem}
-.footer-bottom-links a{font-size:.77rem;color:rgba(255,255,255,.2);transition:.25s}
-.footer-bottom-links a:hover{color:var(--white)}
+/* ═══ CONTACT ════════════════════════════════════════════════════ */
+.contact-section{background:var(--white)}
+.contact-form{display:flex;flex-direction:column;gap:1.25rem}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.form-group label{display:block;font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--off);border:1.5px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.95rem;padding:.9rem 1.25rem;border-radius:var(--r);outline:none;transition:border-color .25s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--orange)}
+.form-group textarea{resize:vertical;line-height:1.65}
+.form-submit{background:var(--orange);color:var(--white);font-family:var(--font-head);font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:1.1rem 2.5rem;border:none;border-radius:var(--r);cursor:pointer;display:flex;align-items:center;gap:.6rem;transition:var(--t)}
+.form-submit:hover{background:var(--orange-dk);transform:translateY(-2px)}
+.form-submit svg{width:16px;height:16px}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem}
+.ci-item{display:flex;gap:1.25rem;align-items:flex-start;padding:1.75rem;background:var(--off);border-radius:var(--r2);border:1.5px solid transparent;transition:var(--t)}
+.ci-item:hover{border-color:var(--orange);background:var(--white);box-shadow:var(--shadow-sm)}
+.ci-icon{width:52px;height:52px;background:var(--orange);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:22px;height:22px;stroke:var(--white);fill:none;stroke-width:1.8}
+.ci-label{font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:.3rem}
+.ci-val{font-size:.95rem;color:var(--heading);font-weight:600}
+.success-msg{display:none;text-align:center;padding:2.5rem;background:var(--off);border-radius:var(--r2);border:1.5px solid rgba(56,161,105,.3)}
+.success-msg h3{font-size:1.5rem;color:var(--heading);margin-bottom:.75rem}
+.success-msg p{color:var(--text)}
 
-/* ━━━ WHATSAPP + SCROLL TOP ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:50px;height:50px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:.25s}
+/* ═══ FOOTER ══════════════════════════════════════════════════════ */
+.footer{background:var(--black);padding:80px 0 0}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.06)}
+.footer-logo img{height:44px;width:auto;margin-bottom:1.25rem}
+.footer-about{font-size:.9rem;color:rgba(255,255,255,.35);line-height:1.8;max-width:280px;margin-bottom:2rem}
+.footer-socials{display:flex;gap:.625rem}
+.footer-soc{width:36px;height:36px;background:rgba(255,255,255,.06);border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.4);transition:.25s}
+.footer-soc:hover{background:var(--orange);color:var(--white)}
+.footer-col h4{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.5rem}
+.footer-col ul{display:flex;flex-direction:column;gap:.75rem}
+.footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:.5rem;transition:.25s}
+.footer-col ul li a::before{content:'';width:0;height:1.5px;background:var(--orange);transition:width .25s}
+.footer-col ul li a:hover{color:var(--white);padding-left:.5rem}
+.footer-col ul li a:hover::before{width:10px}
+.footer-bottom{padding:1.75rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:.82rem;color:rgba(255,255,255,.2)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.2);transition:.25s}
+.footer-links a:hover{color:var(--white)}
+
+/* ═══ FLOATS ══════════════════════════════════════════════════════ */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.45);transition:.25s}
 .wa-float:hover{transform:scale(1.1)}
-.wa-float svg{width:24px;height:24px;fill:#fff}
-.scroll-top{position:fixed;bottom:5.5rem;right:2rem;z-index:999;width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1rem;cursor:pointer;opacity:0;transition:.3s;border:none;box-shadow:var(--shadow)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+.scroll-top{position:fixed;bottom:5.5rem;right:2rem;z-index:999;width:44px;height:44px;background:var(--orange);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.1rem;cursor:pointer;opacity:0;border:none;transition:.3s;box-shadow:var(--shadow-sm)}
 .scroll-top.visible{opacity:1}
-.scroll-top:hover{background:var(--primary-dk);transform:translateY(-3px)}
+.scroll-top:hover{background:var(--orange-dk);transform:translateY(-3px)}
 
-/* ━━━ SCROLL REVEAL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+/* ═══ REVEAL ══════════════════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .65s ease,transform .65s ease}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal-right.visible{opacity:1;transform:none}
 
-/* ━━━ RESPONSIVE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+/* ═══ RESPONSIVE ══════════════════════════════════════════════════ */
 @media(max-width:1024px){
-  .grid-2,.hero-grid{grid-template-columns:1fr;gap:2.5rem}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
-  .pricing-grid{grid-template-columns:1fr}
-  .pricing-card.featured{transform:none}
+  .col-4{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .process-grid::before{display:none}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
   .nav-links,.nav-cta{display:none}
-  .nav-hamburger{display:flex}
-  .grid-3,.workflow-grid,.testi-grid,.services-grid,.team-grid,.blog-grid{grid-template-columns:1fr}
-  .faq-grid{grid-template-columns:1fr}
-  .cta-inner,.footer-cta-inner,.cta-mid .cta-inner{flex-direction:column;text-align:center}
-  .video-strip-inner,.video-services{flex-direction:column;gap:1.5rem}
-  .footer-grid{grid-template-columns:1fr}
-  .hero-grid{gap:3rem}
+  .nav-ham{display:flex}
+  .col-2,.col-3,.col-4{grid-template-columns:1fr}
+  .row{gap:2.5rem}
   .form-row-2{grid-template-columns:1fr}
-  .about-exp-badge{right:.5rem}
+  .cta-inner{flex-direction:column;text-align:center}
+  .cta-actions{align-items:center}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-stats{gap:2rem}
+  .about-exp{right:.5rem}
+  .why-img-over{right:.5rem}
+  .stats-dark .col-4{grid-template-columns:repeat(2,1fr)}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  .stat-item:last-child{border-bottom:none}
 }
 </style>
 </head>
 <body>
 
-<!-- ════ NAVBAR ════════════════════════════════════════════ -->
-<nav class="navbar" id="navbar">
+<!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
   <div class="nav-inner">
-    <div class="nav-logo">
-      <div class="nav-logo-icon">TG</div>
-      <div>
-        <div class="nav-logo-text">The Growth Union</div>
-        <div class="nav-logo-sub">Where Strategy Meets Execution</div>
-      </div>
-    </div>
+    <a href="index.html"><img src="logo.png" alt="The Growth Union" class="nav-logo-img" style="height:48px;width:auto"/></a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="insights.html">Insights</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Request a Quote</a>
-    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <a href="contact.html" class="nav-cta">Request a Quote</a>
+    <button class="nav-ham" onclick="toggleMob()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="toggleMenu()">✕</button>
-  <a href="index.html" onclick="toggleMenu()">Home</a>
-  <a href="about.html" onclick="toggleMenu()">About</a>
-  <a href="services.html" onclick="toggleMenu()">Services</a>
-  <a href="team.html" onclick="toggleMenu()">Team</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="insights.html" onclick="toggleMenu()">Insights</a>
-  <a href="#contact" onclick="toggleMenu()" style="color:var(--primary)">Request a Quote</a>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="toggleMob()">✕</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="team.html">Team</a>
+  <a href="faq.html">FAQ</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html" style="color:var(--orange)">Request a Quote</a>
 </div>
 
-<!-- ════ HERO ═══════════════════════════════════════════════ -->
+<!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-tag">
-          <span></span>
-          Growth Consultancy · Delhi NCR
+  <div class="hero-overlay"></div>
+  <div class="container" style="width:100%">
+    <div class="row col-2" style="align-items:center">
+      <div class="hero-content">
+        <div class="hero-pretitle">Strategy-Led Growth Consultancy · Delhi NCR</div>
+        <h1>Where <span>Strategy</span> Meets Execution.</h1>
+        <p class="hero-sub">Not a consultant. Not an agency. A growth partner — bridging the gap between thinking and doing with structured systems built to compound.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn btn-orange">Build Your System <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="about.html" class="btn btn-outline-white">About TGU</a>
         </div>
-        <h1>Strategy That <em>Actually</em> Gets Executed.</h1>
-        <p class="hero-sub">Not a consultant. Not an agency. A growth partner that bridges the gap between thinking and doing — with structured systems built to compound.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Build Your Growth System →</a>
-          <a href="The_Growth_Union.pdf" download class="btn btn-outline" style="color:#a5b4fc;border-color:rgba(165,180,252,.4)">↓ Our Profile</a>
-        </div>
-        <div class="hero-social-proof">
-          <div class="hero-avatars">
-            <span>RG</span><span>TS</span><span>CG</span><span>+</span>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">7<sup>+</sup></div>
+            <div class="hero-stat-label">Years Experience</div>
           </div>
-          <div class="hero-social-text"><strong>50+ businesses</strong> trust TGU across Delhi NCR &amp; beyond</div>
+          <div style="width:1px;height:48px;background:rgba(255,255,255,.12)"></div>
+          <div>
+            <div class="hero-stat-num">50<sup>+</sup></div>
+            <div class="hero-stat-label">Businesses Grown</div>
+          </div>
+          <div style="width:1px;height:48px;background:rgba(255,255,255,.12)"></div>
+          <div>
+            <div class="hero-stat-num">15<sup>+</sup></div>
+            <div class="hero-stat-label">Industries Served</div>
+          </div>
+          <div style="width:1px;height:48px;background:rgba(255,255,255,.12)"></div>
+          <div>
+            <div class="hero-stat-num">600<sup>%</sup></div>
+            <div class="hero-stat-label">Peak ROI Delivered</div>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="hero-card">
-          <h3>Start a Conversation</h3>
-          <div class="hero-card-sub">Tell us about your growth challenge</div>
-          <div class="form-row">
-            <label class="form-label">Full Name</label>
-            <input class="form-input" type="text" placeholder="Your name"/>
+      <div class="hero-img-col">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=900&q=85" alt="Growth strategy" class="hero-img-main"/>
+          <div class="hero-img-badge">
+            <div class="hero-img-badge-num">4.9★</div>
+            <div class="hero-img-badge-txt">Client Rating</div>
           </div>
-          <div class="form-row">
-            <label class="form-label">Business / Company</label>
-            <input class="form-input" type="text" placeholder="Company name"/>
-          </div>
-          <div class="form-row-2">
-            <div class="form-row" style="margin-bottom:0">
-              <label class="form-label">Phone</label>
-              <input class="form-input" type="tel" placeholder="+91 98765 43210"/>
-            </div>
-            <div class="form-row" style="margin-bottom:0">
-              <label class="form-label">Preferred Call</label>
-              <select class="form-input" style="color:rgba(255,255,255,.5)">
-                <option>WhatsApp</option>
-                <option>Phone Call</option>
-                <option>Virtual Meeting</option>
-                <option>In-Office</option>
-              </select>
-            </div>
-          </div>
-          <button class="form-submit">Request a Strategy Call →</button>
-          <div class="hero-rating-bar">
-            <div class="hero-stars">★★★★★</div>
-            <div class="hero-rating-text">4.9 OUT OF 5 rating by our clients</div>
-          </div>
+          <div class="hero-deco"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ VIDEO / SERVICES INTRO STRIP ═══════════════════════ -->
-<section class="video-strip">
-  <div class="container">
-    <div class="video-strip-inner">
-      <div>
-        <div class="video-play-btn" title="Watch Our Story">
-          <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
-        </div>
-      </div>
-      <div class="video-services">
-        <div class="video-service">
-          <div class="vs-num">1</div>
-          <div>
-            <div class="vs-title">Strategy &amp; Positioning</div>
-            <div class="vs-desc">Growth roadmap, ICP definition, brand messaging, competitive intelligence.</div>
-          </div>
-        </div>
-        <div class="video-service">
-          <div class="vs-num">2</div>
-          <div>
-            <div class="vs-title">Acquisition Systems</div>
-            <div class="vs-desc">Performance marketing, SEO, B2B outreach, LinkedIn authority building.</div>
-          </div>
-        </div>
-        <div class="video-service">
-          <div class="vs-num">3</div>
-          <div>
-            <div class="vs-title">Revenue &amp; Scale</div>
-            <div class="vs-desc">Sales process, pricing strategy, retention systems, expansion planning.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ ABOUT ═══════════════════════════════════════════════ -->
-<section class="section about" id="about">
-  <div class="container">
-    <div class="grid-2">
-      <div class="about-img-wrap reveal">
-        <div class="about-img-placeholder">
-          <span style="font-family:var(--font-head);font-size:8rem;font-weight:800;color:rgba(80,70,229,.1);letter-spacing:-.05em">TGU</span>
-        </div>
-        <div class="about-exp-badge">
-          <div class="about-exp-num">7+</div>
-          <div class="about-exp-label">Years of<br/>Experience</div>
-        </div>
-      </div>
-      <div class="about-content reveal">
-        <div class="tag">About The Growth Union</div>
-        <h2 class="section-title">Who We Are?</h2>
-        <p>We help founders and growing businesses overcome their most pressing growth challenges — by building structured, scalable systems that combine strategy with full execution.</p>
-        <div class="about-quote">"Growth is not an activity. It is a structured system." — The Growth Union</div>
-        <div class="about-blocks">
-          <div class="about-block">
-            <h4>Mission.</h4>
-            <p>To redefine how businesses grow by eliminating the gap between strategy and execution — building predictable, compounding growth systems.</p>
-          </div>
-          <div class="about-block">
-            <h4>Vision.</h4>
-            <p>A future where every founder has access to CXO-level strategic thinking — not just agencies running campaigns without business context.</p>
-          </div>
-        </div>
-        <a href="#contact" class="btn btn-primary" style="margin-top:1.75rem">Talk to Neeraj →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ SPONSORS / INDUSTRIES ══════════════════════════════ -->
-<div class="sponsors">
-  <div class="sponsors-label">Trusted across 15+ Industries</div>
-  <div class="sponsors-track-wrap">
-    <div class="sponsors-track">
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Real Estate</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Electronics</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>EdTech</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Healthcare</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>FMCG &amp; Beverages</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>EV / Automotive</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Fashion</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Transport / Luxury</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Blockchain / Web3</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Sports &amp; Fitness</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Finance</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Hospitality</div>
-      <!-- duplicate for loop -->
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Real Estate</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Electronics</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>EdTech</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Healthcare</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>FMCG &amp; Beverages</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>EV / Automotive</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Fashion</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Transport / Luxury</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Blockchain / Web3</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Sports &amp; Fitness</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Finance</div>
-      <div class="sponsors-item"><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/></svg>Hospitality</div>
-    </div>
+<!-- ═══ MARQUEE ════════════════════════════════════════════════════ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">Strategy & Positioning</span>
+    <span class="marquee-item">Performance Marketing</span>
+    <span class="marquee-item">SEO & Organic Growth</span>
+    <span class="marquee-item">Web Development</span>
+    <span class="marquee-item">Social Media Management</span>
+    <span class="marquee-item">B2B Sales Systems</span>
+    <span class="marquee-item">Revenue Architecture</span>
+    <span class="marquee-item">Brand Identity</span>
+    <span class="marquee-item">Strategy & Positioning</span>
+    <span class="marquee-item">Performance Marketing</span>
+    <span class="marquee-item">SEO & Organic Growth</span>
+    <span class="marquee-item">Web Development</span>
+    <span class="marquee-item">Social Media Management</span>
+    <span class="marquee-item">B2B Sales Systems</span>
+    <span class="marquee-item">Revenue Architecture</span>
+    <span class="marquee-item">Brand Identity</span>
   </div>
 </div>
 
-<!-- ════ WORKFLOW ════════════════════════════════════════════ -->
-<section class="section workflow" id="process">
+<!-- ═══ ABOUT ══════════════════════════════════════════════════════ -->
+<section class="section about" id="about">
   <div class="container">
-    <div class="text-center reveal">
-      <div class="tag">Seamless Workflow</div>
-      <h2 class="section-title">How We Build Your Growth System</h2>
-      <p class="section-desc">We help founders and growing businesses overcome challenges with a disciplined, end-to-end process — not generic advice.</p>
-    </div>
-    <div class="workflow-grid">
-      <div class="workflow-card reveal">
-        <div class="wf-icon">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <div class="row col-2">
+      <div class="about-img-wrap reveal-left">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85" alt="Business strategy consulting" class="about-img"/>
+        <div class="about-exp">
+          <div class="about-exp-num">7+</div>
+          <div class="about-exp-txt">Years of<br/>Experience</div>
         </div>
-        <div class="wf-num">Step 01</div>
-        <h3>Discovery &amp; Strategy</h3>
-        <p>We study your market, goals, audience, and competitive landscape. We diagnose the real problem before prescribing any solution — starting with clarity, not assumptions.</p>
       </div>
-      <div class="workflow-card reveal">
-        <div class="wf-icon">
-          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <div class="reveal-right">
+        <div class="section-tag">About The Growth Union</div>
+        <h2 class="section-title">Not a Consultant.<br/>Not an Agency.<br/>A Growth Partner.</h2>
+        <p>Most businesses fall between two broken options — consultants who give strategy but vanish at execution, and agencies that execute without business thinking. The Growth Union bridges this gap.</p>
+        <div class="about-quote">
+          <p>Growth is not an activity. It is a structured system.</p>
+          <cite>— The Growth Union</cite>
         </div>
-        <div class="wf-num">Step 02</div>
-        <h3>Development &amp; Execution</h3>
-        <p>We build and run your growth system — campaigns, websites, content, outreach — fast and correctly. Full accountability for outcomes, not just deliverables and reports.</p>
-      </div>
-      <div class="workflow-card reveal">
-        <div class="wf-icon">
-          <svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        <div class="about-checks">
+          <div class="about-check">Strategy & execution under one roof</div>
+          <div class="about-check">CXO-level thinking for growing businesses</div>
+          <div class="about-check">30–35 specialists across every discipline</div>
+          <div class="about-check">Accountable for outcomes, not deliverables</div>
         </div>
-        <div class="wf-num">Step 03</div>
-        <h3>Launch &amp; Scale</h3>
-        <p>We track what matters — revenue, leads, ROAS, conversion — optimise continuously, and scale what's working. Growth that compounds month over month.</p>
+        <a href="about.html" class="btn btn-orange">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ TESTIMONIALS ════════════════════════════════════════ -->
-<section class="section testimonials">
+<!-- ═══ SERVICES ════════════════════════════════════════════════════ -->
+<section class="section services" id="services">
   <div class="container">
-    <div class="testi-header reveal">
-      <div>
-        <div class="tag">What Clients Say</div>
-        <h2 class="section-title">Real businesses. Real outcomes.</h2>
-        <p>We help founders and growing businesses overcome challenges, streamline operations, and unlock growth.</p>
+    <div class="text-center reveal" style="margin-bottom:3.5rem">
+      <div class="section-tag">Our Services</div>
+      <h2 class="section-title">Four Pillars.<br/>One Growth System.</h2>
+      <p class="section-desc">We don't offer services in isolation. Every engagement is a connected system — designed to compound and scale.</p>
+    </div>
+    <div class="row col-4" style="gap:1.5rem;align-items:stretch">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+        <h3>Strategy &amp; Positioning</h3>
+        <p>Growth roadmap, brand positioning, ICP definition, messaging architecture, and go-to-market strategy.</p>
+        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
-      <div class="testi-rating-big">
-        <div class="testi-num">4.9</div>
-        <div>
-          <div class="testi-stars">★★★★★</div>
-          <div class="testi-sub">Clients rate us across<br/>Google &amp; LinkedIn</div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Acquisition Systems</h3>
+        <p>Performance marketing (Meta, Google), SEO/AEO/GEO, lead funnels, B2B outreach, LinkedIn authority building.</p>
+        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+        <h3>Digital Infrastructure</h3>
+        <p>Conversion-first websites, web & mobile apps, CRM setup, automation flows, and legal compliance.</p>
+        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>Revenue &amp; Scale Systems</h3>
+        <p>Sales strategy, revenue architecture, pricing, retention systems, and expansion playbooks.</p>
+        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ════════════════════════════════════════════════════ -->
+<section class="section process">
+  <div class="container">
+    <div class="text-center text-white reveal" style="margin-bottom:4rem">
+      <div class="section-tag">How We Work</div>
+      <h2 class="section-title" style="color:var(--white)">Our Growth Process</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-num">01</div>
+        <h4>Discover</h4>
+        <p>Understand your market, goals, audience, and competitive landscape.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">02</div>
+        <h4>Diagnose</h4>
+        <p>Identify the exact gaps, blockers, and hidden opportunities.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">03</div>
+        <h4>Design</h4>
+        <p>Build the right growth system architecture for your stage.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">04</div>
+        <h4>Deploy</h4>
+        <p>Execute fast and correctly — campaigns, sites, outreach, systems.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">05</div>
+        <h4>Drive Growth</h4>
+        <p>Measure outcomes, optimise, and scale what compounds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY US ══════════════════════════════════════════════════════ -->
+<section class="section why" id="why">
+  <div class="container">
+    <div class="row col-2">
+      <div class="reveal-left">
+        <div class="section-tag">Why The Growth Union</div>
+        <h2 class="section-title">Most Consultants Talk Strategy.<br/>Most Agencies Just Execute.<br/>We Do Both.</h2>
+        <p>We bring CXO-level thinking and full-stack execution under one roof — with accountability for outcomes, not just deliverables.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div>
+            <div>
+              <h4>Strategy-First Thinking</h4>
+              <p>Every engagement starts with CXO-level clarity — positioning, ICP, messaging — before a single campaign launches.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div>
+              <h4>Full-Stack Execution</h4>
+              <p>We don't hand you a plan and disappear. We build, run, and iterate — accountable for real outcomes.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+            <div>
+              <h4>30–35 Specialists</h4>
+              <p>A curated network across strategy, digital, design, sales, legal — the right expertise for every challenge.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div>
+              <h4>Systems Built to Scale</h4>
+              <p>We build growth systems — designed to compound over time and scale without breaking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-img reveal-right">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=85" alt="Why The Growth Union" class="why-img-main"/>
+        <div class="why-img-over">
+          <div class="why-img-over-num">50+</div>
+          <div class="why-img-over-txt">Businesses Grown<br/>Across 15+ Industries</div>
         </div>
       </div>
     </div>
-    <div class="testi-grid">
+  </div>
+</section>
+
+<!-- ═══ STATS DARK ══════════════════════════════════════════════════ -->
+<section class="stats-dark">
+  <div class="container">
+    <div class="col-4" style="display:grid">
+      <div class="stat-item reveal">
+        <div class="stat-num">600<span>%</span></div>
+        <div class="stat-label">Peak ROI</div>
+        <div class="stat-desc">Google Ads — Chauffeurs on Demand</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">1,625</div>
+        <div class="stat-label">Leads in 1 Month</div>
+        <div class="stat-desc">Frankfinn — Meta + Google Ads</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">93.4<span>K</span></div>
+        <div class="stat-label">Instagram Followers</div>
+        <div class="stat-desc">Cellecor Gadgets — verified page</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">4.5<span>×</span></div>
+        <div class="stat-label">ROAS</div>
+        <div class="stat-desc">RCasa — ₹13.5L from ₹3L spend</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ════════════════════════════════════════════════ -->
+<section class="section testi" id="testi">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:3.5rem">
+      <div class="section-tag">Client Testimonials</div>
+      <h2 class="section-title">Real Businesses.<br/>Real Outcomes.</h2>
+    </div>
+    <div class="row col-3" style="align-items:stretch">
       <div class="testi-card reveal">
-        <div class="testi-quote-icon">"</div>
-        <p class="testi-text">Neeraj doesn't just give you a strategy and leave. He builds the entire system and executes it alongside you. Our lead cost dropped 59% in the first month. That's not marketing — that's engineering.</p>
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="testi-text">Neeraj doesn't just give you a strategy and leave. He builds the entire system and executes it alongside you. Our lead cost dropped 59% in the first month. That's not marketing — that's engineering.</div>
         <div class="testi-author">
-          <div class="testi-avatar">R</div>
+          <div class="testi-av">RS</div>
           <div>
             <div class="testi-name">Rajbir Singh</div>
             <div class="testi-role">Founder — IndoMedhub</div>
@@ -637,10 +685,10 @@ p{font-size:1rem;line-height:1.75}
         </div>
       </div>
       <div class="testi-card reveal">
-        <div class="testi-quote-icon">"</div>
-        <p class="testi-text">We went from scattered social media to a structured content engine that actually generates enquiries. TechnoStruct Academy's Instagram grew to 14,500+ real, engaged followers. The results speak for themselves.</p>
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="testi-text">We went from scattered social media to a structured content engine. TechnoStruct Academy's Instagram grew to 14,500+ real, engaged followers. Every post has a purpose — and it shows in our enquiries.</div>
         <div class="testi-author">
-          <div class="testi-avatar" style="background:#7C3AED">T</div>
+          <div class="testi-av" style="background:#7C3AED">TA</div>
           <div>
             <div class="testi-name">TechnoStruct Academy</div>
             <div class="testi-role">Engineering Education — Delhi</div>
@@ -648,10 +696,10 @@ p{font-size:1rem;line-height:1.75}
         </div>
       </div>
       <div class="testi-card reveal">
-        <div class="testi-quote-icon">"</div>
-        <p class="testi-text">The Growth Union built our entire digital presence — website, SEO, social media, performance ads. 93,000+ Instagram followers and a verified account. The results are extraordinary and measurable.</p>
+        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="testi-text">The Growth Union built our entire digital presence — website, SEO, social media, performance ads. 93,000+ Instagram followers and a verified account. The results are extraordinary and fully measurable.</div>
         <div class="testi-author">
-          <div class="testi-avatar" style="background:#DB2777">C</div>
+          <div class="testi-av" style="background:#DB2777">CG</div>
           <div>
             <div class="testi-name">Cellecor Gadgets</div>
             <div class="testi-role">Electronics Brand — India</div>
@@ -662,526 +710,358 @@ p{font-size:1rem;line-height:1.75}
   </div>
 </section>
 
-<!-- ════ UNIQUE SERVICES ════════════════════════════════════ -->
-<section class="section services" id="services">
-  <div class="container">
-    <div class="text-center reveal">
-      <div class="tag">Unique Services</div>
-      <h2 class="section-title">Four Pillars. One Growth System.</h2>
-      <p class="section-desc">We don't offer services in isolation. Every engagement is a connected system — designed to compound and scale.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <div class="service-body">
-          <h3>Strategy &amp; Positioning</h3>
-          <p>Growth strategy and roadmap, brand positioning, messaging architecture, ICP definition, market and competitive intelligence, founder-led authority positioning.</p>
-          <a href="#contact" class="service-link">Get Started →</a>
-        </div>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div class="service-body">
-          <h3>Acquisition Systems</h3>
-          <p>Performance marketing (Meta, Google), SEO / AEO / GEO / SXO, lead generation funnels, B2B cold outreach frameworks, LinkedIn authority building programmes.</p>
-          <a href="#contact" class="service-link">Get Started →</a>
-        </div>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
-        </div>
-        <div class="service-body">
-          <h3>Digital Infrastructure</h3>
-          <p>Conversion-optimised websites, web and mobile app development, CRM setup and automation, legal and compliance setup, digital systems architecture.</p>
-          <a href="#contact" class="service-link">Get Started →</a>
-        </div>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <div class="service-body">
-          <h3>Revenue &amp; Scale Systems</h3>
-          <p>Sales strategy and process design, revenue operations architecture, pricing and packaging strategy, retention and expansion systems, scale planning.</p>
-          <a href="#contact" class="service-link">Get Started →</a>
-        </div>
-      </div>
-    </div>
-    <!-- Video / CTA Strip -->
-    <div class="video-section reveal">
-      <div class="video-content">
-        <h2>Have a project in mind?</h2>
-        <p>Get in touch with us today and let's build the growth system your business deserves.</p>
-        <a href="#contact" class="btn btn-primary">Request a Quote →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ TEAM ═════════════════════════════════════════════════ -->
+<!-- ═══ TEAM ════════════════════════════════════════════════════════ -->
 <section class="section team" id="team">
   <div class="container">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3rem;flex-wrap:wrap;gap:1rem" class="reveal">
-      <div>
-        <div class="tag">Unique Team</div>
-        <h2 class="section-title" style="margin-bottom:.5rem">Our Growth Experts</h2>
-        <p>Led by practitioners — not account managers.</p>
-      </div>
-      <div class="team-rating">
-        <div class="team-rating-num">4.9/5</div>
-        <div>
-          <div class="team-rating-stars">★★★★★</div>
-          <div class="team-rating-txt">Clients rate us on Google.</div>
-        </div>
-      </div>
+    <div class="text-center reveal" style="margin-bottom:3.5rem">
+      <div class="section-tag">Our Team</div>
+      <h2 class="section-title">Led by Practitioners,<br/>Not Account Managers.</h2>
     </div>
-    <div class="team-grid" style="max-width:860px;grid-template-columns:repeat(2,1fr)">
+    <div class="row col-3" style="align-items:stretch;max-width:900px;margin:0 auto">
       <div class="team-card reveal">
         <div class="team-img">
-          <div class="team-img-text">NG</div>
-          <div class="team-role-badge">Founder &amp; Principal Consultant</div>
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=85" alt="Neeraj Grover"/>
+          <div class="team-img-overlay"></div>
+          <div class="team-socials">
+            <a href="https://www.linkedin.com/in/neerajgrover007" target="_blank" class="team-social">in</a>
+            <a href="https://www.instagram.com/thegrowth.union" target="_blank" class="team-social">ig</a>
+          </div>
         </div>
         <div class="team-body">
+          <div class="team-role">Founder &amp; Principal Consultant</div>
           <h3>Neeraj Grover</h3>
           <div class="team-skills">
             <div class="team-skill">13+ years B2B Sales &amp; Growth Strategy</div>
-            <div class="team-skill">Published Author — "Sell Without Selling"</div>
+            <div class="team-skill">Author — "Sell Without Selling"</div>
             <div class="team-skill">7+ years building NCR businesses</div>
-            <div class="team-skill">Pioneer consultant in Panipat market</div>
           </div>
-          <a href="https://www.linkedin.com/in/neerajgrover007" target="_blank" class="team-social-link">
-            <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            Connect on LinkedIn
-          </a>
         </div>
       </div>
-      <div class="team-card reveal" style="background:linear-gradient(135deg,var(--primary),#7C3AED)">
-        <div class="team-img" style="background:rgba(255,255,255,.1)">
-          <div class="team-img-text" style="color:rgba(255,255,255,.15)">30+</div>
-          <div class="team-role-badge" style="background:rgba(255,255,255,.2)">Specialist Network</div>
+      <div class="team-card reveal" style="background:var(--dark)">
+        <div class="team-img" style="background:var(--dark2)">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=85" alt="Specialist team" style="opacity:.6"/>
+          <div class="team-img-overlay" style="opacity:.7"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+            <div style="font-family:var(--font-head);font-size:4rem;font-weight:800;color:var(--orange);line-height:1">30+</div>
+            <div style="font-family:var(--font-head);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.25rem">Specialists</div>
+          </div>
         </div>
-        <div class="team-body">
-          <h3 style="color:#fff">30–35 Specialists</h3>
+        <div class="team-body" style="background:var(--dark2)">
+          <div class="team-role">Specialist Network</div>
+          <h3 style="color:var(--white)">Our Expert Team</h3>
           <div class="team-skills">
-            <div class="team-skill" style="color:rgba(255,255,255,.75)">Strategy &amp; Brand Consultants</div>
-            <div class="team-skill" style="color:rgba(255,255,255,.75)">Performance Marketing Experts</div>
-            <div class="team-skill" style="color:rgba(255,255,255,.75)">Web &amp; App Developers</div>
-            <div class="team-skill" style="color:rgba(255,255,255,.75)">Legal &amp; Compliance Advisors</div>
+            <div class="team-skill" style="color:rgba(255,255,255,.5)">Strategy &amp; Brand Consultants</div>
+            <div class="team-skill" style="color:rgba(255,255,255,.5)">Performance Marketing Experts</div>
+            <div class="team-skill" style="color:rgba(255,255,255,.5)">Web Developers &amp; Designers</div>
           </div>
-          <a href="#contact" class="team-social-link" style="color:rgba(255,255,255,.7)">Work with our team →</a>
         </div>
       </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="team.html" class="btn btn-outline-dark">View Full Team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ════ CTA MID ══════════════════════════════════════════════ -->
-<section class="cta-mid" id="contact">
+<!-- ═══ CTA ═════════════════════════════════════════════════════════ -->
+<section class="cta-section">
   <div class="container">
     <div class="cta-inner">
-      <div class="cta-text">
-        <h2>Have a project in mind?</h2>
-        <p>Get in touch with us today and let's transform your business with a growth system that actually works.</p>
+      <div class="cta-text reveal-left">
+        <h2>Ready to Build Your<br/><span>Growth System?</span></h2>
+        <p>Join 50+ businesses that have structured their growth with The Growth Union. Start with a 30-minute strategy call — no pitch, no pressure.</p>
       </div>
-      <div class="cta-links">
-        <a href="mailto:Hello@thegrowthunion.com" class="btn btn-white">Request a Quote →</a>
-        <a href="The_Growth_Union.pdf" download class="btn btn-outline-white" style="color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.2)">↓ Download Our Profile</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ PRICING → RESULTS ════════════════════════════════════ -->
-<section class="section pricing" id="results">
-  <div class="container">
-    <div class="text-center reveal">
-      <div class="tag">Real Results</div>
-      <h2 class="section-title">Flexible Growth Approach</h2>
-      <p class="section-desc">We build structured growth systems that combine strategy and execution into measurable outcomes — not scattered activities.</p>
-    </div>
-    <div style="display:flex;gap:.5rem;background:var(--bg-light);border-radius:50px;padding:.4rem;width:fit-content;margin:0 auto 3rem">
-      <button class="pricing-tab active" onclick="switchTab(this,'r1')">Social Media</button>
-      <button class="pricing-tab" onclick="switchTab(this,'r2')">Performance Ads</button>
-      <button class="pricing-tab" onclick="switchTab(this,'r3')">SEO</button>
-    </div>
-    <div id="r1" class="pricing-grid">
-      <div class="pricing-card reveal">
-        <div class="pricing-plan">Starter</div>
-        <div class="pricing-val">14.5K</div>
-        <div class="pricing-period">Instagram Followers Built</div>
-        <div class="pricing-desc">TechnoStruct Academy — BIM Engineering community built from zero</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">System-driven content strategy</div>
-          <div class="pricing-feat">60+ post formats created</div>
-          <div class="pricing-feat">IIT Bombay webinar collaboration</div>
-          <div class="pricing-feat">Monthly analytics optimisation</div>
-        </div>
-        <a href="#contact" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Get Similar Results</a>
-      </div>
-      <div class="pricing-card featured reveal">
-        <div class="pricing-badge">★ Most Impressive</div>
-        <div class="pricing-plan">Growth</div>
-        <div class="pricing-val">93.4K</div>
-        <div class="pricing-period">Instagram Followers</div>
-        <div class="pricing-desc">Cellecor Gadgets — from launch to verified, award-winning brand page</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">Full social media management</div>
-          <div class="pricing-feat">Brand identity system</div>
-          <div class="pricing-feat">Celebrity ambassador integration</div>
-          <div class="pricing-feat">668+ posts published</div>
-        </div>
-        <a href="#contact" class="btn btn-primary btn-sm" style="width:100%;justify-content:center">Build This With Us</a>
-      </div>
-      <div class="pricing-card reveal">
-        <div class="pricing-plan">Scale</div>
-        <div class="pricing-val">19K</div>
-        <div class="pricing-period">Followers + 4.5× ROAS</div>
-        <div class="pricing-desc">RCasa — social media + Meta Ads delivering ₹13.5L revenue</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">Social + Performance Marketing</div>
-          <div class="pricing-feat">₹3L spend → ₹13.5L revenue</div>
-          <div class="pricing-feat">1,600 units sold in one month</div>
-          <div class="pricing-feat">469+ posts published</div>
-        </div>
-        <a href="#contact" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Get Similar Results</a>
-      </div>
-    </div>
-    <div id="r2" class="pricing-grid" style="display:none">
-      <div class="pricing-card reveal">
-        <div class="pricing-plan">Lead Gen</div>
-        <div class="pricing-val">1,625</div>
-        <div class="pricing-period">Leads in One Month</div>
-        <div class="pricing-desc">Frankfinn Institute — Meta + Google Ads combined lead generation</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">646 leads via Google Ads</div>
-          <div class="pricing-feat">979 leads via Meta Ads</div>
-          <div class="pricing-feat">59.2% CPL reduction</div>
-          <div class="pricing-feat">Custom landing page built</div>
-        </div>
-        <a href="#contact" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Get Similar Results</a>
-      </div>
-      <div class="pricing-card featured reveal">
-        <div class="pricing-badge">★ Highest ROI</div>
-        <div class="pricing-plan">ROI Champion</div>
-        <div class="pricing-val">600%</div>
-        <div class="pricing-period">Return on Investment</div>
-        <div class="pricing-desc">Chauffeurs on Demand — Google Ads, Melbourne | 90-day campaign</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">400 confirmed bookings</div>
-          <div class="pricing-feat">$35K estimated revenue</div>
-          <div class="pricing-feat">$120 average booking value</div>
-          <div class="pricing-feat">High-intent keyword targeting</div>
-        </div>
-        <a href="#contact" class="btn btn-primary btn-sm" style="width:100%;justify-content:center">Build This With Us</a>
-      </div>
-      <div class="pricing-card reveal">
-        <div class="pricing-plan">E-commerce</div>
-        <div class="pricing-val">4.5×</div>
-        <div class="pricing-period">ROAS Achieved</div>
-        <div class="pricing-desc">RCasa Glass Jars — ₹3L spend → ₹13.5L revenue | 1,600 units</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">Meta Ads (Facebook + Instagram)</div>
-          <div class="pricing-feat">1,600 units sold in one month</div>
-          <div class="pricing-feat">₹800 average order value</div>
-          <div class="pricing-feat">Pan-India targeting</div>
-        </div>
-        <a href="#contact" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Get Similar Results</a>
-      </div>
-    </div>
-    <div id="r3" class="pricing-grid" style="display:none">
-      <div class="pricing-card reveal">
-        <div class="pricing-plan">Local SEO</div>
-        <div class="pricing-val">114K</div>
-        <div class="pricing-period">Search Impressions</div>
-        <div class="pricing-desc">Diamond Bar Dental — California | 9,640 clicks | 8.4% CTR</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">Technical + on-page SEO built</div>
-          <div class="pricing-feat">Ranked 25K+ monthly volume kws</div>
-          <div class="pricing-feat">8.4% average CTR achieved</div>
-          <div class="pricing-feat">3-month engagement</div>
-        </div>
-        <a href="#contact" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Get Similar Results</a>
-      </div>
-      <div class="pricing-card featured reveal">
-        <div class="pricing-badge">★ Best CTR</div>
-        <div class="pricing-plan">International SEO</div>
-        <div class="pricing-val">13.5%</div>
-        <div class="pricing-period">Average Click-Through Rate</div>
-        <div class="pricing-desc">Melbourne Chauffeur Service — 6,990 clicks | 51.6K impressions</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">Local SEO + GBP optimisation</div>
-          <div class="pricing-feat">Airport transfer keyword dominance</div>
-          <div class="pricing-feat">#1–3 SERP position achieved</div>
-          <div class="pricing-feat">High-intent booking keywords</div>
-        </div>
-        <a href="#contact" class="btn btn-primary btn-sm" style="width:100%;justify-content:center">Build This With Us</a>
-      </div>
-      <div class="pricing-card reveal">
-        <div class="pricing-plan">Long-term SEO</div>
-        <div class="pricing-val">136K</div>
-        <div class="pricing-period">Organic Impressions</div>
-        <div class="pricing-desc">Fujiyama Electric Vehicles — 4,410 clicks | 3.2% CTR | 6 months</div>
-        <div class="pricing-features">
-          <div class="pricing-feat">EV keyword architecture built</div>
-          <div class="pricing-feat">Buying-intent keyword targeting</div>
-          <div class="pricing-feat">6-month compounding strategy</div>
-          <div class="pricing-feat">Technical SEO foundation</div>
-        </div>
-        <a href="#contact" class="btn btn-outline btn-sm" style="width:100%;justify-content:center">Get Similar Results</a>
+      <div class="cta-actions reveal-right">
+        <a href="contact.html" class="btn btn-orange">Request a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="The_Growth_Union.pdf" download style="font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:.4rem;justify-content:flex-end;transition:.25s" onmouseover="this.style.color='var(--orange)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">↓ Download Our Profile</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ FAQ ══════════════════════════════════════════════════ -->
-<section class="section faq" id="faq">
+<!-- ═══ INSIGHTS ════════════════════════════════════════════════════ -->
+<section class="section insights" id="insights">
   <div class="container">
-    <div class="text-center reveal" style="margin-bottom:0">
-      <div class="tag">Question Answer!</div>
-      <h2 class="section-title">What founders typically ask</h2>
-      <p class="section-desc">We help entrepreneurs and growing businesses overcome challenges and unlock structured growth.</p>
+    <div class="text-center reveal" style="margin-bottom:3.5rem">
+      <div class="section-tag">Growth Insights</div>
+      <h2 class="section-title">Growth Thinking.<br/>No Fluff.</h2>
+      <p class="section-desc">Strategic perspectives on marketing, growth systems, and building businesses that last.</p>
     </div>
-    <div class="faq-grid">
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">What makes TGU different from an agency? <span class="faq-icon">+</span></button>
-          <div class="faq-a">An agency executes tasks. A consultant gives advice. We do both — with full ownership of outcomes. Every engagement is a connected growth system, not a collection of services delivered in isolation.</div>
+    <div class="row col-3" style="align-items:stretch">
+      <div class="insight-card reveal">
+        <div class="insight-img">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="GTM Strategy"/>
+          <div class="insight-cat">GTM Strategy</div>
         </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">How long before we see results? <span class="faq-icon">+</span></button>
-          <div class="faq-a">Paid acquisition can show results in 2–4 weeks. SEO typically takes 3–6 months to compound. Social media communities take 6–12 months to build real engagement. We set clear timelines at the start — and we don't overpromise.</div>
+        <div class="insight-body">
+          <div class="insight-meta">Jan 2025 · Neeraj Grover</div>
+          <h3>Why Most GTM Strategies Fail Before They Even Launch</h3>
+          <p>A launch plan is a calendar. A GTM strategy is a system. Most businesses confuse the two — and pay the price.</p>
         </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">Do you work with businesses outside Delhi NCR? <span class="faq-icon">+</span></button>
-          <div class="faq-a">Yes — we've delivered results in Melbourne (Australia), California (USA), Singapore, and across India. While our primary markets are Delhi NCR and Panipat, geography is never a constraint for structured growth work.</div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">What is the minimum engagement term? <span class="faq-icon">+</span></button>
-          <div class="faq-a">Retainer engagements have a minimum 3-month commitment. Real growth requires time to compound. We don't take on projects where the timeline is too short to deliver meaningful outcomes.</div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">What industries do you work with? <span class="faq-icon">+</span></button>
-          <div class="faq-a">Real estate, electronics, healthcare, EdTech, FMCG, EV/automotive, fashion, transport, finance, Web3, sports, and hospitality — across 15+ industries. If your business has a growth challenge, we've likely solved something similar.</div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">How do we get started? <span class="faq-icon">+</span></button>
-          <div class="faq-a">The first step is a 30-minute strategy call — no pitch, no sales deck. We listen to where you are and where you want to be. Fill in the form on this page or WhatsApp us at +91 95186-04324.</div>
+        <div class="insight-footer">
+          <span class="insight-author">by Neeraj Grover</span>
+          <a href="insights.html" class="insight-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
-      <div>
-        <div class="faq-side reveal">
-          <div class="faq-side-img">📩</div>
-          <h3>If you need any further information</h3>
-          <p>We respond to all enquiries within one business day. Reach out directly and let's talk.</p>
-          <a href="mailto:Hello@thegrowthunion.com" class="btn btn-white btn-sm" style="margin-bottom:.75rem;width:100%;justify-content:center">Contact Us →</a>
-          <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.75rem">📞 +91 95186-04324<br/>✉ Hello@thegrowthunion.com<br/>📍 A-43, Malviya Nagar, New Delhi</div>
+      <div class="insight-card reveal">
+        <div class="insight-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Performance Marketing"/>
+          <div class="insight-cat">Performance Marketing</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-meta">Feb 2025 · Neeraj Grover</div>
+          <h3>The Real Reason Your Ads Aren't Converting</h3>
+          <p>Acquisition before strategy is burning money. When you don't know your ICP — no ad budget will fix it.</p>
+        </div>
+        <div class="insight-footer">
+          <span class="insight-author">by Neeraj Grover</span>
+          <a href="insights.html" class="insight-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
+      <div class="insight-card reveal">
+        <div class="insight-img">
+          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" alt="Brand Strategy"/>
+          <div class="insight-cat">Brand Strategy</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-meta">Mar 2025 · Neeraj Grover</div>
+          <h3>Your Business Doesn't Have a Marketing Problem</h3>
+          <p>Most founders spend years switching agencies without fixing the actual issue — the structure underneath.</p>
+        </div>
+        <div class="insight-footer">
+          <span class="insight-author">by Neeraj Grover</span>
+          <a href="insights.html" class="insight-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem">
+      <a href="insights.html" class="btn btn-outline-dark">View All Insights <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ════ BLOG / INSIGHTS ═══════════════════════════════════════ -->
-<section class="section blog" id="blog">
+<!-- ═══ CONTACT FORM ════════════════════════════════════════════════ -->
+<section class="section contact-section" id="contact">
   <div class="container">
-    <div class="text-center reveal">
-      <div class="tag">Latest Stories</div>
-      <h2 class="section-title">Growth Thinking. No Fluff.</h2>
-      <p class="section-desc">Strategic perspectives on growth, marketing, and building businesses that last — from the desk of Neeraj Grover.</p>
-    </div>
-    <div class="blog-grid">
-      <div class="blog-card reveal">
-        <div class="blog-img">
-          <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=600&q=80" alt="Blog post 1" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0"/>
-          <span class="blog-cat">GTM Strategy</span>
-        </div>
-        <div class="blog-body">
-          <div class="blog-meta">
-            <div class="blog-date">Jan 2025</div>
+    <div class="row col-2" style="gap:5rem;align-items:start">
+      <div class="reveal-left">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Let's Build Something Together.</h2>
+        <p style="margin-bottom:2.5rem">Fill in the form and Neeraj will personally respond within one business day.</p>
+        <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)" class="contact-form">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
+          <input type="hidden" name="subject" value="New Quote Request — The Growth Union"/>
+          <input type="checkbox" name="botcheck" style="display:none"/>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input name="first_name" type="text" required placeholder="Your first name"/>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input name="last_name" type="text" placeholder="Your last name"/>
+            </div>
           </div>
-          <h3><a href="#">Why Most GTM Strategies Fail Before They Even Launch</a></h3>
-          <p>A launch plan is a calendar. A GTM strategy is a system. Most businesses confuse the two — and pay the price in wasted budget.</p>
-        </div>
-        <div class="blog-footer">
-          <span class="blog-author">by Neeraj Grover</span>
-          <a href="#" class="blog-link">Read More →</a>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input name="email" type="email" required placeholder="you@company.com"/>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp *</label>
+              <input name="phone" type="tel" required placeholder="+91 98765 43210"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Required</label>
+            <select name="service">
+              <option value="">Select a service...</option>
+              <option>Strategy &amp; Positioning</option>
+              <option>Performance Marketing</option>
+              <option>SEO / Organic Growth</option>
+              <option>Website Development</option>
+              <option>Social Media Management</option>
+              <option>Full Growth System</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell us about your business *</label>
+            <textarea name="message" rows="4" required placeholder="Brief description of your business and growth challenge..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            Send Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          </button>
+        </form>
+        <div class="success-msg" id="successMsg">
+          <div style="font-size:3rem;margin-bottom:1rem">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Neeraj will personally review your request and respond within one business day.</p>
         </div>
       </div>
-      <div class="blog-card reveal">
-        <div class="blog-img">
-          <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=600&q=80" alt="Blog post 2" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0"/>
-          <span class="blog-cat">Performance Marketing</span>
-        </div>
-        <div class="blog-body">
-          <div class="blog-meta">
-            <div class="blog-date">Feb 2025</div>
+      <div class="reveal-right">
+        <div class="contact-info">
+          <div class="ci-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+            <div>
+              <div class="ci-label">Phone / WhatsApp</div>
+              <div class="ci-val">+91 95186-04324</div>
+            </div>
           </div>
-          <h3><a href="#">The Real Reason Your Ads Aren't Converting</a></h3>
-          <p>Acquisition before strategy is burning money. When you don't know your ICP and positioning — no ad budget will fix it.</p>
-        </div>
-        <div class="blog-footer">
-          <span class="blog-author">by Neeraj Grover</span>
-          <a href="#" class="blog-link">Read More →</a>
-        </div>
-      </div>
-      <div class="blog-card reveal">
-        <div class="blog-img">
-          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" alt="Blog post 3" style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0"/>
-          <span class="blog-cat">Brand Strategy</span>
-        </div>
-        <div class="blog-body">
-          <div class="blog-meta">
-            <div class="blog-date">Mar 2025</div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-val">Neeraj@thegrowthunion.com</div>
+            </div>
           </div>
-          <h3><a href="#">Your Business Doesn't Have a Marketing Problem</a></h3>
-          <p>Most founders spend years switching agencies without fixing the actual issue — the structure underneath the marketing.</p>
+          <div class="ci-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <div class="ci-label">Office</div>
+              <div class="ci-val">A-43, Malviya Nagar, New Delhi — 110017</div>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 2H3v16h5l3 4 3-4h7V2z"/></svg></div>
+            <div>
+              <div class="ci-label">Response Time</div>
+              <div class="ci-val">Within 1 Business Day</div>
+            </div>
+          </div>
         </div>
-        <div class="blog-footer">
-          <span class="blog-author">by Neeraj Grover</span>
-          <a href="#" class="blog-link">Read More →</a>
+        <div style="background:var(--dark);border-radius:var(--r2);padding:2rem;margin-top:1.5rem;border-left:4px solid var(--orange)">
+          <h4 style="color:var(--white);font-size:1rem;margin-bottom:1rem;font-family:var(--font-head);text-transform:uppercase;letter-spacing:.05em">After You Submit</h4>
+          <div style="display:flex;flex-direction:column;gap:.75rem">
+            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">1</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">Neeraj reviews personally within 1 business day</span></div>
+            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">2</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">You get a WhatsApp or email for a strategy call</span></div>
+            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">3</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">30-min call — no pitch, just honest strategy conversation</span></div>
+            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">4</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">Tailored proposal within 48 hours if there's a fit</span></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ FOOTER CTA ═══════════════════════════════════════════ -->
-<section class="footer-cta">
-  <div class="container">
-    <div class="footer-cta-inner reveal">
-      <div>
-        <h2>Start Your Business and Achieve Goals</h2>
-        <h2 style="color:var(--primary);font-size:clamp(1.6rem,3vw,2.6rem)">Grow Your Business!</h2>
-        <p>We are a strategy-led growth consultancy that digitally works to help companies grow — with a proven track record across 15+ industries worldwide.</p>
-        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem">Request a Quote →</a>
-      </div>
-      <div class="footer-cta-links">
-        <div style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:.5rem">Quick Links</div>
-        <a href="team.html" class="footer-cta-link">Expert Team</a>
-        <a href="services.html" class="footer-cta-link">Our Services</a>
-        <a href="about.html" class="footer-cta-link">Our Approach</a>
-        <a href="contact.html" class="footer-cta-link">Promote Your Business</a>
-        <a href="contact.html" class="footer-cta-link">Contact Us</a>
-        <a href="insights.html" class="footer-cta-link">Growth Insights</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ FOOTER ═══════════════════════════════════════════════ -->
+<!-- ═══ FOOTER ══════════════════════════════════════════════════════ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand-name">The Growth Union</div>
-        <p>Strategy-led growth consultancy bridging the gap between thinking and doing — for founders who are serious about structured, long-term growth.</p>
+        <div class="footer-logo"><img src="logo.png" alt="The Growth Union" style="height:44px;width:auto;filter:brightness(0) invert(1)"/></div>
+        <p class="footer-about">Strategy-led growth consultancy bridging the gap between thinking and doing — for founders serious about structured, long-term growth.</p>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/thegrowth.union" target="_blank" class="footer-social" title="Instagram">ig</a>
-          <a href="https://www.linkedin.com/company/thegrowthunion" target="_blank" class="footer-social" title="LinkedIn">in</a>
-          <a href="https://wa.me/919518604324" target="_blank" class="footer-social" title="WhatsApp">wa</a>
+          <a href="https://www.instagram.com/thegrowth.union" target="_blank" class="footer-soc" title="Instagram">ig</a>
+          <a href="https://www.linkedin.com/company/thegrowthunion" target="_blank" class="footer-soc" title="LinkedIn">in</a>
+          <a href="https://wa.me/919518604324" target="_blank" class="footer-soc" title="WhatsApp">wa</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Expert Team</h4>
+        <h4>Company</h4>
         <ul>
-          <li><a href="#team">Neeraj Grover</a></li>
-          <li><a href="#team">Our Specialists</a></li>
-          <li><a href="#about">About TGU</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Content Marketing</h4>
-        <ul>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#process">Our Approach</a></li>
+          <li><a href="about.html">About TGU</a></li>
+          <li><a href="team.html">Our Team</a></li>
           <li><a href="insights.html">Insights</a></li>
           <li><a href="The_Growth_Union.pdf" download>Download Profile</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact Us</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="mailto:Hello@thegrowthunion.com">Hello@thegrowthunion.com</a></li>
+          <li><a href="services.html">Strategy &amp; Positioning</a></li>
+          <li><a href="services.html">Acquisition Systems</a></li>
+          <li><a href="services.html">Digital Infrastructure</a></li>
+          <li><a href="services.html">Revenue &amp; Scale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:Neeraj@thegrowthunion.com">Neeraj@thegrowthunion.com</a></li>
           <li><a href="tel:+919518604324">+91 95186-04324</a></li>
           <li><a href="#">A-43, Malviya Nagar, Delhi</a></li>
-          <li><a href="https://www.linkedin.com/in/neerajgrover007" target="_blank">LinkedIn Profile</a></li>
+          <li><a href="contact.html">Request a Quote</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 The Growth Union. All Rights Reserved.</p>
-      <div class="footer-bottom-links">
-        <a href="#">Licence</a>
-        <a href="#">Terms &amp; Conditions</a>
+      <p class="footer-copy">© 2025 The Growth Union. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- ════ FLOATING BUTTONS ══════════════════════════════════════ -->
+<!-- ═══ FLOATS ══════════════════════════════════════════════════════ -->
 <a href="https://wa.me/919518604324" target="_blank" class="wa-float" title="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
 
-<!-- ════ SCRIPTS ═══════════════════════════════════════════════ -->
+<!-- ═══ JS ═══════════════════════════════════════════════════════════ -->
 <script>
-/* Navbar scroll */
-const navbar = document.getElementById('navbar');
+/* Nav scroll */
+const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('shadow', window.scrollY > 60);
+  nav.classList.toggle('scrolled', window.scrollY > 80);
   document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
 });
 
 /* Mobile menu */
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
+function toggleMob() {
+  document.getElementById('mobMenu').classList.toggle('open');
 }
 
-/* FAQ accordion */
+/* FAQ */
 function toggleFaq(btn) {
   const a = btn.nextElementSibling;
   const open = btn.classList.contains('open');
   document.querySelectorAll('.faq-q.open').forEach(q => {
     q.classList.remove('open');
-    q.nextElementSibling.classList.remove('open');
+    q.nextElementSibling.style.display = 'none';
   });
-  if (!open) { btn.classList.add('open'); a.classList.add('open'); }
+  if (!open) { btn.classList.add('open'); a.style.display = 'block'; }
 }
 
-/* Pricing tabs */
-function switchTab(btn, id) {
-  document.querySelectorAll('.pricing-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  ['r1','r2','r3'].forEach(r => {
-    document.getElementById(r).style.display = r === id ? 'grid' : 'none';
-  });
+/* Form submit */
+async function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST', body: new FormData(e.target)
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('quoteForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    } else throw new Error();
+  } catch {
+    btn.textContent = 'Send Request'; btn.disabled = false;
+    alert('Please email us directly: Neeraj@thegrowthunion.com or WhatsApp +91 95186-04324');
+  }
 }
 
 /* Scroll reveal */
-const observer = new IntersectionObserver(entries => {
+const obs = new IntersectionObserver(entries => {
   entries.forEach((e, i) => {
     if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 70);
-      observer.unobserve(e.target);
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      obs.unobserve(e.target);
     }
   });
 }, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => obs.observe(el));
 
-/* Smooth scroll for anchor links */
+/* Smooth anchor scroll */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
 </script>
