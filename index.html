@@ -4,1066 +4,744 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>The Growth Union — Where Strategy Meets Execution</title>
-<meta name="description" content="The Growth Union is a strategy-led growth consultancy. Not a consultant. Not an agency. A growth partner."/>
+<meta name="description" content="Not a consultant. Not an agency. A growth partner — building structured growth systems for founders in Gurgaon, Delhi NCR."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-/* ═══════════════════════════════════════════════════════════════
-   INCONSL / ICONSL EXACT PALETTE
-   ═══════════════════════════════════════════════════════════════ */
 :root{
-  --black:     #0a0d17;   /* deepest bg */
-  --dark:      #0e1220;   /* section dark bg */
-  --dark2:     #141829;   /* cards on dark */
-  --dark3:     #1c2236;   /* borders on dark */
-  --orange:    #f47c20;   /* PRIMARY accent */
-  --orange-dk: #d96b10;   /* hover */
-  --orange-lt: #fff3e8;   /* light tint */
-  --white:     #ffffff;
-  --off:       #f8f9fc;   /* light section bg */
-  --light:     #f2f4f8;
-  --border:    #e8eaef;
-  --text:      #5a6275;   /* body on light */
-  --heading:   #0e1220;
-  --muted:     rgba(255,255,255,.5);
-  --muted2:    rgba(255,255,255,.25);
-
-  --font-head: 'Barlow Condensed', sans-serif;
-  --font-body: 'Barlow', sans-serif;
-  --r: 4px;
-  --r2: 8px;
-  --shadow: 0 8px 40px rgba(10,13,23,.18);
-  --shadow-sm: 0 4px 16px rgba(10,13,23,.1);
-  --t: .3s ease;
+  --or:#f4732b;--or-dk:#d95e18;--or-lt:#fff4ee;
+  --blk:#0d0d0d;--h:#1a1a1a;--body:#5a6070;
+  --muted:#8a919e;--border:#e8eaed;--bg:#f8f9fa;
+  --white:#fff;
+  --fh:'Fraunces',Georgia,serif;
+  --fb:'DM Sans',sans-serif;
+  --r:6px;--r2:14px;
+  --sh:0 4px 24px rgba(0,0,0,.07);
+  --sh2:0 14px 48px rgba(0,0,0,.12);
+  --t:.3s ease;
 }
-
-/* ── RESET ─────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--text);background:var(--white);overflow-x:hidden;line-height:1.7}
+body{font-family:var(--fb);color:var(--body);background:var(--white);overflow-x:hidden;line-height:1.7}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
-h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.1;color:var(--heading);text-transform:uppercase;letter-spacing:.02em}
-h1{font-size:clamp(3rem,6vw,5.5rem);font-weight:800}
-h2{font-size:clamp(2.2rem,4vw,3.6rem)}
-h3{font-size:clamp(1.3rem,2vw,1.8rem)}
-h4{font-size:1.1rem}
-p{font-size:1rem;line-height:1.75}
+h1,h2,h3,h4{font-family:var(--fh);color:var(--h);line-height:1.15;font-weight:700}
+h1{font-size:clamp(2.6rem,5.5vw,4.2rem)}
+h2{font-size:clamp(1.9rem,3.8vw,3rem)}
+h3{font-size:clamp(1.15rem,2vw,1.45rem)}
+p{font-size:.97rem;line-height:1.78}
+.container{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+.sec{padding:96px 0}
+.sec-sm{padding:64px 0}
 
-/* ── LAYOUT ──────────────────────────────────────────────────────── */
-.container{max-width:1200px;margin:0 auto;padding:0 2rem}
-.section{padding:100px 0}
-.section-sm{padding:60px 0}
-.row{display:grid;align-items:center;gap:4rem}
-.col-2{grid-template-columns:1fr 1fr}
-.col-3{grid-template-columns:repeat(3,1fr)}
-.col-4{grid-template-columns:repeat(4,1fr)}
+/* Label */
+.lbl{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--or);margin-bottom:12px}
+.lbl::before{content:'';width:24px;height:2px;background:var(--or)}
+.tc .lbl{justify-content:center}.tc .lbl::before{display:none}.tc .lbl::after{content:'';width:24px;height:2px;background:var(--or)}
+.tc{text-align:center}
+.divider{width:48px;height:3px;background:var(--or);border-radius:2px;margin:14px 0}
+.divider-c{margin:14px auto}
 
-/* ── TYPOGRAPHY HELPERS ─────────────────────────────────────────── */
-.section-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem}
-.section-tag::before{content:'';width:28px;height:2px;background:var(--orange)}
-.section-tag-white{color:var(--white)}
-.section-tag-white::before{background:var(--white)}
-.section-title{margin-bottom:1.25rem}
-.section-desc{max-width:580px;font-size:1.05rem}
-.text-center{text-align:center}
-.text-center .section-tag{justify-content:center}
-.text-center .section-desc{margin:0 auto}
-.text-white h2,.text-white h3,.text-white h4{color:var(--white)}
-.text-white p{color:var(--muted)}
-.text-white .section-tag{color:var(--orange)}
-em-orange{color:var(--orange);font-style:normal}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:.82rem;font-weight:600;padding:13px 28px;border-radius:50px;transition:var(--t);cursor:pointer;border:2px solid transparent;white-space:nowrap}
+.btn svg{width:15px;height:15px;transition:transform var(--t);flex-shrink:0}
+.btn:hover svg{transform:translateX(3px)}
+.btn-or{background:var(--or);color:var(--white);border-color:var(--or)}
+.btn-or:hover{background:var(--or-dk);box-shadow:0 8px 28px rgba(244,115,43,.38);transform:translateY(-2px)}
+.btn-out{background:transparent;color:var(--h);border-color:rgba(26,26,26,.2)}
+.btn-out:hover{border-color:var(--or);color:var(--or)}
+.btn-out-w{background:transparent;color:var(--white);border-color:rgba(255,255,255,.4)}
+.btn-out-w:hover{background:var(--or);border-color:var(--or)}
+.btn-sm{padding:10px 22px;font-size:.78rem}
 
-/* ── BUTTONS ─────────────────────────────────────────────────────── */
-.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-head);font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.9rem 2.2rem;border-radius:var(--r);border:2px solid transparent;transition:var(--t);cursor:pointer;white-space:nowrap}
-.btn svg{width:16px;height:16px;flex-shrink:0;transition:transform var(--t)}
-.btn:hover svg{transform:translateX(4px)}
-.btn-orange{background:var(--orange);color:var(--white);border-color:var(--orange)}
-.btn-orange:hover{background:var(--orange-dk);border-color:var(--orange-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(244,124,32,.35)}
-.btn-outline-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.4)}
-.btn-outline-white:hover{background:var(--orange);border-color:var(--orange);color:var(--white)}
-.btn-outline-dark{background:transparent;color:var(--heading);border-color:var(--heading)}
-.btn-outline-dark:hover{background:var(--orange);border-color:var(--orange);color:var(--white)}
-.btn-sm{padding:.65rem 1.6rem;font-size:.76rem}
-
-/* ── NAV ─────────────────────────────────────────────────────────── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,13,23,.0);transition:background .4s,box-shadow .4s,padding .3s}
-.nav.scrolled{background:var(--black);box-shadow:0 2px 24px rgba(0,0,0,.4)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px;max-width:1200px;margin:0 auto;padding:0 2rem}
-.nav-logo img{height:48px;width:auto;display:block}
-.nav-links{display:flex;align-items:center;gap:2.5rem}
-.nav-links a{font-family:var(--font-head);font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--white);transition:color var(--t);position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--orange);transition:width var(--t)}
-.nav-links a:hover{color:var(--orange)}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.nav-links a.active{color:var(--orange)}
-.nav-cta{font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:var(--white);padding:.75rem 1.75rem;border-radius:var(--r);transition:var(--t)}
-.nav-cta:hover{background:var(--orange-dk);transform:translateY(-1px)}
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+.nav.lifted{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-logo img{height:44px;width:auto}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{font-family:var(--fb);font-size:.8rem;font-weight:500;color:var(--body);padding:7px 14px;border-radius:50px;transition:var(--t)}
+.nav-links a:hover,.nav-links a.active{color:var(--or);background:var(--or-lt)}
+.nav-right{display:flex;align-items:center;gap:10px}
 .nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
-.nav-ham span{display:block;width:24px;height:2px;background:var(--white);transition:.3s}
+.nav-ham span{display:block;width:22px;height:2px;background:var(--h);border-radius:2px;transition:.3s}
+.mob-nav{position:fixed;inset:0;background:var(--white);z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:.3s}
+.mob-nav.open{opacity:1;pointer-events:all}
+.mob-nav a{font-family:var(--fh);font-size:2rem;font-weight:700;color:var(--h)}
+.mob-nav a:hover{color:var(--or)}
+.mob-close{position:absolute;top:1.5rem;right:1.5rem;font-size:1.6rem;cursor:pointer;border:none;background:none;color:var(--h)}
 
-/* ── MOBILE MENU ──────────────────────────────────────────────────── */
-.mob-menu{position:fixed;inset:0;background:var(--black);z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;opacity:0;pointer-events:none;transition:.3s}
-.mob-menu.open{opacity:1;pointer-events:all}
-.mob-menu a{font-family:var(--font-head);font-size:2rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--white)}
-.mob-menu a:hover{color:var(--orange)}
-.mob-close{position:absolute;top:1.5rem;right:1.5rem;font-size:1.75rem;color:var(--white);border:none;background:none;cursor:pointer}
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--blk);display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 0 80px}
+.hero-img-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;opacity:.18}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(13,13,13,.95) 40%,rgba(13,13,13,.6) 100%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,115,43,.15);border:1px solid rgba(244,115,43,.3);color:#fdba74;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:20px}
+.hero-badge::before{content:'';width:7px;height:7px;background:var(--or);border-radius:50%}
+.hero h1{color:var(--white);margin-bottom:16px;font-size:clamp(2.6rem,5vw,4rem)}
+.hero h1 span{color:var(--or);font-style:italic}
+.hero-sub{color:rgba(255,255,255,.58);font-size:1.05rem;max-width:480px;margin-bottom:32px;line-height:1.8}
+.hero-btns{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-proof{display:flex;align-items:center;gap:14px}
+.hero-avatars{display:flex}
+.hero-avatars span{width:38px;height:38px;border-radius:50%;background:var(--or);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:.75rem;color:var(--white);margin-right:-10px;flex-shrink:0}
+.hero-avatars span:nth-child(2){background:#7c3aed}
+.hero-avatars span:nth-child(3){background:#0891b2}
+.hero-proof-txt{font-size:.83rem;color:rgba(255,255,255,.5);line-height:1.45;margin-left:18px}
+.hero-proof-txt strong{display:block;color:var(--white);font-size:.9rem}
+/* Hero form card */
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:36px}
+.hero-card-title{font-family:var(--fh);font-size:1.5rem;color:var(--white);margin-bottom:4px}
+.hero-card-sub{font-size:.83rem;color:rgba(255,255,255,.4);margin-bottom:28px}
+.hf-row{margin-bottom:16px}
+.hf-row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hf-lbl{display:block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.hf-inp{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);font-family:var(--fb);font-size:.92rem;padding:11px 14px;border-radius:var(--r);outline:none;transition:border-color .25s}
+.hf-inp::placeholder{color:rgba(255,255,255,.22)}
+.hf-inp:focus{border-color:rgba(244,115,43,.7)}
+.hf-select{appearance:none;cursor:pointer}
+.hf-btn{width:100%;background:var(--or);color:var(--white);font-family:var(--fb);font-size:.85rem;font-weight:600;padding:14px;border:none;border-radius:50px;cursor:pointer;transition:var(--t);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px}
+.hf-btn:hover{background:var(--or-dk);transform:translateY(-1px)}
+.hero-stars{display:flex;align-items:center;gap:10px;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}
+.hs-stars{color:var(--or);font-size:.9rem;letter-spacing:2px}
+.hs-txt{font-size:.78rem;color:rgba(255,255,255,.38)}
 
-/* ═══ HERO ════════════════════════════════════════════════════════ */
-.hero{min-height:100vh;background:var(--black);position:relative;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;opacity:.12}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,13,23,.97) 45%,rgba(10,13,23,.75) 100%)}
-.hero-content{position:relative;z-index:2;padding:140px 0 100px}
-.hero-pretitle{display:flex;align-items:center;gap:.75rem;font-family:var(--font-head);font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:1.5rem}
-.hero-pretitle::before{content:'';width:32px;height:2px;background:var(--orange)}
-.hero h1{color:var(--white);margin-bottom:1.5rem;max-width:800px}
-.hero h1 span{color:var(--orange)}
-.hero-sub{color:var(--muted);font-size:1.1rem;max-width:520px;margin-bottom:2.5rem;line-height:1.8}
-.hero-btns{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:3.5rem}
-.hero-stats{display:flex;align-items:center;gap:3rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
-.hero-stat-num{font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--orange);line-height:1;display:flex;align-items:flex-end;gap:2px}
-.hero-stat-num sup{font-size:1.2rem;margin-bottom:.3rem}
-.hero-stat-label{font-size:.82rem;color:var(--muted);margin-top:.3rem;letter-spacing:.05em}
-.hero-img-col{position:relative;z-index:2}
-.hero-img-wrap{position:relative}
-.hero-img-main{width:100%;height:580px;object-fit:cover;object-position:top;border-radius:var(--r2)}
-.hero-img-badge{position:absolute;bottom:2rem;left:-2rem;background:var(--orange);padding:1.5rem 2rem;border-radius:var(--r2)}
-.hero-img-badge-num{font-family:var(--font-head);font-size:2.4rem;font-weight:800;color:var(--white);line-height:1}
-.hero-img-badge-txt{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.1em;margin-top:.25rem}
-.hero-deco{position:absolute;top:2rem;right:-1rem;width:4px;height:120px;background:var(--orange)}
-
-/* ═══ MARQUEE ════════════════════════════════════════════════════ */
-.marquee-strip{background:var(--orange);padding:1.25rem 0;overflow:hidden}
-.marquee-track{display:flex;gap:0;animation:marquee 28s linear infinite;width:max-content}
-.marquee-item{display:flex;align-items:center;gap:2rem;padding:0 2.5rem;font-family:var(--font-head);font-size:.88rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--white);white-space:nowrap;flex-shrink:0}
-.marquee-item::after{content:'◆';opacity:.5;font-size:.5rem}
+/* ── MARQUEE ── */
+.marquee-wrap{background:var(--blk);padding:18px 0;overflow:hidden}
+.marquee-track{display:flex;animation:marquee 28s linear infinite;width:max-content}
+.marquee-item{display:flex;align-items:center;gap:18px;padding:0 28px;font-family:var(--fh);font-size:.83rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);white-space:nowrap;flex-shrink:0}
+.marquee-item::after{content:'◆';color:var(--or);font-size:.45rem;opacity:.7}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ═══ ABOUT ══════════════════════════════════════════════════════ */
+/* ── ABOUT ── */
 .about{background:var(--white)}
-.about-img-wrap{position:relative}
-.about-img{width:100%;height:560px;object-fit:cover;border-radius:var(--r2)}
-.about-exp{position:absolute;bottom:-2rem;right:-2rem;background:var(--orange);padding:2rem 2.25rem;border-radius:var(--r2);text-align:center;box-shadow:var(--shadow)}
-.about-exp-num{font-family:var(--font-head);font-size:4rem;font-weight:800;color:var(--white);line-height:1}
-.about-exp-txt{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.8);margin-top:.25rem}
-.about-checks{display:flex;flex-direction:column;gap:.75rem;margin:1.75rem 0}
-.about-check{display:flex;align-items:center;gap:.75rem;font-weight:600;color:var(--heading);font-family:var(--font-head);font-size:.9rem;letter-spacing:.03em;text-transform:uppercase}
-.about-check::before{content:'';width:20px;height:20px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:12px;background-repeat:no-repeat;background-position:center;background-color:var(--orange)}
-.about-quote{background:var(--dark);border-left:4px solid var(--orange);padding:1.5rem 2rem;border-radius:0 var(--r) var(--r) 0;margin:2rem 0}
-.about-quote p{color:rgba(255,255,255,.75);font-style:italic;font-size:1.05rem}
-.about-quote cite{font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);display:block;margin-top:.5rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about-imgs{position:relative;padding-bottom:56px;padding-right:36px}
+.about-img1{width:100%;height:380px;object-fit:cover;border-radius:var(--r2);box-shadow:var(--sh2)}
+.about-img2{position:absolute;bottom:0;right:0;width:55%;height:220px;object-fit:cover;border-radius:var(--r2);border:5px solid var(--white);box-shadow:var(--sh2)}
+.about-badge{position:absolute;bottom:28px;left:14px;background:var(--or);color:var(--white);padding:18px 22px;border-radius:var(--r2);text-align:center}
+.ab-num{font-family:var(--fh);font-size:2.8rem;font-weight:900;line-height:1}
+.ab-txt{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;opacity:.85;margin-top:4px}
+.about-content .lbl{justify-content:flex-start}
+.about-content h2{margin-bottom:14px}
+.about-content p{margin-bottom:14px}
+.about-checks{display:flex;flex-direction:column;gap:10px;margin:22px 0}
+.about-ck{display:flex;align-items:center;gap:12px;font-family:var(--fb);font-size:.88rem;font-weight:500;color:var(--h)}
+.ck-dot{width:22px;height:22px;background:var(--or);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ck-dot::after{content:'✓';color:#fff;font-size:.62rem;font-weight:700}
+.about-quote{border-left:3px solid var(--or);padding:12px 18px;background:var(--or-lt);border-radius:0 var(--r) var(--r) 0;margin:22px 0;font-family:var(--fh);font-style:italic;font-size:1rem;color:var(--h)}
 
-/* ═══ SERVICES ════════════════════════════════════════════════════ */
-.services{background:var(--off)}
-.service-card{background:var(--white);border-radius:var(--r2);padding:2.5rem;border:1px solid var(--border);transition:var(--t);position:relative;overflow:hidden}
-.service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--orange);transition:width .4s ease}
-.service-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:transparent}
-.service-card:hover::before{width:100%}
-.service-num{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem}
-.service-icon{width:60px;height:60px;background:var(--orange-lt);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;transition:background var(--t)}
-.service-icon svg{width:28px;height:28px;stroke:var(--orange);fill:none;stroke-width:1.6;transition:stroke var(--t)}
-.service-card:hover .service-icon{background:var(--orange)}
-.service-card:hover .service-icon svg{stroke:var(--white)}
-.service-card h3{font-size:1.3rem;margin-bottom:.75rem;transition:color var(--t)}
-.service-card:hover h3{color:var(--orange)}
-.service-card p{font-size:.92rem}
-.service-link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-head);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-top:1.25rem;transition:gap var(--t)}
-.service-link:hover{gap:.8rem}
-.service-link svg{width:14px;height:14px}
+/* ── SERVICES ── */
+.services{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+.svc-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r2);padding:30px 26px;position:relative;overflow:hidden;transition:var(--t)}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--or);transform:scaleX(0);transition:transform .4s}
+.svc-card:hover{box-shadow:var(--sh2);transform:translateY(-5px);border-color:transparent}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-card:hover .svc-icon{background:var(--or)}
+.svc-card:hover .svc-icon svg{stroke:var(--white)}
+.svc-num{font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px}
+.svc-icon{width:54px;height:54px;background:var(--or-lt);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:var(--t)}
+.svc-icon svg{width:26px;height:26px;stroke:var(--or);fill:none;stroke-width:1.7;transition:stroke var(--t)}
+.svc-card h3{font-size:1.15rem;margin-bottom:10px;transition:color var(--t)}
+.svc-card:hover h3{color:var(--or)}
+.svc-card p{font-size:.87rem;color:var(--body)}
+.svc-link{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--or);margin-top:16px;transition:gap var(--t)}
+.svc-link:hover{gap:9px}
 
-/* ═══ PROCESS (DARK) ══════════════════════════════════════════════ */
-.process{background:var(--dark)}
-.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
-.process-grid::before{content:'';position:absolute;top:52px;left:10%;right:10%;height:2px;background:rgba(255,255,255,.08);z-index:0}
-.process-step{text-align:center;padding:0 1rem;position:relative;z-index:1}
-.process-num{width:52px;height:52px;background:var(--dark3);border:2px solid rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:var(--font-head);font-size:1rem;font-weight:800;color:var(--orange);transition:var(--t)}
-.process-step:hover .process-num{background:var(--orange);border-color:var(--orange);color:var(--white)}
-.process-step h4{font-family:var(--font-head);font-size:1rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--white);margin-bottom:.5rem}
-.process-step p{font-size:.83rem;color:rgba(255,255,255,.45);line-height:1.6}
-.process-step:nth-child(2) .process-num,
-.process-step:nth-child(4) .process-num{background:var(--orange);border-color:var(--orange);color:var(--white)}
-
-/* ═══ WHY US ══════════════════════════════════════════════════════ */
-.why{background:var(--white)}
-.why-img{position:relative}
-.why-img-main{width:100%;height:520px;object-fit:cover;border-radius:var(--r2)}
-.why-img-over{position:absolute;bottom:2rem;right:-2rem;background:var(--dark);padding:2rem;border-radius:var(--r2);border-left:4px solid var(--orange)}
-.why-img-over-num{font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--orange);line-height:1}
-.why-img-over-txt{font-size:.78rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.1em;margin-top:.3rem}
-.why-list{display:flex;flex-direction:column;gap:1.5rem;margin:2rem 0}
-.why-item{display:flex;gap:1.25rem;align-items:flex-start}
-.why-item-icon{width:48px;height:48px;background:var(--orange-lt);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--t)}
-.why-item-icon svg{width:22px;height:22px;stroke:var(--orange);fill:none;stroke-width:1.6}
-.why-item:hover .why-item-icon{background:var(--orange)}
-.why-item:hover .why-item-icon svg{stroke:var(--white)}
-.why-item h4{font-family:var(--font-head);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.35rem;color:var(--heading)}
-.why-item p{font-size:.9rem}
-
-/* ═══ STATS DARK ══════════════════════════════════════════════════ */
-.stats-dark{background:var(--dark);padding:80px 0}
-.stat-item{text-align:center;padding:2rem;border-right:1px solid rgba(255,255,255,.08)}
+/* ── STATS ── */
+.stat-strip{background:var(--or);padding:52px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}
+.stat-item{padding:0 20px;border-right:1px solid rgba(255,255,255,.25)}
 .stat-item:last-child{border-right:none}
-.stat-num{font-family:var(--font-head);font-size:4rem;font-weight:800;color:var(--orange);line-height:1;margin-bottom:.5rem}
-.stat-num span{font-size:2rem}
-.stat-label{font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.stat-desc{font-size:.83rem;color:rgba(255,255,255,.3);margin-top:.35rem}
+.stat-num{font-family:var(--fh);font-size:3rem;font-weight:900;color:var(--white);line-height:1;margin-bottom:6px}
+.stat-lbl{font-size:.77rem;font-weight:500;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.08em}
+.stat-src{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:4px}
 
-/* ═══ TESTIMONIALS ════════════════════════════════════════════════ */
-.testi{background:var(--off)}
-.testi-card{background:var(--white);border-radius:var(--r2);padding:2.5rem;border:1px solid var(--border);transition:var(--t)}
-.testi-card:hover{box-shadow:var(--shadow);border-color:transparent}
-.testi-stars{display:flex;gap:3px;margin-bottom:1.25rem}
-.testi-stars span{color:var(--orange);font-size:1rem}
-.testi-text{font-size:.95rem;color:var(--text);line-height:1.8;font-style:italic;margin-bottom:1.75rem;position:relative}
-.testi-text::before{content:'"';font-family:Georgia,serif;font-size:4rem;color:var(--orange);opacity:.2;line-height:1;display:block;margin-bottom:-.5rem}
-.testi-author{display:flex;align-items:center;gap:.875rem}
-.testi-av{width:48px;height:48px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;color:var(--white);font-size:1rem;flex-shrink:0}
-.testi-name{font-family:var(--font-head);font-weight:700;font-size:.95rem;color:var(--heading);text-transform:uppercase;letter-spacing:.03em}
-.testi-role{font-size:.8rem;color:var(--text);margin-top:2px}
+/* ── WHY ── */
+.why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.why-img-wrap{position:relative;border-radius:var(--r2);overflow:hidden}
+.why-img{width:100%;height:500px;object-fit:cover;border-radius:var(--r2);display:block}
+.why-badge{position:absolute;bottom:28px;right:-20px;background:var(--white);border-radius:var(--r2);padding:20px 24px;box-shadow:var(--sh2);text-align:center;min-width:160px}
+.wb-num{font-family:var(--fh);font-size:2.5rem;font-weight:900;color:var(--or);line-height:1}
+.wb-txt{font-size:.77rem;font-weight:600;color:var(--body);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+.why-items{display:flex;flex-direction:column;gap:22px;margin:28px 0}
+.why-item{display:flex;gap:16px;align-items:flex-start}
+.why-icon{width:50px;height:50px;background:var(--or-lt);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--t)}
+.why-icon svg{width:22px;height:22px;stroke:var(--or);fill:none;stroke-width:1.8;transition:stroke var(--t)}
+.why-item:hover .why-icon{background:var(--or)}
+.why-item:hover .why-icon svg{stroke:var(--white)}
+.why-body h4{font-size:1rem;font-weight:700;color:var(--h);margin-bottom:5px}
+.why-body p{font-size:.88rem}
 
-/* ═══ TEAM ════════════════════════════════════════════════════════ */
-.team{background:var(--white)}
-.team-card{border-radius:var(--r2);overflow:hidden;border:1px solid var(--border);transition:var(--t)}
-.team-card:hover{box-shadow:var(--shadow);transform:translateY(-4px);border-color:transparent}
-.team-img{height:300px;position:relative;overflow:hidden;background:var(--dark)}
-.team-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease}
-.team-card:hover .team-img img{transform:scale(1.05)}
-.team-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,13,23,.8),transparent 50%);opacity:0;transition:.3s}
-.team-card:hover .team-img-overlay{opacity:1}
-.team-socials{position:absolute;bottom:1.25rem;left:50%;transform:translateX(-50%) translateY(10px);display:flex;gap:.5rem;opacity:0;transition:.3s}
-.team-card:hover .team-socials{opacity:1;transform:translateX(-50%) translateY(0)}
-.team-social{width:36px;height:36px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.75rem;font-weight:700;transition:background .25s}
-.team-social:hover{background:var(--orange-dk)}
-.team-body{padding:1.5rem}
-.team-role{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:.35rem}
-.team-body h3{font-size:1.25rem;color:var(--heading)}
-.team-skills{margin-top:.75rem;display:flex;flex-direction:column;gap:.3rem}
-.team-skill{font-size:.82rem;color:var(--text);display:flex;align-items:center;gap:.5rem}
-.team-skill::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0}
+/* ── PROCESS ── */
+.process{background:var(--bg)}
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:52px;position:relative}
+.process-grid::before{content:'';position:absolute;top:40px;left:10%;right:10%;height:2px;background:var(--border);z-index:0}
+.process-step{text-align:center;position:relative;z-index:1}
+.ps-num{width:80px;height:80px;margin:0 auto 20px;background:var(--white);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:1.1rem;font-weight:900;color:var(--or);position:relative;transition:var(--t)}
+.process-step:hover .ps-num{background:var(--or);border-color:var(--or);color:var(--white);box-shadow:0 8px 24px rgba(244,115,43,.35)}
+.process-step h4{font-size:.95rem;font-weight:700;color:var(--h);margin-bottom:7px}
+.process-step p{font-size:.83rem;color:var(--body);line-height:1.6}
 
-/* ═══ FAQ ════════════════════════════════════════════════════════ */
-.faq-section{background:var(--dark)}
-.faq-list{display:flex;flex-direction:column;gap:.75rem}
-.faq-item{border:1px solid rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden}
-.faq-q{width:100%;background:none;border:none;text-align:left;padding:1.5rem 2rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-family:var(--font-head);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--white);transition:.25s}
-.faq-q:hover{background:rgba(255,255,255,.04)}
-.faq-q.open{background:var(--orange);color:var(--white)}
-.faq-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;transition:.3s}
-.faq-q.open .faq-icon{border-color:rgba(255,255,255,.4);transform:rotate(45deg)}
-.faq-a{display:none;padding:0 2rem 1.5rem;font-size:.92rem;color:rgba(255,255,255,.55);line-height:1.8;border-top:1px solid rgba(255,255,255,.08)}
-.faq-a.open{display:block}
-.faq-side{background:var(--dark2);border-radius:var(--r2);padding:2.5rem;border:1px solid rgba(255,255,255,.06)}
-.faq-side h3{color:var(--white);font-size:1.8rem;margin-bottom:1rem}
-.faq-side p{color:rgba(255,255,255,.5);font-size:.9rem;margin-bottom:2rem}
-.faq-contact-item{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.faq-contact-item:last-child{border-bottom:none}
-.faq-ci{width:40px;height:40px;background:rgba(244,124,32,.15);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--orange);flex-shrink:0}
-.faq-cl{font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.2rem}
-.faq-cv{font-size:.9rem;color:var(--white)}
+/* ── TESTIMONIALS ── */
+.testi{background:var(--white)}
+.testi-header{background:var(--blk);border-radius:var(--r2);padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.testi-rating .num{font-family:var(--fh);font-size:3.2rem;font-weight:900;color:var(--or);line-height:1}
+.testi-rating .stars{color:var(--or);font-size:1rem;letter-spacing:2px;margin:.3rem 0}
+.testi-rating .lbl{font-size:.78rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em}
+.testi-htext h2{color:var(--white);font-size:clamp(1.4rem,2.5vw,2rem);margin-bottom:6px}
+.testi-htext p{color:rgba(255,255,255,.5);font-size:.9rem;max-width:420px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{background:var(--bg);border-radius:var(--r2);padding:30px;border:2px solid transparent;transition:var(--t)}
+.testi-card:hover{border-color:var(--or);background:var(--white);box-shadow:var(--sh)}
+.testi-stars{color:var(--or);font-size:.9rem;letter-spacing:3px;margin-bottom:16px}
+.testi-q{font-family:var(--fh);font-size:2.8rem;color:var(--or);opacity:.2;line-height:.8;margin-bottom:6px}
+.testi-text{font-size:.93rem;font-style:italic;color:var(--body);line-height:1.8;margin-bottom:22px}
+.testi-author{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid var(--border)}
+.testi-av{width:44px;height:44px;border-radius:50%;background:var(--or);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;color:var(--white);font-size:.85rem;flex-shrink:0}
+.testi-name{font-family:var(--fh);font-weight:700;font-size:.92rem;color:var(--h)}
+.testi-role{font-size:.78rem;color:var(--muted)}
 
-/* ═══ INSIGHTS ════════════════════════════════════════════════════ */
-.insights{background:var(--off)}
-.insight-card{background:var(--white);border-radius:var(--r2);overflow:hidden;border:1px solid var(--border);transition:var(--t)}
-.insight-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:transparent}
-.insight-img{height:220px;overflow:hidden;position:relative;background:var(--dark)}
-.insight-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.insight-card:hover .insight-img img{transform:scale(1.06)}
-.insight-cat{position:absolute;top:.875rem;left:.875rem;background:var(--orange);color:var(--white);font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .85rem;border-radius:var(--r)}
-.insight-body{padding:1.75rem}
-.insight-meta{display:flex;align-items:center;gap:1rem;margin-bottom:.875rem;font-size:.78rem;color:var(--text)}
-.insight-meta::before{content:'';width:20px;height:2px;background:var(--orange)}
-.insight-body h3{font-size:1.1rem;margin-bottom:.75rem;line-height:1.35;transition:color var(--t)}
-.insight-card:hover .insight-body h3{color:var(--orange)}
-.insight-body p{font-size:.88rem}
-.insight-footer{padding:.75rem 1.75rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.insight-author{font-size:.78rem;color:var(--text)}
-.insight-more{font-family:var(--font-head);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:.35rem;transition:gap var(--t)}
-.insight-more:hover{gap:.6rem}
+/* ── CTA STRIP ── */
+.cta-strip{background:var(--or);padding:80px 0;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.07)}
+.cta-strip::after{content:'';position:absolute;left:80px;bottom:-60px;width:180px;height:180px;border-radius:50%;background:rgba(0,0,0,.06)}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;position:relative;z-index:1}
+.cta-text h2{color:var(--white);font-size:clamp(1.7rem,3vw,2.6rem)}
+.cta-text p{color:rgba(255,255,255,.8);margin-top:8px}
+.cta-actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end;flex-shrink:0}
 
-/* ═══ CTA SECTION ════════════════════════════════════════════════ */
-.cta-section{background:var(--dark);position:relative;overflow:hidden;padding:100px 0}
-.cta-section::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;opacity:.07}
-.cta-section .container{position:relative;z-index:1}
-.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap}
-.cta-text h2{color:var(--white);font-size:clamp(2.2rem,4vw,3.2rem)}
-.cta-text h2 span{color:var(--orange)}
-.cta-text p{color:var(--muted);margin-top:.75rem;font-size:1rem;max-width:480px}
-.cta-actions{display:flex;flex-direction:column;gap:.75rem;align-items:flex-end;flex-shrink:0}
+/* ── BLOG ── */
+.insights{background:var(--bg)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.blog-card{background:var(--white);border-radius:var(--r2);overflow:hidden;border:1px solid var(--border);transition:var(--t)}
+.blog-card:hover{box-shadow:var(--sh2);transform:translateY(-3px);border-color:transparent}
+.blog-img{height:210px;overflow:hidden;position:relative}
+.blog-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.blog-card:hover .blog-img img{transform:scale(1.05)}
+.blog-cat{position:absolute;top:14px;left:14px;background:var(--or);color:var(--white);font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:50px}
+.blog-body{padding:24px}
+.blog-meta{font-size:.77rem;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.blog-meta::before{content:'';width:16px;height:1.5px;background:var(--or)}
+.blog-body h3{font-size:1.05rem;margin-bottom:10px;line-height:1.4;transition:color .25s}
+.blog-card:hover .blog-body h3{color:var(--or)}
+.blog-body p{font-size:.86rem}
+.blog-more{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--or);display:inline-flex;align-items:center;gap:5px;margin-top:14px;transition:gap .25s}
+.blog-more:hover{gap:9px}
 
-/* ═══ CONTACT ════════════════════════════════════════════════════ */
-.contact-section{background:var(--white)}
-.contact-form{display:flex;flex-direction:column;gap:1.25rem}
-.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-.form-group label{display:block;font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--heading);margin-bottom:.5rem}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--off);border:1.5px solid var(--border);color:var(--heading);font-family:var(--font-body);font-size:.95rem;padding:.9rem 1.25rem;border-radius:var(--r);outline:none;transition:border-color .25s}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--orange)}
-.form-group textarea{resize:vertical;line-height:1.65}
-.form-submit{background:var(--orange);color:var(--white);font-family:var(--font-head);font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:1.1rem 2.5rem;border:none;border-radius:var(--r);cursor:pointer;display:flex;align-items:center;gap:.6rem;transition:var(--t)}
-.form-submit:hover{background:var(--orange-dk);transform:translateY(-2px)}
-.form-submit svg{width:16px;height:16px}
-.contact-info{display:flex;flex-direction:column;gap:1.5rem}
-.ci-item{display:flex;gap:1.25rem;align-items:flex-start;padding:1.75rem;background:var(--off);border-radius:var(--r2);border:1.5px solid transparent;transition:var(--t)}
-.ci-item:hover{border-color:var(--orange);background:var(--white);box-shadow:var(--shadow-sm)}
-.ci-icon{width:52px;height:52px;background:var(--orange);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ci-icon svg{width:22px;height:22px;stroke:var(--white);fill:none;stroke-width:1.8}
-.ci-label{font-family:var(--font-head);font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:.3rem}
-.ci-val{font-size:.95rem;color:var(--heading);font-weight:600}
-.success-msg{display:none;text-align:center;padding:2.5rem;background:var(--off);border-radius:var(--r2);border:1.5px solid rgba(56,161,105,.3)}
-.success-msg h3{font-size:1.5rem;color:var(--heading);margin-bottom:.75rem}
-.success-msg p{color:var(--text)}
+/* ── CONTACT HOME ── */
+.contact-home{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.cf{display:flex;flex-direction:column;gap:16px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cf-g label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--h);margin-bottom:7px}
+.cf-g input,.cf-g select,.cf-g textarea{width:100%;background:var(--bg);border:1.5px solid var(--border);color:var(--h);font-family:var(--fb);font-size:.92rem;padding:12px 16px;border-radius:var(--r);outline:none;transition:border-color .25s}
+.cf-g input:focus,.cf-g select:focus,.cf-g textarea:focus{border-color:var(--or)}
+.cf-g textarea{resize:vertical;line-height:1.65}
+.cf-sub{background:var(--or);color:var(--white);font-family:var(--fb);font-size:.82rem;font-weight:600;padding:14px 32px;border:none;border-radius:50px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:var(--t)}
+.cf-sub:hover{background:var(--or-dk);transform:translateY(-2px);box-shadow:0 8px 28px rgba(244,115,43,.38)}
+.success-box{display:none;text-align:center;padding:36px;background:var(--bg);border-radius:var(--r2);border:1.5px solid rgba(244,115,43,.2)}
+.ci{display:flex;align-items:flex-start;gap:16px;background:var(--bg);border-radius:var(--r);padding:20px 22px;border:1.5px solid transparent;transition:var(--t);margin-bottom:14px}
+.ci:last-child{margin-bottom:0}
+.ci:hover{border-color:var(--or);background:var(--white);box-shadow:var(--sh)}
+.ci-icon{width:44px;height:44px;background:var(--or);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:20px;height:20px;stroke:var(--white);fill:none;stroke-width:1.8}
+.ci-lbl{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--or);margin-bottom:3px}
+.ci-val{font-size:.9rem;color:var(--h);font-weight:500}
+.what-happens{background:var(--bg);border-radius:var(--r2);padding:24px;margin-top:24px;border-left:4px solid var(--or)}
+.what-happens h4{font-size:1rem;margin-bottom:14px;color:var(--h)}
+.wh-step{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
+.wh-step:last-child{margin-bottom:0}
+.wh-n{width:26px;height:26px;background:var(--or);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fb);font-size:.7rem;font-weight:700;color:var(--white);flex-shrink:0}
+.wh-step p{font-size:.87rem;color:var(--body)}
 
-/* ═══ FOOTER ══════════════════════════════════════════════════════ */
-.footer{background:var(--black);padding:80px 0 0}
-.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.06)}
-.footer-logo img{height:44px;width:auto;margin-bottom:1.25rem}
-.footer-about{font-size:.9rem;color:rgba(255,255,255,.35);line-height:1.8;max-width:280px;margin-bottom:2rem}
-.footer-socials{display:flex;gap:.625rem}
-.footer-soc{width:36px;height:36px;background:rgba(255,255,255,.06);border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.4);transition:.25s}
-.footer-soc:hover{background:var(--orange);color:var(--white)}
-.footer-col h4{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.5rem}
-.footer-col ul{display:flex;flex-direction:column;gap:.75rem}
-.footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:.5rem;transition:.25s}
-.footer-col ul li a::before{content:'';width:0;height:1.5px;background:var(--orange);transition:width .25s}
-.footer-col ul li a:hover{color:var(--white);padding-left:.5rem}
-.footer-col ul li a:hover::before{width:10px}
-.footer-bottom{padding:1.75rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-copy{font-size:.82rem;color:rgba(255,255,255,.2)}
-.footer-links{display:flex;gap:2rem}
-.footer-links a{font-size:.8rem;color:rgba(255,255,255,.2);transition:.25s}
-.footer-links a:hover{color:var(--white)}
+/* ── FOOTER ── */
+.footer{background:var(--blk);padding:72px 0 0}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:40px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-logo img{height:40px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px}
+.footer-about{font-size:.87rem;color:rgba(255,255,255,.38);line-height:1.75;max-width:270px;margin-bottom:24px}
+.footer-socials{display:flex;gap:8px}
+.footer-soc{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.4);transition:.25s;text-transform:uppercase}
+.footer-soc:hover{background:var(--or);color:var(--white)}
+.footer-col h4{font-family:var(--fb);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-col ul{display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a{font-size:.87rem;color:rgba(255,255,255,.38);transition:.25s;display:flex;align-items:center;gap:7px}
+.footer-col ul li a::before{content:'›';color:var(--or);font-size:1rem}
+.footer-col ul li a:hover{color:var(--white);padding-left:3px}
+.footer-bottom{padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.22)}
+.footer-bl{display:flex;gap:20px}
+.footer-bl a{font-size:.78rem;color:rgba(255,255,255,.22);transition:.25s}
+.footer-bl a:hover{color:var(--white)}
 
-/* ═══ FLOATS ══════════════════════════════════════════════════════ */
-.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.45);transition:.25s}
-.wa-float:hover{transform:scale(1.1)}
-.wa-float svg{width:26px;height:26px;fill:#fff}
-.scroll-top{position:fixed;bottom:5.5rem;right:2rem;z-index:999;width:44px;height:44px;background:var(--orange);border-radius:var(--r);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.1rem;cursor:pointer;opacity:0;border:none;transition:.3s;box-shadow:var(--shadow-sm)}
-.scroll-top.visible{opacity:1}
-.scroll-top:hover{background:var(--orange-dk);transform:translateY(-3px)}
+/* Floats */
+.wa{position:fixed;bottom:28px;right:28px;z-index:999;width:50px;height:50px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.45);transition:.25s}
+.wa:hover{transform:scale(1.1)}
+.wa svg{width:24px;height:24px;fill:#fff}
+.st{position:fixed;bottom:86px;right:28px;z-index:999;width:40px;height:40px;background:var(--or);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.9rem;cursor:pointer;opacity:0;border:none;transition:.3s;box-shadow:var(--sh)}
+.st.vis{opacity:1}
+.st:hover{background:var(--or-dk);transform:translateY(-3px)}
 
-/* ═══ REVEAL ══════════════════════════════════════════════════════ */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:none}
-.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .65s ease,transform .65s ease}
-.reveal-left.visible{opacity:1;transform:none}
-.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .65s ease,transform .65s ease}
-.reveal-right.visible{opacity:1;transform:none}
+/* Reveal */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rev-l{opacity:0;transform:translateX(-22px);transition:opacity .6s ease,transform .6s ease}
+.rev-r{opacity:0;transform:translateX(22px);transition:opacity .6s ease,transform .6s ease}
+.rev.in,.rev-l.in,.rev-r.in{opacity:1;transform:none}
 
-/* ═══ RESPONSIVE ══════════════════════════════════════════════════ */
 @media(max-width:1024px){
-  .col-4{grid-template-columns:repeat(2,1fr)}
-  .process-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .process-grid{grid-template-columns:repeat(3,1fr)}
   .process-grid::before{display:none}
+  .about-grid,.why-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
   .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
 }
 @media(max-width:768px){
-  .nav-links,.nav-cta{display:none}
-  .nav-ham{display:flex}
-  .col-2,.col-3,.col-4{grid-template-columns:1fr}
-  .row{gap:2.5rem}
-  .form-row-2{grid-template-columns:1fr}
+  .nav-links,.nav-right .btn{display:none}.nav-ham{display:flex}
+  .svc-grid,.testi-grid,.blog-grid,.cf-row{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
   .cta-inner{flex-direction:column;text-align:center}
   .cta-actions{align-items:center}
   .footer-grid{grid-template-columns:1fr}
-  .hero-stats{gap:2rem}
-  .about-exp{right:.5rem}
-  .why-img-over{right:.5rem}
-  .stats-dark .col-4{grid-template-columns:repeat(2,1fr)}
-  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}
-  .stat-item:last-child{border-bottom:none}
+  .testi-header{flex-direction:column;text-align:center}
+  .about-imgs{padding:0 0 50px}
+  .about-img2{display:none}
+  .why-badge{right:0}
 }
 </style>
 </head>
 <body>
 
-<!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+<!-- NAV -->
 <nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="index.html"><img src="logo.png" alt="The Growth Union" class="nav-logo-img" style="height:48px;width:auto"/></a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="insights.html">Insights</a></li>
-    </ul>
-    <a href="contact.html" class="nav-cta">Request a Quote</a>
-    <button class="nav-ham" onclick="toggleMob()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="container nav-in">
+    <a href="index.html"><img src="logo.png" alt="The Growth Union" style="height:44px;width:auto"/></a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="faq.html">FAQ</a>
+      <a href="insights.html">Insights</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-or btn-sm">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <button class="nav-ham" onclick="mob()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
-<div class="mob-menu" id="mobMenu">
-  <button class="mob-close" onclick="toggleMob()">✕</button>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="team.html">Team</a>
-  <a href="faq.html">FAQ</a>
-  <a href="insights.html">Insights</a>
-  <a href="contact.html" style="color:var(--orange)">Request a Quote</a>
+<div class="mob-nav" id="mobNav">
+  <button class="mob-close" onclick="mob()">✕</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="insights.html">Insights</a>
+  <a href="contact.html" style="color:var(--or)">Get a Quote →</a>
 </div>
 
-<!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg"></div>
+  <div class="hero-img-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="container" style="width:100%">
-    <div class="row col-2" style="align-items:center">
-      <div class="hero-content">
-        <div class="hero-pretitle">Strategy-Led Growth Consultancy · Delhi NCR</div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">Strategy-Led Growth Consultancy · Gurgaon</div>
         <h1>Where <span>Strategy</span> Meets Execution.</h1>
         <p class="hero-sub">Not a consultant. Not an agency. A growth partner — bridging the gap between thinking and doing with structured systems built to compound.</p>
         <div class="hero-btns">
-          <a href="contact.html" class="btn btn-orange">Build Your System <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <a href="about.html" class="btn btn-outline-white">About TGU</a>
+          <a href="contact.html" class="btn btn-or">Build Your Growth System <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="about.html" class="btn btn-out-w">About TGU</a>
         </div>
-        <div class="hero-stats">
-          <div>
-            <div class="hero-stat-num">7<sup>+</sup></div>
-            <div class="hero-stat-label">Years Experience</div>
-          </div>
-          <div style="width:1px;height:48px;background:rgba(255,255,255,.12)"></div>
-          <div>
-            <div class="hero-stat-num">50<sup>+</sup></div>
-            <div class="hero-stat-label">Businesses Grown</div>
-          </div>
-          <div style="width:1px;height:48px;background:rgba(255,255,255,.12)"></div>
-          <div>
-            <div class="hero-stat-num">15<sup>+</sup></div>
-            <div class="hero-stat-label">Industries Served</div>
-          </div>
-          <div style="width:1px;height:48px;background:rgba(255,255,255,.12)"></div>
-          <div>
-            <div class="hero-stat-num">600<sup>%</sup></div>
-            <div class="hero-stat-label">Peak ROI Delivered</div>
-          </div>
+        <div class="hero-proof">
+          <div class="hero-avatars"><span>RS</span><span>CG</span><span>TA</span></div>
+          <div class="hero-proof-txt"><strong>50+ Businesses Grown</strong>Trusted by founders across India &amp; beyond</div>
         </div>
       </div>
-      <div class="hero-img-col">
-        <div class="hero-img-wrap">
-          <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=900&q=85" alt="Growth strategy" class="hero-img-main"/>
-          <div class="hero-img-badge">
-            <div class="hero-img-badge-num">4.9★</div>
-            <div class="hero-img-badge-txt">Client Rating</div>
+      <div>
+        <div class="hero-card">
+          <div class="hero-card-title">Start a Conversation</div>
+          <div class="hero-card-sub">Tell us about your growth challenge</div>
+          <form id="heroForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="sendHero(event)">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
+            <input type="hidden" name="subject" value="Strategy Call Request — TGU Homepage"/>
+            <input type="checkbox" name="botcheck" style="display:none"/>
+            <div class="hf-row">
+              <label class="hf-lbl">Full Name</label>
+              <input class="hf-inp" type="text" name="name" placeholder="Your name" required/>
+            </div>
+            <div class="hf-row">
+              <label class="hf-lbl">Business / Company</label>
+              <input class="hf-inp" type="text" name="company" placeholder="Company name"/>
+            </div>
+            <div class="hf-row2">
+              <div>
+                <label class="hf-lbl">Phone</label>
+                <input class="hf-inp" type="tel" name="phone" placeholder="+91 98765 43210" required/>
+              </div>
+              <div>
+                <label class="hf-lbl">Email</label>
+                <input class="hf-inp" type="email" name="email" placeholder="you@company.com" required/>
+              </div>
+            </div>
+            <div class="hf-row">
+              <label class="hf-lbl">Service Needed</label>
+              <select class="hf-inp hf-select" name="service">
+                <option>Strategy &amp; Positioning</option>
+                <option>Performance Marketing</option>
+                <option>SEO / Organic Growth</option>
+                <option>Website Development</option>
+                <option>Social Media</option>
+                <option>Full Growth System</option>
+              </select>
+            </div>
+            <button class="hf-btn" type="submit" id="heroBtn">Request a Strategy Call →</button>
+          </form>
+          <div id="heroSuccess" style="display:none;text-align:center;padding:20px 0">
+            <div style="font-size:2rem;margin-bottom:8px">✅</div>
+            <p style="color:rgba(255,255,255,.7);font-size:.9rem">Received! We'll be in touch within 1 business day.</p>
           </div>
-          <div class="hero-deco"></div>
+          <div class="hero-stars">
+            <div class="hs-stars">★★★★★</div>
+            <div class="hs-txt">4.9/5 · Rated by 50+ clients</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ MARQUEE ════════════════════════════════════════════════════ -->
-<div class="marquee-strip">
+<!-- MARQUEE -->
+<div class="marquee-wrap">
   <div class="marquee-track">
-    <span class="marquee-item">Strategy & Positioning</span>
-    <span class="marquee-item">Performance Marketing</span>
-    <span class="marquee-item">SEO & Organic Growth</span>
-    <span class="marquee-item">Web Development</span>
-    <span class="marquee-item">Social Media Management</span>
-    <span class="marquee-item">B2B Sales Systems</span>
-    <span class="marquee-item">Revenue Architecture</span>
-    <span class="marquee-item">Brand Identity</span>
-    <span class="marquee-item">Strategy & Positioning</span>
-    <span class="marquee-item">Performance Marketing</span>
-    <span class="marquee-item">SEO & Organic Growth</span>
-    <span class="marquee-item">Web Development</span>
-    <span class="marquee-item">Social Media Management</span>
-    <span class="marquee-item">B2B Sales Systems</span>
-    <span class="marquee-item">Revenue Architecture</span>
-    <span class="marquee-item">Brand Identity</span>
+    <span class="marquee-item">Strategy &amp; Positioning</span><span class="marquee-item">Performance Marketing</span>
+    <span class="marquee-item">SEO &amp; Organic Growth</span><span class="marquee-item">Web Development</span>
+    <span class="marquee-item">Social Media Systems</span><span class="marquee-item">B2B Sales Training</span>
+    <span class="marquee-item">Revenue Architecture</span><span class="marquee-item">Brand Identity</span>
+    <span class="marquee-item">Strategy &amp; Positioning</span><span class="marquee-item">Performance Marketing</span>
+    <span class="marquee-item">SEO &amp; Organic Growth</span><span class="marquee-item">Web Development</span>
+    <span class="marquee-item">Social Media Systems</span><span class="marquee-item">B2B Sales Training</span>
+    <span class="marquee-item">Revenue Architecture</span><span class="marquee-item">Brand Identity</span>
   </div>
 </div>
 
-<!-- ═══ ABOUT ══════════════════════════════════════════════════════ -->
-<section class="section about" id="about">
+<!-- ABOUT -->
+<section class="sec about" id="about">
   <div class="container">
-    <div class="row col-2">
-      <div class="about-img-wrap reveal-left">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=85" alt="Business strategy consulting" class="about-img"/>
-        <div class="about-exp">
-          <div class="about-exp-num">7+</div>
-          <div class="about-exp-txt">Years of<br/>Experience</div>
-        </div>
+    <div class="about-grid">
+      <div class="about-imgs rev-l">
+        <img class="about-img1" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=700&q=85" alt="Strategy consulting"/>
+        <img class="about-img2" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=85" alt="Business meeting"/>
+        <div class="about-badge"><div class="ab-num">7+</div><div class="ab-txt">Years of<br/>Experience</div></div>
       </div>
-      <div class="reveal-right">
-        <div class="section-tag">About The Growth Union</div>
-        <h2 class="section-title">Not a Consultant.<br/>Not an Agency.<br/>A Growth Partner.</h2>
-        <p>Most businesses fall between two broken options — consultants who give strategy but vanish at execution, and agencies that execute without business thinking. The Growth Union bridges this gap.</p>
-        <div class="about-quote">
-          <p>Growth is not an activity. It is a structured system.</p>
-          <cite>— The Growth Union</cite>
-        </div>
+      <div class="rev-r">
+        <div class="lbl">About The Growth Union</div>
+        <h2>Not a Consultant. Not an Agency. A Growth Partner.</h2>
+        <div class="divider"></div>
+        <p>Most businesses fall between two broken options — consultants who give strategy but vanish at execution, and agencies that execute tasks without any real business thinking behind them.</p>
+        <p>The Growth Union bridges this gap. We combine CXO-level strategic thinking with full-stack execution — building connected growth systems that compound over time.</p>
+        <div class="about-quote">"Growth is not an activity. It is a structured system." — The Growth Union</div>
         <div class="about-checks">
-          <div class="about-check">Strategy & execution under one roof</div>
-          <div class="about-check">CXO-level thinking for growing businesses</div>
-          <div class="about-check">30–35 specialists across every discipline</div>
-          <div class="about-check">Accountable for outcomes, not deliverables</div>
+          <div class="about-ck"><div class="ck-dot"></div>Strategy &amp; execution under one roof</div>
+          <div class="about-ck"><div class="ck-dot"></div>CXO-level thinking for growing businesses</div>
+          <div class="about-ck"><div class="ck-dot"></div>30–35 specialists across every discipline</div>
+          <div class="about-ck"><div class="ck-dot"></div>Accountable for outcomes, not deliverables</div>
         </div>
-        <a href="about.html" class="btn btn-orange">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="about.html" class="btn btn-or" style="margin-top:8px">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ SERVICES ════════════════════════════════════════════════════ -->
-<section class="section services" id="services">
+<!-- SERVICES -->
+<section class="sec services" id="services">
   <div class="container">
-    <div class="text-center reveal" style="margin-bottom:3.5rem">
-      <div class="section-tag">Our Services</div>
-      <h2 class="section-title">Four Pillars.<br/>One Growth System.</h2>
-      <p class="section-desc">We don't offer services in isolation. Every engagement is a connected system — designed to compound and scale.</p>
+    <div class="tc rev">
+      <div class="lbl">Our Services</div>
+      <h2>Four Pillars. One Growth System.</h2>
+      <div class="divider divider-c"></div>
+      <p style="max-width:560px;margin:0 auto">Every engagement is a connected system — designed to compound and scale without breaking.</p>
     </div>
-    <div class="row col-4" style="gap:1.5rem;align-items:stretch">
-      <div class="service-card reveal">
-        <div class="service-num">01</div>
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+    <div class="svc-grid">
+      <div class="svc-card rev">
+        <div class="svc-num">01</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <h3>Strategy &amp; Positioning</h3>
-        <p>Growth roadmap, brand positioning, ICP definition, messaging architecture, and go-to-market strategy.</p>
-        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <p>Growth roadmap, brand positioning, ICP definition, messaging architecture, and go-to-market strategy built for your market.</p>
+        <a href="services.html" class="svc-link">Learn more →</a>
       </div>
-      <div class="service-card reveal">
-        <div class="service-num">02</div>
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="svc-card rev">
+        <div class="svc-num">02</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
         <h3>Acquisition Systems</h3>
-        <p>Performance marketing (Meta, Google), SEO/AEO/GEO, lead funnels, B2B outreach, LinkedIn authority building.</p>
-        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <p>Performance marketing (Meta, Google), SEO/AEO/GEO, lead funnels, B2B outreach, and LinkedIn authority programmes.</p>
+        <a href="services.html" class="svc-link">Learn more →</a>
       </div>
-      <div class="service-card reveal">
-        <div class="service-num">03</div>
-        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+      <div class="svc-card rev">
+        <div class="svc-num">03</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
         <h3>Digital Infrastructure</h3>
-        <p>Conversion-first websites, web & mobile apps, CRM setup, automation flows, and legal compliance.</p>
-        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <p>Conversion-first websites, web &amp; mobile apps, CRM setup, automation flows — turning traffic into paying customers.</p>
+        <a href="services.html" class="svc-link">Learn more →</a>
       </div>
-      <div class="service-card reveal">
-        <div class="service-num">04</div>
-        <div class="service-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+      <div class="svc-card rev">
+        <div class="svc-num">04</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
         <h3>Revenue &amp; Scale Systems</h3>
-        <p>Sales strategy, revenue architecture, pricing, retention systems, and expansion playbooks.</p>
-        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <p>Sales process design, pricing strategy, retention systems, and expansion playbooks — growth that compounds month over month.</p>
+        <a href="services.html" class="svc-link">Learn more →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PROCESS ════════════════════════════════════════════════════ -->
-<section class="section process">
+<!-- STATS -->
+<section class="stat-strip">
   <div class="container">
-    <div class="text-center text-white reveal" style="margin-bottom:4rem">
-      <div class="section-tag">How We Work</div>
-      <h2 class="section-title" style="color:var(--white)">Our Growth Process</h2>
+    <div class="stat-grid">
+      <div class="stat-item rev"><div class="stat-num">600%</div><div class="stat-lbl">Peak ROI</div><div class="stat-src">Google Ads · Melbourne</div></div>
+      <div class="stat-item rev"><div class="stat-num">1,625</div><div class="stat-lbl">Leads in 1 Month</div><div class="stat-src">Meta + Google · Frankfinn</div></div>
+      <div class="stat-item rev"><div class="stat-num">93.4K</div><div class="stat-lbl">Followers Built</div><div class="stat-src">Instagram · Cellecor</div></div>
+      <div class="stat-item rev"><div class="stat-num">4.5×</div><div class="stat-lbl">ROAS Achieved</div><div class="stat-src">Meta Ads · RCasa</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sec why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-img-wrap rev-l">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=700&q=85" alt="Why The Growth Union" class="why-img"/>
+        <div class="why-badge"><div class="wb-num">50+</div><div class="wb-txt">Businesses<br/>Grown</div></div>
+      </div>
+      <div class="rev-r">
+        <div class="lbl">Why Choose Us</div>
+        <h2>Most Consultants Talk Strategy. Most Agencies Just Execute.</h2>
+        <div class="divider"></div>
+        <p>We do both — with full accountability for outcomes, not just deliverables. Here's what makes The Growth Union genuinely different.</p>
+        <div class="why-items">
+          <div class="why-item">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div>
+            <div class="why-body"><h4>Strategy-First Thinking</h4><p>Every engagement starts with CXO-level clarity — positioning, ICP, messaging — before any campaign launches.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="why-body"><h4>Full-Stack Execution</h4><p>We don't hand you a plan and disappear. We build, run, and iterate with full accountability for real outcomes.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+            <div class="why-body"><h4>30–35 Specialists</h4><p>A curated network across strategy, digital, design, sales, legal — the right expertise for every challenge.</p></div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-or">Discover More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process" style="background:var(--bg)">
+  <div class="container">
+    <div class="tc rev">
+      <div class="lbl">How We Work</div>
+      <h2>Our 5-Step Growth Process</h2>
+      <div class="divider divider-c"></div>
     </div>
     <div class="process-grid">
-      <div class="process-step reveal">
-        <div class="process-num">01</div>
-        <h4>Discover</h4>
-        <p>Understand your market, goals, audience, and competitive landscape.</p>
-      </div>
-      <div class="process-step reveal">
-        <div class="process-num">02</div>
-        <h4>Diagnose</h4>
-        <p>Identify the exact gaps, blockers, and hidden opportunities.</p>
-      </div>
-      <div class="process-step reveal">
-        <div class="process-num">03</div>
-        <h4>Design</h4>
-        <p>Build the right growth system architecture for your stage.</p>
-      </div>
-      <div class="process-step reveal">
-        <div class="process-num">04</div>
-        <h4>Deploy</h4>
-        <p>Execute fast and correctly — campaigns, sites, outreach, systems.</p>
-      </div>
-      <div class="process-step reveal">
-        <div class="process-num">05</div>
-        <h4>Drive Growth</h4>
-        <p>Measure outcomes, optimise, and scale what compounds.</p>
-      </div>
+      <div class="process-step rev"><div class="ps-num">01</div><h4>Discover</h4><p>Understand your market, goals, audience, and competitive landscape.</p></div>
+      <div class="process-step rev"><div class="ps-num">02</div><h4>Diagnose</h4><p>Identify the exact gaps, blockers, and hidden growth opportunities.</p></div>
+      <div class="process-step rev"><div class="ps-num">03</div><h4>Design</h4><p>Build the right growth system architecture for your stage and market.</p></div>
+      <div class="process-step rev"><div class="ps-num">04</div><h4>Deploy</h4><p>Execute fast and correctly — campaigns, sites, outreach, systems.</p></div>
+      <div class="process-step rev"><div class="ps-num">05</div><h4>Drive Growth</h4><p>Measure, optimise, and scale what compounds month over month.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ WHY US ══════════════════════════════════════════════════════ -->
-<section class="section why" id="why">
+<!-- TESTIMONIALS -->
+<section class="sec testi">
   <div class="container">
-    <div class="row col-2">
-      <div class="reveal-left">
-        <div class="section-tag">Why The Growth Union</div>
-        <h2 class="section-title">Most Consultants Talk Strategy.<br/>Most Agencies Just Execute.<br/>We Do Both.</h2>
-        <p>We bring CXO-level thinking and full-stack execution under one roof — with accountability for outcomes, not just deliverables.</p>
-        <div class="why-list">
-          <div class="why-item">
-            <div class="why-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div>
-            <div>
-              <h4>Strategy-First Thinking</h4>
-              <p>Every engagement starts with CXO-level clarity — positioning, ICP, messaging — before a single campaign launches.</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <div class="why-item-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-            <div>
-              <h4>Full-Stack Execution</h4>
-              <p>We don't hand you a plan and disappear. We build, run, and iterate — accountable for real outcomes.</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <div class="why-item-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
-            <div>
-              <h4>30–35 Specialists</h4>
-              <p>A curated network across strategy, digital, design, sales, legal — the right expertise for every challenge.</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <div class="why-item-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-            <div>
-              <h4>Systems Built to Scale</h4>
-              <p>We build growth systems — designed to compound over time and scale without breaking.</p>
-            </div>
-          </div>
-        </div>
+    <div class="testi-header rev">
+      <div class="testi-rating">
+        <div class="num">4.9</div>
+        <div class="stars">★★★★★</div>
+        <div class="lbl" style="margin-bottom:0">Overall Rating</div>
       </div>
-      <div class="why-img reveal-right">
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=85" alt="Why The Growth Union" class="why-img-main"/>
-        <div class="why-img-over">
-          <div class="why-img-over-num">50+</div>
-          <div class="why-img-over-txt">Businesses Grown<br/>Across 15+ Industries</div>
-        </div>
+      <div class="testi-htext">
+        <h2>Real Businesses. Real Outcomes.</h2>
+        <p>Our clients don't just get deliverables — they get growth systems that compound every month.</p>
+      </div>
+      <a href="contact.html" class="btn btn-or">Start a Conversation →</a>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card rev">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p class="testi-text">Neeraj doesn't just give you a strategy and leave. He builds the entire system and executes it alongside you. Our lead cost dropped 59% in the first month. That's not marketing — that's engineering.</p>
+        <div class="testi-author"><div class="testi-av">RS</div><div><div class="testi-name">Rajbir Singh</div><div class="testi-role">Founder — IndoMedhub</div></div></div>
+      </div>
+      <div class="testi-card rev">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p class="testi-text">We went from scattered social media to a structured content engine generating real enquiries. TechnoStruct Academy's Instagram grew to 14,500+ real, engaged followers with measurable ROI.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#7c3aed">TA</div><div><div class="testi-name">TechnoStruct Academy</div><div class="testi-role">Engineering Education — Delhi</div></div></div>
+      </div>
+      <div class="testi-card rev">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p class="testi-text">The Growth Union built our entire digital presence — website, SEO, social media, performance ads. 93,000+ Instagram followers and a verified account. The results are extraordinary and measurable.</p>
+        <div class="testi-author"><div class="testi-av" style="background:#0891b2">CG</div><div><div class="testi-name">Cellecor Gadgets</div><div class="testi-role">Electronics Brand — India</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ STATS DARK ══════════════════════════════════════════════════ -->
-<section class="stats-dark">
-  <div class="container">
-    <div class="col-4" style="display:grid">
-      <div class="stat-item reveal">
-        <div class="stat-num">600<span>%</span></div>
-        <div class="stat-label">Peak ROI</div>
-        <div class="stat-desc">Google Ads — Chauffeurs on Demand</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-num">1,625</div>
-        <div class="stat-label">Leads in 1 Month</div>
-        <div class="stat-desc">Frankfinn — Meta + Google Ads</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-num">93.4<span>K</span></div>
-        <div class="stat-label">Instagram Followers</div>
-        <div class="stat-desc">Cellecor Gadgets — verified page</div>
-      </div>
-      <div class="stat-item reveal">
-        <div class="stat-num">4.5<span>×</span></div>
-        <div class="stat-label">ROAS</div>
-        <div class="stat-desc">RCasa — ₹13.5L from ₹3L spend</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TESTIMONIALS ════════════════════════════════════════════════ -->
-<section class="section testi" id="testi">
-  <div class="container">
-    <div class="text-center reveal" style="margin-bottom:3.5rem">
-      <div class="section-tag">Client Testimonials</div>
-      <h2 class="section-title">Real Businesses.<br/>Real Outcomes.</h2>
-    </div>
-    <div class="row col-3" style="align-items:stretch">
-      <div class="testi-card reveal">
-        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <div class="testi-text">Neeraj doesn't just give you a strategy and leave. He builds the entire system and executes it alongside you. Our lead cost dropped 59% in the first month. That's not marketing — that's engineering.</div>
-        <div class="testi-author">
-          <div class="testi-av">RS</div>
-          <div>
-            <div class="testi-name">Rajbir Singh</div>
-            <div class="testi-role">Founder — IndoMedhub</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <div class="testi-text">We went from scattered social media to a structured content engine. TechnoStruct Academy's Instagram grew to 14,500+ real, engaged followers. Every post has a purpose — and it shows in our enquiries.</div>
-        <div class="testi-author">
-          <div class="testi-av" style="background:#7C3AED">TA</div>
-          <div>
-            <div class="testi-name">TechnoStruct Academy</div>
-            <div class="testi-role">Engineering Education — Delhi</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <div class="testi-text">The Growth Union built our entire digital presence — website, SEO, social media, performance ads. 93,000+ Instagram followers and a verified account. The results are extraordinary and fully measurable.</div>
-        <div class="testi-author">
-          <div class="testi-av" style="background:#DB2777">CG</div>
-          <div>
-            <div class="testi-name">Cellecor Gadgets</div>
-            <div class="testi-role">Electronics Brand — India</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TEAM ════════════════════════════════════════════════════════ -->
-<section class="section team" id="team">
-  <div class="container">
-    <div class="text-center reveal" style="margin-bottom:3.5rem">
-      <div class="section-tag">Our Team</div>
-      <h2 class="section-title">Led by Practitioners,<br/>Not Account Managers.</h2>
-    </div>
-    <div class="row col-3" style="align-items:stretch;max-width:900px;margin:0 auto">
-      <div class="team-card reveal">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=85" alt="Neeraj Grover"/>
-          <div class="team-img-overlay"></div>
-          <div class="team-socials">
-            <a href="https://www.linkedin.com/company/thegrowthunion" target="_blank" class="team-social">in</a>
-            <a href="https://www.instagram.com/thegrowth.union" target="_blank" class="team-social">ig</a>
-          </div>
-        </div>
-        <div class="team-body">
-          <div class="team-role">Founder &amp; Principal Consultant</div>
-          <h3>Neeraj Grover</h3>
-          <div class="team-skills">
-            <div class="team-skill">13+ years B2B Sales &amp; Growth Strategy</div>
-            <div class="team-skill">Author — "Sell Without Selling"</div>
-            <div class="team-skill">7+ years building NCR businesses</div>
-          </div>
-        </div>
-      </div>
-      <div class="team-card reveal" style="background:var(--dark)">
-        <div class="team-img" style="background:var(--dark2)">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=85" alt="Specialist team" style="opacity:.6"/>
-          <div class="team-img-overlay" style="opacity:.7"></div>
-          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
-            <div style="font-family:var(--font-head);font-size:4rem;font-weight:800;color:var(--orange);line-height:1">30+</div>
-            <div style="font-family:var(--font-head);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.25rem">Specialists</div>
-          </div>
-        </div>
-        <div class="team-body" style="background:var(--dark2)">
-          <div class="team-role">Specialist Network</div>
-          <h3 style="color:var(--white)">Our Expert Team</h3>
-          <div class="team-skills">
-            <div class="team-skill" style="color:rgba(255,255,255,.5)">Strategy &amp; Brand Consultants</div>
-            <div class="team-skill" style="color:rgba(255,255,255,.5)">Performance Marketing Experts</div>
-            <div class="team-skill" style="color:rgba(255,255,255,.5)">Web Developers &amp; Designers</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:3rem">
-      <a href="team.html" class="btn btn-outline-dark">View Full Team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CTA ═════════════════════════════════════════════════════════ -->
-<section class="cta-section">
+<!-- CTA -->
+<section class="cta-strip">
   <div class="container">
     <div class="cta-inner">
-      <div class="cta-text reveal-left">
-        <h2>Ready to Build Your<br/><span>Growth System?</span></h2>
-        <p>Join 50+ businesses that have structured their growth with The Growth Union. Start with a 30-minute strategy call — no pitch, no pressure.</p>
-      </div>
-      <div class="cta-actions reveal-right">
-        <a href="contact.html" class="btn btn-orange">Request a Strategy Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="The_Growth_Union.pdf" download style="font-family:var(--font-head);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:.4rem;justify-content:flex-end;transition:.25s" onmouseover="this.style.color='var(--orange)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">↓ Download Our Profile</a>
+      <div class="cta-text rev-l"><h2>Ready to Build Your Growth System?</h2><p>Join 50+ businesses that have structured their growth with The Growth Union.</p></div>
+      <div class="cta-actions rev-r">
+        <a href="contact.html" class="btn btn-out-w" style="background:var(--white);color:var(--or);border-color:var(--white)">Request a Strategy Call →</a>
+        <a href="The_Growth_Union.pdf" download style="font-size:.77rem;font-weight:600;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:5px;justify-content:flex-end">↓ Download Our Profile</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ INSIGHTS ════════════════════════════════════════════════════ -->
-<section class="section insights" id="insights">
+<!-- INSIGHTS -->
+<section class="sec insights">
   <div class="container">
-    <div class="text-center reveal" style="margin-bottom:3.5rem">
-      <div class="section-tag">Growth Insights</div>
-      <h2 class="section-title">Growth Thinking.<br/>No Fluff.</h2>
-      <p class="section-desc">Strategic perspectives on marketing, growth systems, and building businesses that last.</p>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px" class="rev">
+      <div><div class="lbl">Growth Insights</div><h2>Growth Thinking. No Fluff.</h2></div>
+      <a href="insights.html" class="btn btn-out">View All Insights →</a>
     </div>
-    <div class="row col-3" style="align-items:stretch">
-      <div class="insight-card reveal">
-        <div class="insight-img">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="GTM Strategy"/>
-          <div class="insight-cat">GTM Strategy</div>
-        </div>
-        <div class="insight-body">
-          <div class="insight-meta">Jan 2025 · Neeraj Grover</div>
+    <div class="blog-grid">
+      <div class="blog-card rev">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="GTM Strategy"/><div class="blog-cat">GTM Strategy</div></div>
+        <div class="blog-body">
+          <div class="blog-meta">Jan 2025 · Neeraj Grover</div>
           <h3>Why Most GTM Strategies Fail Before They Even Launch</h3>
           <p>A launch plan is a calendar. A GTM strategy is a system. Most businesses confuse the two — and pay the price.</p>
-        </div>
-        <div class="insight-footer">
-          <span class="insight-author">by Neeraj Grover</span>
-          <a href="insights.html" class="insight-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="insights.html" class="blog-more">Read More →</a>
         </div>
       </div>
-      <div class="insight-card reveal">
-        <div class="insight-img">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Performance Marketing"/>
-          <div class="insight-cat">Performance Marketing</div>
-        </div>
-        <div class="insight-body">
-          <div class="insight-meta">Feb 2025 · Neeraj Grover</div>
+      <div class="blog-card rev">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Performance Marketing"/><div class="blog-cat">Performance Marketing</div></div>
+        <div class="blog-body">
+          <div class="blog-meta">Feb 2025 · Neeraj Grover</div>
           <h3>The Real Reason Your Ads Aren't Converting</h3>
           <p>Acquisition before strategy is burning money. When you don't know your ICP — no ad budget will fix it.</p>
-        </div>
-        <div class="insight-footer">
-          <span class="insight-author">by Neeraj Grover</span>
-          <a href="insights.html" class="insight-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="insights.html" class="blog-more">Read More →</a>
         </div>
       </div>
-      <div class="insight-card reveal">
-        <div class="insight-img">
-          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" alt="Brand Strategy"/>
-          <div class="insight-cat">Brand Strategy</div>
-        </div>
-        <div class="insight-body">
-          <div class="insight-meta">Mar 2025 · Neeraj Grover</div>
+      <div class="blog-card rev">
+        <div class="blog-img"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" alt="Brand Strategy"/><div class="blog-cat">Brand Strategy</div></div>
+        <div class="blog-body">
+          <div class="blog-meta">Mar 2025 · Neeraj Grover</div>
           <h3>Your Business Doesn't Have a Marketing Problem</h3>
           <p>Most founders spend years switching agencies without fixing the actual issue — the structure underneath.</p>
-        </div>
-        <div class="insight-footer">
-          <span class="insight-author">by Neeraj Grover</span>
-          <a href="insights.html" class="insight-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="insights.html" class="blog-more">Read More →</a>
         </div>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:3rem">
-      <a href="insights.html" class="btn btn-outline-dark">View All Insights <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ CONTACT FORM ════════════════════════════════════════════════ -->
-<section class="section contact-section" id="contact">
+<!-- CONTACT -->
+<section class="sec contact-home" id="contact">
   <div class="container">
-    <div class="row col-2" style="gap:5rem;align-items:start">
-      <div class="reveal-left">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Let's Build Something Together.</h2>
-        <p style="margin-bottom:2.5rem">Fill in the form, and We will respond within one business day.</p>
-        <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)" class="contact-form">
+    <div class="contact-grid">
+      <div class="rev-l">
+        <div class="lbl">Get In Touch</div>
+        <h2>Let's Build Something Together.</h2>
+        <div class="divider"></div>
+        <p style="margin-bottom:28px">Fill in the form and Neeraj will personally respond within one business day.</p>
+        <form id="mainForm" class="cf" action="https://api.web3forms.com/submit" method="POST" onsubmit="sendForm(event)">
           <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
           <input type="hidden" name="subject" value="New Quote Request — The Growth Union"/>
           <input type="checkbox" name="botcheck" style="display:none"/>
-          <div class="form-row-2">
-            <div class="form-group">
-              <label>First Name *</label>
-              <input name="first_name" type="text" required placeholder="Your first name"/>
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input name="last_name" type="text" placeholder="Your last name"/>
-            </div>
+          <div class="cf-row">
+            <div class="cf-g"><label>First Name *</label><input type="text" name="first_name" required placeholder="Your first name"/></div>
+            <div class="cf-g"><label>Last Name</label><input type="text" name="last_name" placeholder="Your last name"/></div>
           </div>
-          <div class="form-row-2">
-            <div class="form-group">
-              <label>Email Address *</label>
-              <input name="email" type="email" required placeholder="you@company.com"/>
-            </div>
-            <div class="form-group">
-              <label>Phone / WhatsApp *</label>
-              <input name="phone" type="tel" required placeholder="+91 98765 43210"/>
-            </div>
+          <div class="cf-row">
+            <div class="cf-g"><label>Email *</label><input type="email" name="email" required placeholder="you@company.com"/></div>
+            <div class="cf-g"><label>Phone *</label><input type="tel" name="phone" required placeholder="+91 98765 43210"/></div>
           </div>
-          <div class="form-group">
-            <label>Service Required</label>
-            <select name="service">
-              <option value="">Select a service...</option>
-              <option>Strategy &amp; Positioning</option>
-              <option>Performance Marketing</option>
-              <option>SEO / Organic Growth</option>
-              <option>Website Development</option>
-              <option>Social Media Management</option>
-              <option>Full Growth System</option>
-              <option>Other / Not Sure</option>
-            </select>
+          <div class="cf-g"><label>Service Required</label>
+            <select name="service"><option>Strategy &amp; Positioning</option><option>Performance Marketing</option><option>SEO / Organic Growth</option><option>Website Development</option><option>Social Media Management</option><option>Full Growth System</option><option>Other / Not Sure</option></select>
           </div>
-          <div class="form-group">
-            <label>Tell us about your business *</label>
-            <textarea name="message" rows="4" required placeholder="Brief description of your business and growth challenge..."></textarea>
-          </div>
-          <button type="submit" class="form-submit" id="submitBtn">
-            Send Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
-          </button>
+          <div class="cf-g"><label>Tell us about your business *</label><textarea name="message" rows="4" required placeholder="Brief description of your business and growth challenge..."></textarea></div>
+          <div><button type="submit" class="cf-sub" id="mainBtn">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></button></div>
         </form>
-        <div class="success-msg" id="successMsg">
-          <div style="font-size:3rem;margin-bottom:1rem">✅</div>
-          <h3>Message Sent!</h3>
-          <p>We will review your request and respond within one business day.</p>
-        </div>
+        <div class="success-box" id="successBox"><div style="font-size:2.5rem;margin-bottom:12px">✅</div><h3 style="margin-bottom:8px">Message Sent!</h3><p>Neeraj will review your request and respond within one business day.</p></div>
       </div>
-      <div class="reveal-right">
-        <div class="contact-info">
-          <div class="ci-item">
-            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
-            <div>
-              <div class="ci-label">Phone / WhatsApp</div>
-              <div class="ci-val">+91 95186-04324</div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <div>
-              <div class="ci-label">Email</div>
-              <div class="ci-val">Neeraj@thegrowthunion.com</div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div>
-              <div class="ci-label">Office</div>
-              <div class="ci-val">272, Ground Floor, Sector 38, Gurgaon, Haryana - 122001</div>
-            </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 2H3v16h5l3 4 3-4h7V2z"/></svg></div>
-            <div>
-              <div class="ci-label">Response Time</div>
-              <div class="ci-val">Within 1 Business Day</div>
-            </div>
-          </div>
-        </div>
-        <div style="background:var(--dark);border-radius:var(--r2);padding:2rem;margin-top:1.5rem;border-left:4px solid var(--orange)">
-          <h4 style="color:var(--white);font-size:1rem;margin-bottom:1rem;font-family:var(--font-head);text-transform:uppercase;letter-spacing:.05em">After You Submit</h4>
-          <div style="display:flex;flex-direction:column;gap:.75rem">
-            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">1</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">Neeraj reviews personally within 1 business day</span></div>
-            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">2</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">You get a WhatsApp or email for a strategy call</span></div>
-            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">3</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">30-min call — no pitch, just honest strategy conversation</span></div>
-            <div style="display:flex;align-items:flex-start;gap:.75rem"><span style="width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:.72rem;font-weight:800;color:var(--white);flex-shrink:0">4</span><span style="font-size:.88rem;color:rgba(255,255,255,.55)">Tailored proposal within 48 hours if there's a fit</span></div>
-          </div>
+      <div class="rev-r">
+        <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div><div><div class="ci-lbl">Phone / WhatsApp</div><div class="ci-val">+91 95186-04324</div></div></div>
+        <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="ci-lbl">Email</div><div class="ci-val">hello@thegrowthunion.com</div></div></div>
+        <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ci-lbl">Office</div><div class="ci-val">272, Ground Floor, Sector 38<br/>Gurgaon, Haryana — 122001</div></div></div>
+        <div class="what-happens">
+          <h4>What happens after you submit?</h4>
+          <div class="wh-step"><div class="wh-n">1</div><p>Neeraj personally reviews your request within 1 business day</p></div>
+          <div class="wh-step"><div class="wh-n">2</div><p>You get a WhatsApp or email to schedule a 30-min strategy call</p></div>
+          <div class="wh-step"><div class="wh-n">3</div><p>Honest conversation — no pitch, just clarity about your growth challenge</p></div>
+          <div class="wh-step"><div class="wh-n">4</div><p>If there's a fit, a tailored proposal within 48 hours</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ FOOTER ══════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-logo"><img src="logo.png" alt="The Growth Union" style="height:44px;width:auto;filter:brightness(0) invert(1)"/></div>
-        <p class="footer-about">Strategy-led growth consultancy bridging the gap between thinking and doing — for founders serious about structured, long-term growth.</p>
+      <div><div class="footer-logo"><img src="logo.png" alt="The Growth Union"/></div>
+        <p class="footer-about">Strategy-led growth consultancy bridging strategy and execution — for founders serious about structured, long-term growth.</p>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/thegrowth.union" target="_blank" class="footer-soc" title="Instagram">ig</a>
-          <a href="https://www.linkedin.com/company/thegrowthunion" target="_blank" class="footer-soc" title="LinkedIn">in</a>
-          <a href="https://wa.me/919518604324" target="_blank" class="footer-soc" title="WhatsApp">wa</a>
+          <a href="https://www.instagram.com/thegrowth.union" target="_blank" class="footer-soc">ig</a>
+          <a href="https://www.linkedin.com/company/thegrowthunion" target="_blank" class="footer-soc">li</a>
+          <a href="https://wa.me/919518604324" target="_blank" class="footer-soc">wa</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About TGU</a></li>
-          <li><a href="team.html">Our Team</a></li>
-          <li><a href="insights.html">Insights</a></li>
-          <li><a href="The_Growth_Union.pdf" download>Download Profile</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Strategy &amp; Positioning</a></li>
-          <li><a href="services.html">Acquisition Systems</a></li>
-          <li><a href="services.html">Digital Infrastructure</a></li>
-          <li><a href="services.html">Revenue &amp; Scale</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:Neeraj@thegrowthunion.com">Neeraj@thegrowthunion.com</a></li>
-          <li><a href="tel:+919518604324">+91 95186-04324</a></li>
-          <li><a href="#">272, Ground Floor, Sector 38, Gurgaon, Haryana - 122001</a></li>
-          <li><a href="contact.html">Request a Quote</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About TGU</a></li><li><a href="team.html">Our Team</a></li><li><a href="insights.html">Insights</a></li><li><a href="The_Growth_Union.pdf" download>Download Profile</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Strategy &amp; Positioning</a></li><li><a href="services.html">Acquisition Systems</a></li><li><a href="services.html">Digital Infrastructure</a></li><li><a href="services.html">Revenue &amp; Scale</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@thegrowthunion.com">hello@thegrowthunion.com</a></li><li><a href="tel:+919518604324">+91 95186-04324</a></li><li><a href="#">272 GF, Sector 38, Gurgaon</a></li><li><a href="contact.html">Request a Quote</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© 2025 The Growth Union. All Rights Reserved.</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-      </div>
+      <div class="footer-bl"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
     </div>
   </div>
 </footer>
 
-<!-- ═══ FLOATS ══════════════════════════════════════════════════════ -->
-<a href="https://wa.me/919518604324" target="_blank" class="wa-float" title="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+<!-- FLOATS -->
+<a href="https://wa.me/919518604324" target="_blank" class="wa" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+<button class="st" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- ═══ JS ═══════════════════════════════════════════════════════════ -->
 <script>
-/* Nav scroll */
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 80);
-  document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
-});
-
-/* Mobile menu */
-function toggleMob() {
-  document.getElementById('mobMenu').classList.toggle('open');
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('lifted',scrollY>60);document.getElementById('st').classList.toggle('vis',scrollY>400)});
+function mob(){document.getElementById('mobNav').classList.toggle('open')}
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);obs.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(el=>obs.observe(el));
+async function sendHero(e){
+  e.preventDefault();const btn=document.getElementById('heroBtn');btn.textContent='Sending...';btn.disabled=true;
+  try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(e.target)});const d=await r.json();
+    if(d.success){document.getElementById('heroForm').style.display='none';document.getElementById('heroSuccess').style.display='block'}else throw new Error()}
+  catch{btn.textContent='Request a Strategy Call →';btn.disabled=false;alert('Please WhatsApp us: +91 95186-04324')}
 }
-
-/* FAQ */
-function toggleFaq(btn) {
-  const a = btn.nextElementSibling;
-  const open = btn.classList.contains('open');
-  document.querySelectorAll('.faq-q.open').forEach(q => {
-    q.classList.remove('open');
-    q.nextElementSibling.style.display = 'none';
-  });
-  if (!open) { btn.classList.add('open'); a.style.display = 'block'; }
+async function sendForm(e){
+  e.preventDefault();const btn=document.getElementById('mainBtn');btn.textContent='Sending...';btn.disabled=true;
+  try{const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(e.target)});const d=await r.json();
+    if(d.success){document.getElementById('mainForm').style.display='none';document.getElementById('successBox').style.display='block'}else throw new Error()}
+  catch{btn.textContent='Send Message';btn.disabled=false;alert('Please email hello@thegrowthunion.com')}
 }
-
-/* Form submit */
-async function handleSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('submitBtn');
-  btn.textContent = 'Sending...'; btn.disabled = true;
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST', body: new FormData(e.target)
-    });
-    const data = await res.json();
-    if (data.success) {
-      document.getElementById('quoteForm').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    } else throw new Error();
-  } catch {
-    btn.textContent = 'Send Request'; btn.disabled = false;
-    alert('Please email us directly: Neeraj@thegrowthunion.com or WhatsApp +91 95186-04324');
-  }
-}
-
-/* Scroll reveal */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 80);
-      obs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => obs.observe(el));
-
-/* Smooth anchor scroll */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-  });
-});
 </script>
 </body>
 </html>
