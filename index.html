@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>The Growth Union — Where Strategy Meets Execution</title>
-<meta name="description" content="Not a consultant. Not an agency. A growth partner — building structured growth systems for founders across India."/>
+<meta name="description" content="Not a consultant. Not an agency. A growth partner — building structured growth systems for founders in Gurgaon, Delhi NCR."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -73,337 +73,41 @@ p{font-size:.97rem;line-height:1.78}
 .mob-nav a:hover{color:var(--or)}
 .mob-close{position:absolute;top:1.5rem;right:1.5rem;font-size:1.6rem;cursor:pointer;border:none;background:none;color:var(--h)}
 
-/* ══════════════════════════════════════════════════
-   PREMIUM HERO ✦ ABSOLUTE 10/10
-══════════════════════════════════════════════════ */
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes slideRight{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
-@keyframes expandLine{from{width:0;opacity:0}to{width:100%;opacity:1}}
-@keyframes shimmerLine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
-@keyframes pulseRing{0%{transform:scale(.85);opacity:.8}70%,100%{transform:scale(1.4);opacity:0}}
-@keyframes scaleIn{from{opacity:0;transform:scale(.95) translateY(20px)}to{opacity:1;transform:none}}
-@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes counterUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@keyframes bgDrift{0%{transform:scale(1.08) translate(0,0)}50%{transform:scale(1.04) translate(-1%,-.5%)}100%{transform:scale(1.08) translate(0,0)}}
-
-/* ── HERO STRUCTURE ── */
-.hero{
-  min-height:100vh;display:flex;align-items:stretch;
-  position:relative;overflow:hidden;
-}
-
-/* BG Photo */
-.hero-bg{
-  position:absolute;inset:0;
-  background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90');
-  background-size:cover;background-position:center 35%;
-  animation:bgDrift 20s ease-in-out infinite;
-  will-change:transform;
-}
-
-/* Multi-layer cinematic overlay */
-.hero-overlay{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(175deg,rgba(4,4,4,.97) 0%,rgba(6,6,6,.92) 30%,rgba(8,8,8,.78) 55%,rgba(10,10,10,.55) 80%,rgba(12,12,12,.35) 100%),
-    linear-gradient(90deg,rgba(4,4,4,.96) 0%,rgba(4,4,4,.7) 55%,rgba(4,4,4,.15) 100%);
-}
-
-/* Orange atmospheric glow top-right */
-.hero-glow{
-  position:absolute;top:-20%;right:-8%;
-  width:720px;height:720px;border-radius:50%;
-  background:radial-gradient(circle,rgba(244,115,43,.28) 0%,rgba(244,115,43,.08) 45%,transparent 70%);
-  pointer-events:none;animation:fadeIn 1.5s ease .3s both;
-}
-/* Subtle warm glow bottom-left */
-.hero-glow2{
-  position:absolute;bottom:-15%;left:-5%;
-  width:560px;height:440px;border-radius:50%;
-  background:radial-gradient(ellipse,rgba(244,115,43,.1) 0%,transparent 65%);
-  pointer-events:none;
-}
-/* Fine dot grid */
-.hero-dots{
-  position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,.055) 1px,transparent 1px);
-  background-size:44px 44px;
-  pointer-events:none;opacity:.7;
-}
-/* Vertical light line accent */
-.hero-vline{
-  position:absolute;top:0;bottom:0;
-  left:58%;width:1px;
-  background:linear-gradient(to bottom,transparent 0%,rgba(244,115,43,.18) 25%,rgba(244,115,43,.25) 50%,rgba(244,115,43,.12) 75%,transparent 100%);
-  pointer-events:none;
-}
-/* Horizontal accent bar bottom */
-.hero-hbar{
-  position:absolute;bottom:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent 0%,rgba(244,115,43,.3) 30%,rgba(255,180,80,.4) 50%,rgba(244,115,43,.3) 70%,transparent 100%);
-}
-
-/* ── INNER LAYOUT ── */
-.hero-inner{
-  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;
-  align-items:center;position:relative;z-index:2;
-  width:100%;padding:140px 0 100px;
-}
-
-/* ── LEFT CONTENT ── */
-.hero-location{
-  display:inline-flex;align-items:center;gap:10px;
-  margin-bottom:32px;
-  animation:slideRight .8s ease .05s both;
-}
-.hero-location-line{width:32px;height:1px;background:var(--or)}
-.hero-location-txt{
-  font-family:var(--fb);font-size:.68rem;font-weight:600;
-  letter-spacing:.24em;text-transform:uppercase;
-  color:rgba(255,255,255,.45);
-}
-.hero-location-dot{
-  width:5px;height:5px;border-radius:50%;
-  background:var(--or);position:relative;flex-shrink:0;
-}
-.hero-location-dot::after{
-  content:'';position:absolute;inset:-3px;border-radius:50%;
-  border:1px solid rgba(244,115,43,.55);
-  animation:pulseRing 2.2s ease infinite;
-}
-.hero-location-badge{
-  background:rgba(244,115,43,.12);border:1px solid rgba(244,115,43,.25);
-  color:rgba(255,185,100,.9);font-family:var(--fb);font-size:.65rem;
-  font-weight:600;letter-spacing:.1em;text-transform:uppercase;
-  padding:4px 10px;border-radius:50px;
-}
-
-/* Headline */
-.hero h1{
-  font-family:var(--fh);color:var(--white);
-  font-size:clamp(3rem,5.8vw,5rem);
-  line-height:1.06;letter-spacing:-.02em;
-  font-weight:900;
-  animation:fadeUp .8s ease .1s both;
-}
-.hero h1 .h-line1{
-  display:block;font-weight:700;
-  color:rgba(255,255,255,.75);font-size:.72em;
-  letter-spacing:.02em;margin-bottom:.05em;
-}
-.hero h1 .h-line2{
-  display:block;color:var(--or);font-style:italic;
-  position:relative;padding-bottom:12px;
-}
-.hero h1 .h-line2::after{
-  content:'';display:block;
-  position:absolute;bottom:0;left:0;
-  height:3px;width:0;border-radius:2px;
-  background:linear-gradient(90deg,var(--or) 0%,#ffb347 50%,var(--or) 100%);
-  background-size:200% auto;
-  animation:expandLine 1s ease .7s forwards, shimmerLine 3s linear 1.7s infinite;
-}
-.hero h1 .h-line3{
-  display:block;font-size:.78em;
-  color:rgba(255,255,255,.88);letter-spacing:.01em;
-}
-
-/* Sub-headline */
-.hero-sub{
-  color:rgba(255,255,255,.52);font-size:1.06rem;
-  max-width:470px;margin:26px 0 36px;
-  line-height:1.86;
-  animation:fadeUp .8s ease .22s both;
-}
-.hero-sub strong{color:rgba(255,255,255,.8);font-weight:500}
-
-/* CTA row */
-.hero-btns{
-  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-  animation:fadeUp .8s ease .32s both;
-}
-.hero-btn-primary{
-  display:inline-flex;align-items:center;gap:9px;
-  font-family:var(--fb);font-size:.85rem;font-weight:600;
-  padding:15px 30px;border-radius:50px;cursor:pointer;
-  border:none;white-space:nowrap;
-  background:linear-gradient(135deg,var(--or) 0%,#e55c12 100%);
-  color:var(--white);
-  box-shadow:0 8px 32px rgba(244,115,43,.42), 0 0 0 1px rgba(244,115,43,.3);
-  transition:.3s ease;position:relative;overflow:hidden;
-}
-.hero-btn-primary::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,.15) 0%,transparent 60%);
-  border-radius:50px;
-}
-.hero-btn-primary:hover{
-  transform:translateY(-3px);
-  box-shadow:0 16px 48px rgba(244,115,43,.55), 0 0 0 1px rgba(244,115,43,.4);
-}
-.hero-btn-primary svg{width:15px;height:15px;transition:transform .3s;flex-shrink:0}
-.hero-btn-primary:hover svg{transform:translateX(4px)}
-.hero-btn-ghost{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--fb);font-size:.82rem;font-weight:500;
-  padding:14px 26px;border-radius:50px;cursor:pointer;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.16);
-  color:rgba(255,255,255,.7);
-  backdrop-filter:blur(8px);
-  transition:.3s ease;white-space:nowrap;
-}
-.hero-btn-ghost:hover{
-  background:rgba(255,255,255,.12);
-  border-color:rgba(255,255,255,.28);
-  color:var(--white);transform:translateY(-2px);
-}
-
-/* Social proof */
-.hero-proof{
-  display:flex;align-items:center;gap:16px;
-  margin-top:36px;padding-top:32px;
-  border-top:1px solid rgba(255,255,255,.09);
-  animation:fadeUp .8s ease .42s both;
-}
+/* ── HERO ── */
+.hero{min-height:100vh;background:var(--blk);display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 0 80px}
+.hero-img-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;opacity:.18}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(13,13,13,.95) 40%,rgba(13,13,13,.6) 100%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,115,43,.15);border:1px solid rgba(244,115,43,.3);color:#fdba74;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:20px}
+.hero-badge::before{content:'';width:7px;height:7px;background:var(--or);border-radius:50%}
+.hero h1{color:var(--white);margin-bottom:16px;font-size:clamp(2.6rem,5vw,4rem)}
+.hero h1 span{color:var(--or);font-style:italic}
+.hero-sub{color:rgba(255,255,255,.58);font-size:1.05rem;max-width:480px;margin-bottom:32px;line-height:1.8}
+.hero-btns{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-proof{display:flex;align-items:center;gap:14px}
 .hero-avatars{display:flex}
-.hero-avatars span{
-  width:36px;height:36px;border-radius:50%;
-  border:2.5px solid rgba(6,6,6,.9);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--fh);font-weight:700;font-size:.68rem;
-  color:var(--white);margin-right:-9px;flex-shrink:0;
-}
-.hero-avatars span:nth-child(1){background:var(--or)}
+.hero-avatars span{width:38px;height:38px;border-radius:50%;background:var(--or);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:.75rem;color:var(--white);margin-right:-10px;flex-shrink:0}
 .hero-avatars span:nth-child(2){background:#7c3aed}
 .hero-avatars span:nth-child(3){background:#0891b2}
-.hero-proof-info{margin-left:20px}
-.hero-proof-info strong{display:block;font-size:.88rem;color:rgba(255,255,255,.88);font-weight:600;margin-bottom:2px}
-.hero-proof-info span{font-size:.76rem;color:rgba(255,255,255,.38)}
-.hero-proof-stars{margin-left:auto;text-align:right}
-.hero-proof-stars .s{color:#f59e0b;font-size:.82rem;letter-spacing:1px}
-.hero-proof-stars span{display:block;font-size:.7rem;color:rgba(255,255,255,.35);margin-top:2px}
+.hero-proof-txt{font-size:.83rem;color:rgba(255,255,255,.5);line-height:1.45;margin-left:18px}
+.hero-proof-txt strong{display:block;color:var(--white);font-size:.9rem}
+/* Hero form card */
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:36px}
+.hero-card-title{font-family:var(--fh);font-size:1.5rem;color:var(--white);margin-bottom:4px}
+.hero-card-sub{font-size:.83rem;color:rgba(255,255,255,.4);margin-bottom:28px}
+.hf-row{margin-bottom:16px}
+.hf-row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hf-lbl{display:block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.hf-inp{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:var(--white);font-family:var(--fb);font-size:.92rem;padding:11px 14px;border-radius:var(--r);outline:none;transition:border-color .25s}
+.hf-inp::placeholder{color:rgba(255,255,255,.22)}
+.hf-inp:focus{border-color:rgba(244,115,43,.7)}
+.hf-select{appearance:none;cursor:pointer}
+.hf-btn{width:100%;background:var(--or);color:var(--white);font-family:var(--fb);font-size:.85rem;font-weight:600;padding:14px;border:none;border-radius:50px;cursor:pointer;transition:var(--t);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px}
+.hf-btn:hover{background:var(--or-dk);transform:translateY(-1px)}
+.hero-stars{display:flex;align-items:center;gap:10px;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}
+.hs-stars{color:var(--or);font-size:.9rem;letter-spacing:2px}
+.hs-txt{font-size:.78rem;color:rgba(255,255,255,.38)}
 
-/* Stats row */
-.hero-stats{
-  display:flex;align-items:stretch;
-  margin-top:36px;padding-top:28px;
-  border-top:1px solid rgba(255,255,255,.07);
-  animation:fadeUp .8s ease .52s both;
-}
-.hero-stat{
-  padding:0 22px;border-right:1px solid rgba(255,255,255,.09);
-  display:flex;flex-direction:column;justify-content:center;
-}
-.hero-stat:first-child{padding-left:0}
-.hero-stat:last-child{border-right:none}
-.hero-stat-num{
-  font-family:var(--fh);font-size:2rem;font-weight:900;
-  color:var(--or);line-height:1;margin-bottom:5px;
-  letter-spacing:-.02em;
-}
-.hero-stat-lbl{font-size:.68rem;color:rgba(255,255,255,.34);letter-spacing:.09em;text-transform:uppercase;line-height:1.4}
-
-/* ── RIGHT — GLASS FORM CARD ── */
-.hero-card-wrap{animation:scaleIn .9s ease .18s both}
-.hero-card{
-  background:rgba(10,10,10,.75);
-  backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:24px;
-  padding:42px 38px;
-  position:relative;overflow:hidden;
-  box-shadow:
-    0 40px 100px rgba(0,0,0,.55),
-    0 0 0 1px rgba(255,255,255,.04),
-    inset 0 1px 0 rgba(255,255,255,.08);
-}
-/* Orange gradient top line */
-.hero-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent 0%,rgba(244,115,43,.6) 20%,#f4732b 50%,rgba(244,115,43,.6) 80%,transparent 100%);
-}
-/* Subtle inner glow top */
-.hero-card::after{
-  content:'';position:absolute;top:0;left:0;right:0;height:60%;
-  background:linear-gradient(to bottom,rgba(255,255,255,.025),transparent);
-  border-radius:24px 24px 0 0;pointer-events:none;
-}
-/* Card header */
-.hero-card-badge{
-  display:inline-flex;align-items:center;gap:7px;
-  background:rgba(244,115,43,.12);
-  border:1px solid rgba(244,115,43,.25);
-  color:rgba(255,185,100,.9);font-family:var(--fb);
-  font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-  padding:5px 12px;border-radius:50px;margin-bottom:20px;
-}
-.hero-card-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--or);flex-shrink:0}
-.hero-card-h{font-family:var(--fh);font-size:1.55rem;font-weight:700;color:var(--white);margin-bottom:5px;line-height:1.2}
-.hero-card-sub{font-size:.82rem;color:rgba(255,255,255,.35);margin-bottom:28px;line-height:1.6}
-/* Form */
-.hf-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.hf-g{display:flex;flex-direction:column;gap:5px}
-.hf-g.full{grid-column:1/-1}
-.hf-lbl{font-family:var(--fb);font-size:.64rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-.hf-inp{
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(255,255,255,.1);
-  color:var(--white);font-family:var(--fb);font-size:.88rem;
-  padding:11px 14px;border-radius:10px;
-  outline:none;transition:border-color .25s,background .25s,box-shadow .25s;width:100%;
-}
-.hf-inp::placeholder{color:rgba(255,255,255,.17)}
-.hf-inp:focus{border-color:rgba(244,115,43,.6);background:rgba(255,255,255,.08);box-shadow:0 0 0 3px rgba(244,115,43,.1)}
-.hf-select{appearance:none;cursor:pointer;color:rgba(255,255,255,.55)}
-.hf-select option{background:#111;color:#fff}
-/* Submit button */
-.hf-btn{
-  width:100%;margin-top:18px;
-  background:linear-gradient(135deg,#f4732b 0%,#e05510 100%);
-  color:var(--white);font-family:var(--fb);font-size:.88rem;font-weight:600;
-  padding:15px 24px;border:none;border-radius:50px;cursor:pointer;
-  transition:.3s ease;display:flex;align-items:center;justify-content:center;gap:9px;
-  box-shadow:0 8px 30px rgba(244,115,43,.38),inset 0 1px 0 rgba(255,255,255,.15);
-  letter-spacing:.02em;position:relative;overflow:hidden;
-}
-.hf-btn::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,.12) 0%,transparent 60%);
-  border-radius:50px;
-}
-.hf-btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(244,115,43,.52)}
-.hf-btn svg{width:15px;height:15px;transition:transform .3s;flex-shrink:0}
-.hf-btn:hover svg{transform:translateX(4px)}
-/* Trust bar */
-.hero-trust{
-  display:flex;align-items:center;gap:10px;
-  margin-top:20px;padding-top:18px;
-  border-top:1px solid rgba(255,255,255,.07);
-}
-.hero-trust-stars{color:#f59e0b;font-size:.85rem;letter-spacing:2px}
-.hero-trust-txt{font-size:.73rem;color:rgba(255,255,255,.3);line-height:1.5}
-/* Success state */
-.hero-success-state{display:none;text-align:center;padding:24px 0 8px}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1100px){
-  .hero-inner{grid-template-columns:1fr;gap:44px;padding:120px 0 72px}
-  .hero h1{font-size:clamp(2.5rem,7vw,3.8rem)}
-  .hero-vline{display:none}
-  .hero-stat{padding:0 16px}
-}
-@media(max-width:640px){
-  .hf-grid{grid-template-columns:1fr}
-  .hero-card{padding:28px 22px;border-radius:18px}
-  .hero-stat{padding:0 12px}
-  .hero-stat-num{font-size:1.65rem}
-  .hero h1{font-size:clamp(2.2rem,8vw,3rem)}
-}
-
-/* ── MARQUEE ──
 /* ── MARQUEE ── */
 .marquee-wrap{background:var(--blk);padding:18px 0;overflow:hidden}
 .marquee-track{display:flex;animation:marquee 28s linear infinite;width:max-content}
@@ -609,11 +313,6 @@ p{font-size:.97rem;line-height:1.78}
   .about-imgs{padding:0 0 50px}
   .about-img2{display:none}
   .why-badge{right:0}
-  .hero-stats-row{grid-template-columns:1fr;gap:16px}
-  .hero-stat{border-right:none;padding:0;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:14px}
-  .hero-stat:last-child{border-bottom:none}
-  .hero-card{padding:28px}
-  .hf-row2{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -646,161 +345,76 @@ p{font-size:.97rem;line-height:1.78}
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <!-- Layers -->
-  <div class="hero-bg"></div>
+  <div class="hero-img-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-dots"></div>
-  <div class="hero-vline"></div>
-  <div class="hero-hbar"></div>
-
   <div class="container">
-    <div class="hero-inner">
-
-      <!-- ── LEFT — HEADLINE ── -->
+    <div class="hero-grid">
       <div>
-
-        <!-- Location eyebrow -->
-        <div class="hero-location">
-          <div class="hero-location-line"></div>
-          <span class="hero-location-txt">Pan-India · Founders &amp; CEOs</span>
-          <div class="hero-location-dot"></div>
-          <span class="hero-location-badge">Strategy-Led Growth</span>
-        </div>
-
-        <!-- Main headline -->
-        <h1>
-          <span class="h-line1">Where</span>
-          <span class="h-line2">Strategy</span>
-          <span class="h-line3">Meets Execution.</span>
-        </h1>
-
-        <!-- Sub copy -->
-        <p class="hero-sub">
-          Not a consultant. Not an agency.<br/>
-          A growth partner — combining <strong>CXO-level strategic thinking</strong> with
-          <strong>full-stack execution</strong> into one structured system that compounds over time.
-        </p>
-
-        <!-- CTAs -->
+        <div class="hero-badge">Strategy-Led Growth Consultancy · Gurgaon</div>
+        <h1>Where <span>Strategy</span> Meets Execution.</h1>
+        <p class="hero-sub">Not a consultant. Not an agency. A growth partner — bridging the gap between thinking and doing with structured systems built to compound.</p>
         <div class="hero-btns">
-          <a href="contact.html" class="hero-btn-primary">
-            Build Your Growth System
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="about.html" class="hero-btn-ghost">
-            About TGU &nbsp;→
-          </a>
+          <a href="contact.html" class="btn btn-or">Build Your Growth System <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="about.html" class="btn btn-out-w">About TGU</a>
         </div>
-
-        <!-- Social proof -->
         <div class="hero-proof">
-          <div class="hero-avatars">
-            <span title="Rajbir Singh">RS</span>
-            <span title="Cellecor Gadgets">CG</span>
-            <span title="TechnoStruct">TA</span>
-          </div>
-          <div class="hero-proof-info">
-            <strong>50+ Businesses Grown</strong>
-            <span>Trusted by founders across India &amp; globally</span>
-          </div>
-          <div class="hero-proof-stars">
-            <div class="s">★★★★★</div>
-            <span>4.9 / 5 rating</span>
-          </div>
+          <div class="hero-avatars"><span>RS</span><span>CG</span><span>TA</span></div>
+          <div class="hero-proof-txt"><strong>50+ Businesses Grown</strong>Trusted by founders across India &amp; beyond</div>
         </div>
-
-        <!-- Stats -->
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-num">7+</div>
-            <div class="hero-stat-lbl">Years<br/>Experience</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">600%</div>
-            <div class="hero-stat-lbl">Peak<br/>ROI</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">93K+</div>
-            <div class="hero-stat-lbl">Followers<br/>Built</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">15+</div>
-            <div class="hero-stat-lbl">Industries<br/>Served</div>
-          </div>
-        </div>
-
       </div>
-
-      <!-- ── RIGHT — PREMIUM GLASS FORM ── -->
-      <div class="hero-card-wrap">
+      <div>
         <div class="hero-card">
-          <div class="hero-card-badge">Free · No Pitch · Just Clarity</div>
-          <div class="hero-card-h">Request a Strategy Call</div>
-          <div class="hero-card-sub">Tell us your biggest growth challenge — Neeraj responds personally within 1 business day.</div>
-
+          <div class="hero-card-title">Start a Conversation</div>
+          <div class="hero-card-sub">Tell us about your growth challenge</div>
           <form id="heroForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="sendHero(event)">
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
-            <input type="hidden" name="subject" value="Strategy Call Request — The Growth Union"/>
+            <input type="hidden" name="subject" value="Strategy Call Request — TGU Homepage"/>
             <input type="checkbox" name="botcheck" style="display:none"/>
-            <div class="hf-grid">
-              <div class="hf-g">
-                <label class="hf-lbl">Full Name *</label>
-                <input class="hf-inp" type="text" name="name" placeholder="Your name" required/>
-              </div>
-              <div class="hf-g">
-                <label class="hf-lbl">Company</label>
-                <input class="hf-inp" type="text" name="company" placeholder="Company name"/>
-              </div>
-              <div class="hf-g">
-                <label class="hf-lbl">Phone / WhatsApp *</label>
+            <div class="hf-row">
+              <label class="hf-lbl">Full Name</label>
+              <input class="hf-inp" type="text" name="name" placeholder="Your name" required/>
+            </div>
+            <div class="hf-row">
+              <label class="hf-lbl">Business / Company</label>
+              <input class="hf-inp" type="text" name="company" placeholder="Company name"/>
+            </div>
+            <div class="hf-row2">
+              <div>
+                <label class="hf-lbl">Phone</label>
                 <input class="hf-inp" type="tel" name="phone" placeholder="+91 98765 43210" required/>
               </div>
-              <div class="hf-g">
-                <label class="hf-lbl">Email *</label>
+              <div>
+                <label class="hf-lbl">Email</label>
                 <input class="hf-inp" type="email" name="email" placeholder="you@company.com" required/>
               </div>
-              <div class="hf-g full">
-                <label class="hf-lbl">What do you need help with?</label>
-                <select class="hf-inp hf-select" name="service">
-                  <option>Strategy &amp; Positioning</option>
-                  <option>Performance Marketing (Meta/Google)</option>
-                  <option>SEO / Organic Growth</option>
-                  <option>Website Development</option>
-                  <option>Social Media Management</option>
-                  <option>Full Growth System</option>
-                  <option>Other / Not Sure Yet</option>
-                </select>
-              </div>
             </div>
-
-            <button class="hf-btn" type="submit" id="heroBtn">
-              Request a Free Strategy Call
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <div class="hf-row">
+              <label class="hf-lbl">Service Needed</label>
+              <select class="hf-inp hf-select" name="service">
+                <option>Strategy &amp; Positioning</option>
+                <option>Performance Marketing</option>
+                <option>SEO / Organic Growth</option>
+                <option>Website Development</option>
+                <option>Social Media</option>
+                <option>Full Growth System</option>
+              </select>
+            </div>
+            <button class="hf-btn" type="submit" id="heroBtn">Request a Strategy Call →</button>
           </form>
-
-          <!-- Success state -->
-          <div class="hero-success-state" id="heroSuccess">
-            <div style="font-size:2.4rem;margin-bottom:12px">✅</div>
-            <p style="color:rgba(255,255,255,.65);font-size:.92rem;line-height:1.65">
-              <strong style="color:var(--white)">Message received!</strong><br/>
-              Neeraj will personally respond within 1 business day.
-            </p>
+          <div id="heroSuccess" style="display:none;text-align:center;padding:20px 0">
+            <div style="font-size:2rem;margin-bottom:8px">✅</div>
+            <p style="color:rgba(255,255,255,.7);font-size:.9rem">Received! We'll be in touch within 1 business day.</p>
           </div>
-
-          <!-- Trust bar -->
-          <div class="hero-trust">
-            <div class="hero-trust-stars">★★★★★</div>
-            <div class="hero-trust-txt">4.9/5 rating &nbsp;·&nbsp; 50+ clients &nbsp;·&nbsp; Zero spam, guaranteed</div>
+          <div class="hero-stars">
+            <div class="hs-stars">★★★★★</div>
+            <div class="hs-txt">4.9/5 · Rated by 50+ clients</div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
+
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -1070,7 +684,7 @@ p{font-size:.97rem;line-height:1.78}
       <div class="rev-r">
         <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div><div><div class="ci-lbl">Phone / WhatsApp</div><div class="ci-val">+91 95186-04324</div></div></div>
         <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="ci-lbl">Email</div><div class="ci-val">hello@thegrowthunion.com</div></div></div>
-        <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ci-lbl">Office</div><div class="ci-val">272, Sector 38, Gurgaon — 122001</div></div></div>
+        <div class="ci"><div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ci-lbl">Office</div><div class="ci-val">272, Ground Floor, Sector 38<br/>Gurgaon, Haryana — 122001</div></div></div>
         <div class="what-happens">
           <h4>What happens after you submit?</h4>
           <div class="wh-step"><div class="wh-n">1</div><p>Neeraj personally reviews your request within 1 business day</p></div>
@@ -1097,7 +711,7 @@ p{font-size:.97rem;line-height:1.78}
       </div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About TGU</a></li><li><a href="team.html">Our Team</a></li><li><a href="insights.html">Insights</a></li><li><a href="The_Growth_Union.pdf" download>Download Profile</a></li></ul></div>
       <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Strategy &amp; Positioning</a></li><li><a href="services.html">Acquisition Systems</a></li><li><a href="services.html">Digital Infrastructure</a></li><li><a href="services.html">Revenue &amp; Scale</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@thegrowthunion.com">hello@thegrowthunion.com</a></li><li><a href="tel:+919518604324">+91 95186-04324</a></li><li><a href="#">272, Sector 38, Gurgaon</a></li><li><a href="contact.html">Request a Quote</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@thegrowthunion.com">hello@thegrowthunion.com</a></li><li><a href="tel:+919518604324">+91 95186-04324</a></li><li><a href="#">272 GF, Sector 38, Gurgaon</a></li><li><a href="contact.html">Request a Quote</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© 2025 The Growth Union. All Rights Reserved.</p>
