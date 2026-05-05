@@ -389,18 +389,17 @@ p{font-size:.97rem;line-height:1.78}
               </div>
             </div>
             <div class="hf-row">
-  <label class="hf-lbl">Service Needed</label>
-  <select name="service" class="hf-inp hf-select" required>
+  <label class="hf-lbl">What do you need help with?</label>
+  <select name="service" id="serviceSelect" class="hf-inp hf-select" required onchange="handleServiceChange()">
     <option value="" disabled selected>Select your growth focus...</option>
-
-    <option>Strategy & Positioning</option>
-    <option>Lead Generation Systems</option>
-    <option>Marketing Execution (Meta / Google / Content)</option>
-    <option>Sales Systems (B2B / Funnels / Closures)</option>
-    <option>Conversion Optimization (Website / Funnels)</option>
-    <option>Retention & Scaling Systems</option>
-    <option>Full Growth System (End-to-End)</option>
-    <option>Not Sure Yet — Need Guidance</option>
+    <option value="strategy">Strategy & Positioning</option>
+    <option value="leadgen">Lead Generation Systems</option>
+    <option value="marketing">Marketing Execution</option>
+    <option value="sales">Sales Systems</option>
+    <option value="conversion">Conversion Optimization</option>
+    <option value="retention">Retention & Scaling</option>
+    <option value="full">Full Growth System</option>
+    <option value="unsure">Not Sure Yet</option>
   </select>
 </div>
             <div class="hs-stars">★★★★★</div>
