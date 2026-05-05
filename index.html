@@ -350,7 +350,7 @@ p{font-size:.97rem;line-height:1.78}
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-badge">STRATEGY · SYSTEMS · EXECUTION</div>
+        <div class="hero-badge">Strategy-Led Growth Consultancy · Gurgaon</div>
         <h1>Where <span>Strategy</span> Meets Execution.</h1>
         <p class="hero-sub">Not a consultant. Not an agency. A growth partner — bridging the gap between thinking and doing with structured systems built to compound.</p>
         <div class="hero-btns">
@@ -364,10 +364,10 @@ p{font-size:.97rem;line-height:1.78}
       </div>
       <div>
         <div class="hero-card">
-          <div class="hero-card-title">Request a Free Strategy Call</div>
-          <div class="hero-card-sub">Tell us your biggest growth challenge, and we will respond within 1 business day</div>
+          <div class="hero-card-title">Start a Conversation</div>
+          <div class="hero-card-sub">Tell us about your growth challenge</div>
           <form id="heroForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="sendHero(event)">
-            <input type="hidden" name="access_key" value="25d011e7-d91f-45cc-bbe4-7adc345301ce"/>
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY"/>
             <input type="hidden" name="subject" value="Strategy Call Request — TGU Homepage"/>
             <input type="checkbox" name="botcheck" style="display:none"/>
             <div class="hf-row">
@@ -389,19 +389,23 @@ p{font-size:.97rem;line-height:1.78}
               </div>
             </div>
             <div class="hf-row">
-  <label class="hf-lbl">What do you need help with?</label>
-  <select name="service" id="serviceSelect" class="hf-inp hf-select" required onchange="handleServiceChange()">
-    <option value="" disabled selected>Select your growth focus...</option>
-    <option value="strategy">Strategy & Positioning</option>
-    <option value="leadgen">Lead Generation Systems</option>
-    <option value="marketing">Marketing Execution</option>
-    <option value="sales">Sales Systems</option>
-    <option value="conversion">Conversion Optimization</option>
-    <option value="retention">Retention & Scaling</option>
-    <option value="full">Full Growth System</option>
-    <option value="unsure">Not Sure Yet</option>
-  </select>
-</div>
+              <label class="hf-lbl">Service Needed</label>
+              <select class="hf-inp hf-select" name="service">
+                <option>Strategy &amp; Positioning</option>
+                <option>Performance Marketing</option>
+                <option>SEO / Organic Growth</option>
+                <option>Website Development</option>
+                <option>Social Media</option>
+                <option>Full Growth System</option>
+              </select>
+            </div>
+            <button class="hf-btn" type="submit" id="heroBtn">Request a Strategy Call →</button>
+          </form>
+          <div id="heroSuccess" style="display:none;text-align:center;padding:20px 0">
+            <div style="font-size:2rem;margin-bottom:8px">✅</div>
+            <p style="color:rgba(255,255,255,.7);font-size:.9rem">Received! We'll be in touch within 1 business day.</p>
+          </div>
+          <div class="hero-stars">
             <div class="hs-stars">★★★★★</div>
             <div class="hs-txt">4.9/5 · Rated by 50+ clients</div>
           </div>
@@ -414,9 +418,9 @@ p{font-size:.97rem;line-height:1.78}
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <span class="marquee-item">Strategy &amp; Positioning</span><span class="marquee-item">Strategy &amp; Positioning</span>
+    <span class="marquee-item">Strategy &amp; Positioning</span><span class="marquee-item">Performance Marketing</span>
     <span class="marquee-item">SEO &amp; Organic Growth</span><span class="marquee-item">Web Development</span>
-    <span class="marquee-item">ACQUISITION SYSTEMS</span><span class="marquee-item">B2B Sales Training</span>
+    <span class="marquee-item">Social Media Systems</span><span class="marquee-item">B2B Sales Training</span>
     <span class="marquee-item">Revenue Architecture</span><span class="marquee-item">Brand Identity</span>
     <span class="marquee-item">Strategy &amp; Positioning</span><span class="marquee-item">Performance Marketing</span>
     <span class="marquee-item">SEO &amp; Organic Growth</span><span class="marquee-item">Web Development</span>
@@ -430,8 +434,8 @@ p{font-size:.97rem;line-height:1.78}
   <div class="container">
     <div class="about-grid">
       <div class="about-imgs rev-l">
-        <img class="about-img1" src="https://raw.githubusercontent.com/Thegrowthunion/TheGrowthunion/refs/heads/main/pexels-cottonbro-6814524.jpg"/>
-        <img class="about-img2" src="https://raw.githubusercontent.com/Thegrowthunion/TheGrowthunion/refs/heads/main/pexels-olia-danilevich-8145328.jpg"/>
+        <img class="about-img1" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=700&q=85" alt="Strategy consulting"/>
+        <img class="about-img2" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=400&q=85" alt="Business meeting"/>
         <div class="about-badge"><div class="ab-num">7+</div><div class="ab-txt">Years of<br/>Experience</div></div>
       </div>
       <div class="rev-r">
@@ -512,7 +516,7 @@ p{font-size:.97rem;line-height:1.78}
   <div class="container">
     <div class="why-grid">
       <div class="why-img-wrap rev-l">
-        <img src="https://raw.githubusercontent.com/Thegrowthunion/TheGrowthunion/refs/heads/main/george-dagerotip-gQxpuAU6mLU-unsplash%20(1).jpg" class="why-img"/>
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=700&q=85" alt="Why The Growth Union" class="why-img"/>
         <div class="why-badge"><div class="wb-num">50+</div><div class="wb-txt">Businesses<br/>Grown</div></div>
       </div>
       <div class="rev-r">
@@ -706,20 +710,7 @@ p{font-size:.97rem;line-height:1.78}
         </div>
       </div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About TGU</a></li><li><a href="team.html">Our Team</a></li><li><a href="insights.html">Insights</a></li><li><a href="The_Growth_Union.pdf" download>Download Profile</a></li></ul></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html"><option>Strategy &amp; Positioning</option>
-                <option>Performance Marketing</option>
-                <option>SEO / Organic Growth</option>
-                <option>Website Development</option>
-                <option>Social Media</option>
-                <option>Full Growth System</option>
-                <option>ACQUISITION SYSTEMS</option>
-                <option>DIGITAL INFRASTRUCTURE</option>
-                <option>SEO · AEO · GEO · SXO · AIO</option>
-                <option>REVENUE & SCALE SYSTEMS</option>
-                <option>PERFORMANCE MARKETING</option>
-                <option>B2B OUTREACH</option>
-                <option>CONVERSION WEBSITES</option>
-                <option>GROWTH SYSTEMS</option>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Strategy &amp; Positioning</a></li><li><a href="services.html">Acquisition Systems</a></li><li><a href="services.html">Digital Infrastructure</a></li><li><a href="services.html">Revenue &amp; Scale</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@thegrowthunion.com">hello@thegrowthunion.com</a></li><li><a href="tel:+919518604324">+91 95186-04324</a></li><li><a href="#">272 GF, Sector 38, Gurgaon</a></li><li><a href="contact.html">Request a Quote</a></li></ul></div>
     </div>
     <div class="footer-bottom">
