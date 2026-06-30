@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<script src="https://checkout.razorpay.com/v1/payment-button.js" async></script>
 <style>
 :root{
   --or:#f4732b;--or-dk:#d95e18;--or-lt:#fff4ee;
@@ -105,6 +104,10 @@ p{font-size:.97rem;line-height:1.78}
 .st-card-feat svg{width:16px;height:16px;color:var(--or);flex-shrink:0;margin-top:2px}
 .rzp-wrap{width:100%}
 .rzp-wrap form{width:100%}
+.enroll-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--or);color:var(--white);font-family:var(--fb);font-size:.95rem;font-weight:700;padding:17px 28px;border-radius:50px;border:2px solid var(--or);cursor:pointer;transition:var(--t);text-align:center}
+.enroll-btn:hover{background:var(--or-dk);border-color:var(--or-dk);box-shadow:0 10px 32px rgba(244,115,43,.4);transform:translateY(-2px)}
+.enroll-btn svg{width:18px;height:18px;transition:transform var(--t);flex-shrink:0}
+.enroll-btn:hover svg{transform:translateX(4px)}
 .st-card-note{text-align:center;font-size:.74rem;color:rgba(255,255,255,.32);margin-top:14px}
 
 /* ── PAIN SECTION ── */
@@ -310,16 +313,11 @@ p{font-size:.97rem;line-height:1.78}
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 follow-up Q&amp;A call (30 min, within 7 days)</li>
       </ul>
 
-      <!-- RAZORPAY PAYMENT BUTTON — replace data-payment_button_id with your live Button ID from Razorpay Dashboard -->
-      <div class="rzp-wrap">
-        <form>
-          <script
-            src="https://checkout.razorpay.com/v1/payment-button.js"
-            data-payment_button_id="pl_T7gtpZrQb6D6Qn"
-            async>
-          </script>
-        </form>
-      </div>
+      <!-- CUSTOM ENROLL BUTTON — links to Razorpay Payment Page -->
+      <a href="https://rzp.io/rzp/XMfrbEh" target="_blank" class="enroll-btn">
+        Enroll Now — ₹2,999
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
       <p class="st-card-note">🔒 Secure checkout via Razorpay · UPI, Cards &amp; Net Banking accepted</p>
     </div>
   </div>
@@ -497,15 +495,10 @@ p{font-size:.97rem;line-height:1.78}
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Recorded session + Script Template + Objection Cheat Sheet</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 1 follow-up Q&amp;A call within 7 days</li>
       </ul>
-      <div class="rzp-wrap">
-        <form>
-          <script
-            src="https://checkout.razorpay.com/v1/payment-button.js"
-            data-payment_button_id="pl_T7gtpZrQb6D6Qn"
-            async>
-          </script>
-        </form>
-      </div>
+      <a href="https://rzp.io/rzp/XMfrbEh" target="_blank" class="enroll-btn">
+        Enroll Now — ₹2,999
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
       <p class="st-card-note">🔒 Secure checkout via Razorpay · UPI, Cards &amp; Net Banking accepted</p>
     </div>
     <p class="team-note">Training a larger team or want a fully customised programme? <a href="contact.html">Talk to us about Team &amp; Enterprise options →</a></p>
@@ -553,6 +546,50 @@ p{font-size:.97rem;line-height:1.78}
     <div class="st-cta-btns">
       <a href="#pricing" class="btn btn-or">Reserve Your Seat — ₹2,999 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="https://wa.me/919518604324" target="_blank" class="btn btn-out-w">Ask a Question on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TERMS & CONDITIONS ═══ -->
+<section class="st-faq sec-sm" style="background:var(--bg)">
+  <div class="container tc" style="max-width:680px;margin:0 auto 0">
+    <div class="lbl">Before You Enroll</div>
+    <h2 style="font-size:clamp(1.5rem,3vw,2rem)">Terms &amp; Conditions</h2>
+  </div>
+  <div class="container">
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Seat Confirmation<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>Your seat is confirmed only upon successful payment. You will receive a payment confirmation via email/SMS and access to the WhatsApp group for session details.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Session Details<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>The live cohort is scheduled for Sunday, July 13, 2026, 11:00 AM – 1:00 PM IST, conducted via Google Meet. The Meet link will be shared in the WhatsApp group prior to the session.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Refund Policy<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>This is a live, cohort-based session with limited seats. Once registered, payments are non-refundable. If you're unable to attend live, you will receive full access to the recorded session instead.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Rescheduling<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>In the rare event The Growth Union needs to reschedule the session, registered participants will be notified in advance via WhatsApp/email, and the new date will apply automatically — no separate action needed.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Recording &amp; Materials<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>All participants receive lifetime access to the session recording, Sales Script Template, and Objection Handling Cheat Sheet, regardless of live attendance.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Follow-Up Call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>The complimentary 30-minute follow-up Q&amp;A call must be scheduled within 7 days of the live session. Unused follow-up calls do not carry forward beyond this window.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Conduct<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>The Growth Union reserves the right to remove any participant from the session or WhatsApp group for disruptive or inappropriate behavior, without refund.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="faqT(this)">Questions About This Purchase?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-a"><p>Reach out to <a href="mailto:hello@thegrowthunion.com" style="color:var(--or);font-weight:600">hello@thegrowthunion.com</a> or WhatsApp <a href="https://wa.me/919518604324" style="color:var(--or);font-weight:600">+91 95186-04324</a>.</p></div>
+      </div>
     </div>
   </div>
 </section>
