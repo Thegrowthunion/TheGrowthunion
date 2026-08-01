@@ -39,7 +39,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--fb);color:var(--body);background:var(--white);overflow-x:hidden;line-height:1.7}
+html,body{overflow-x:hidden!important;max-width:100vw!important}body{font-family:var(--fb);color:var(--body);background:var(--white);overflow-x:hidden;line-height:1.7}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
@@ -252,7 +252,7 @@ select.form-inp option{background:var(--white);color:var(--h)}
   .hero-chips{gap:8px}
 }
 
-/* ── MOBILE OVERFLOW FIX ─────────────────── */
+
 html{overflow-x:hidden;max-width:100vw}
 body{overflow-x:hidden;max-width:100vw;position:relative}
 *{max-width:100%}
@@ -295,6 +295,153 @@ section,footer,header,nav,.hero,.about-hero,.car-hero,.ga-hero,.page-hero{max-wi
   .gap-grid{grid-template-columns:1fr !important}
   .founder-grid,.story-grid,.about-hero-grid,.car-hero-grid{grid-template-columns:1fr !important}
 }
+
+/* ══════════════════════════════════════════
+   COMPLETE MOBILE & RESPONSIVE FIX v2
+   ══════════════════════════════════════════ */
+html,body{overflow-x:hidden!important;max-width:100vw!important;width:100%!important}
+*,*::before,*::after{box-sizing:border-box!important}
+.marquee-wrap{overflow:hidden!important;width:100%!important;max-width:100vw!important}
+
+/* Nav audit highlight */
+.nav-links a.nav-audit{color:var(--or)!important;background:var(--or-lt)!important;font-weight:600!important}
+.nav-links a.nav-audit:hover{background:var(--or)!important;color:var(--white)!important}
+
+/* ── TABLET (≤ 860px) ── */
+@media(max-width:860px){
+  /* Container */
+  .container{padding-left:1.2rem!important;padding-right:1.2rem!important;width:100%!important}
+
+  /* ALL two-column grids → single column */
+  .hero-grid,.about-grid,.story-grid,.founder-grid,.why-grid,.gap-grid,
+  .about-hero-grid,.car-hero-grid,.ga-hero-grid,
+  .contact-main-grid,.faq-main-grid,.offices-grid,
+  [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns:1.1fr .9fr"],
+  [style*="grid-template-columns:.85fr 1.15fr"],[style*="grid-template-columns:1fr 1.4fr"],
+  [style*="grid-template-columns:1fr 1.5fr"],[style*="grid-template-columns:1fr 1.2fr"],
+  [style*="grid-template-columns:2.2fr 1fr"],[style*="grid-template-columns:1fr 2fr"],
+  [style*="gap:72px"],[style*="gap:80px"],[style*="gap:64px"]
+  {grid-template-columns:1fr!important;gap:28px!important}
+
+  /* Services grid → 1 col */
+  .svc-grid,.audit-grid,.culture-grid,.who-grid,.testi-grid,.blog-grid
+  {grid-template-columns:1fr!important}
+
+  /* Process → 2 col */
+  .process-grid{grid-template-columns:1fr 1fr!important;gap:14px!important}
+
+  /* Industries → 2 col */
+  .ind-grid{grid-template-columns:1fr 1fr!important}
+
+  /* Perk → 2 col */
+  .perk-grid{grid-template-columns:1fr 1fr!important}
+
+  /* Stats → 2 col */
+  .stat-grid,.stats-band-grid,.trust-grid{grid-template-columns:1fr 1fr!important}
+  .stat-item,.sb-item,.trust-item{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.1)!important;padding-bottom:16px!important}
+  .trust-item:last-child,.sb-item:last-child,.stat-item:last-child{border-bottom:none!important}
+
+  /* 4-col grids → 2 col */
+  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr!important;gap:14px!important}
+
+  /* 3-col grids → 1 col */
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important;gap:16px!important}
+  .svc-grid[style*="grid-template-columns"]{grid-template-columns:1fr!important}
+
+  /* Form rows → 1 col */
+  .form-row,.cf-row,.hf-row,.cf-grid{grid-template-columns:1fr!important}
+
+  /* Footer → 1 col */
+  .footer-grid{grid-template-columns:1fr 1fr!important}
+
+  /* Sticky panels → static */
+  .contact-info-col,[style*="position:sticky"]{position:static!important;top:auto!important}
+
+  /* Typography */
+  h1{font-size:clamp(1.9rem,7.5vw,2.6rem)!important;line-height:1.2!important;word-break:break-word!important}
+  h2{font-size:clamp(1.4rem,5.5vw,2rem)!important;line-height:1.25!important}
+
+  /* Buttons → stack */
+  .hero-btns,.ah-btns,.car-hero-btns,.ga-hero-btns,.cta-dark-btns
+  {flex-direction:column!important;align-items:stretch!important;gap:10px!important}
+  .hero-btns .btn,.ah-btns .btn,.car-hero-btns .btn,.ga-hero-btns .btn,.cta-dark-btns .btn
+  {justify-content:center!important;text-align:center!important;width:100%!important}
+
+  /* Hide decorative floating badges on mobile */
+  .ga-img-badge,.story-img-badge,.car-badge,.ga-img-dot,.story-img-accent,.founder-img-card
+  {display:none!important}
+
+  /* Images full width */
+  .ga-img-wrap,.founder-img-wrap,.car-img-wrap,.story-img
+  {max-width:100%!important;margin:0!important}
+  .ga-img-main,.car-img,.founder-img{aspect-ratio:16/9!important}
+
+  /* Gap section divider */
+  .gap-divider{flex-direction:row!important;padding:8px 0!important}
+  .gap-line{flex:1!important;height:1px!important;width:auto!important}
+
+  /* Hero contact bar */
+  .hero-contact-row{flex-direction:column!important}
+  .hcr-item{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.08)!important;padding:16px!important}
+  .hcr-item:last-child{border-bottom:none!important}
+  .hcr-val{font-size:.85rem!important;white-space:normal!important}
+
+  /* Section padding */
+  .sec{padding:52px 0!important}
+  .sec-sm{padding:36px 0!important}
+  .hero,.ga-hero,.car-hero,.about-hero{padding-top:108px!important;padding-bottom:52px!important}
+
+  /* Hide right column image in some 2-col sections */
+  .who-for-img{display:none!important}
+
+  /* Services page pillars */
+  [style*="grid-template-columns:repeat(2,1fr);"]{grid-template-columns:1fr!important}
+
+  /* Comparison table scrollable */
+  .comparison-table-wrap{overflow-x:auto!important}
+  table{min-width:600px!important}
+
+  /* Career role items */
+  .role-btn{padding:16px!important}
+  .role-left{gap:10px!important}
+  .role-title{font-size:.95rem!important}
+
+  /* Nav */
+  .nav-links,.nav-right .btn{display:none!important}
+  .nav-ham{display:flex!important}
+
+  /* Mobile nav links font size */
+  .mob-nav a{font-size:1.6rem!important;gap:0!important}
+}
+
+/* ── SMALL PHONE (≤ 480px) ── */
+@media(max-width:480px){
+  .container{padding-left:.9rem!important;padding-right:.9rem!important}
+  h1{font-size:clamp(1.6rem,8.5vw,2rem)!important}
+  h2{font-size:clamp(1.25rem,6.5vw,1.6rem)!important}
+
+  .ind-grid{grid-template-columns:1fr!important}
+  .perk-grid{grid-template-columns:1fr 1fr!important}
+  .process-grid{grid-template-columns:1fr!important}
+  [style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr!important}
+  .footer-grid{grid-template-columns:1fr!important}
+  .stat-grid,.stats-band-grid,.trust-grid{grid-template-columns:1fr 1fr!important}
+  .btn-lg{padding:13px 20px!important;font-size:.85rem!important}
+  .ga-form-wrap,.car-form-wrap{padding:20px 14px!important}
+  .svc-select-grid{grid-template-columns:1fr!important}
+
+  /* Services contact grid */
+  .services-contact-grid{grid-template-columns:1fr!important}
+
+  /* Quick connect */
+  .qc-grid{grid-template-columns:1fr!important}
+
+  /* Role tags wrap */
+  .role-tags{display:none!important}
+}
+/* ══════════════════════════════════════════
+   END MOBILE FIX v2
+   ══════════════════════════════════════════ */
 </style>
 </head>
 <body>
@@ -303,28 +450,14 @@ section,footer,header,nav,.hero,.about-hero,.car-hero,.ga-hero,.page-hero{max-wi
 <nav class="nav" id="nav">
   <div class="container nav-in">
     <a href="index.html"><img src="logo.png" alt="The Growth Union" style="height:44px;width:auto"/></a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="team.html">Team</a>
-      <a href="faq.html">FAQ</a>
-      <a href="insights.html">Insights</a>
-      <a href="growth-audit.html" style="color:var(--or);background:var(--or-lt)">Free Audit</a>
-      <a href="careers.html">Careers</a>
-    </div>
+    <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="insights.html">Insights</a><a href="growth-audit.html" class="nav-audit">Free Audit</a><a href="careers.html">Careers</a></div>
     <div class="nav-right">
       <a href="contact.html" class="btn btn-or btn-sm active">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <button class="nav-ham" onclick="mob()" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
-<div class="mob-nav" id="mobNav">
-  <button class="mob-close" onclick="mob()">✕</button>
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
-  <a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="insights.html">Insights</a>
-  <a href="contact.html" style="color:var(--or)">Get a Quote →</a>
-</div>
+<div class="mob-nav" id="mobNav"><button class="mob-close" onclick="mob()">✕</button><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="faq.html">FAQ</a><a href="insights.html">Insights</a><a href="growth-audit.html" style="color:var(--or)">Free Growth Audit</a><a href="careers.html">Careers</a><a href="contact.html" style="color:var(--or)">Get a Quote →</a></div>
 
 <!-- HERO -->
 <section class="hero">
