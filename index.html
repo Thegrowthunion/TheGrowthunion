@@ -534,6 +534,65 @@ html,body{overflow-x:hidden!important;max-width:100vw!important;width:100%!impor
 </head>
 <body>
 
+<!-- ═══ PRELOADER — animated stripe reveal ═══ -->
+<div id="tguPreloader" class="preloader">
+  <div class="preloader-stripe preloader-stripe-1"></div>
+  <div class="preloader-stripe preloader-stripe-2"></div>
+  <div class="preloader-stripe preloader-stripe-3"></div>
+  <div class="preloader-bar preloader-bar-1"></div>
+  <div class="preloader-bar preloader-bar-2"></div>
+  <div class="preloader-logo">
+    <span class="pl-word pl-word-1">THE</span>
+    <span class="pl-word pl-word-2">GROWTH</span>
+    <span class="pl-word pl-word-3">UNION</span>
+  </div>
+</div>
+<style>
+.preloader{position:fixed;inset:0;z-index:99999;background:#0D1B3E;display:flex;align-items:center;justify-content:center;overflow:hidden;pointer-events:none}
+.preloader.done{animation:preloaderOut .7s cubic-bezier(.76,0,.24,1) .3s forwards}
+@keyframes preloaderOut{to{clip-path:inset(0 0 100% 0);opacity:0}}
+.preloader-stripe{position:absolute;left:0;width:100%;background:#f4732b;transform:scaleX(0);transform-origin:left}
+.preloader-stripe-1{top:0;height:33.34%;animation:stripeIn .7s cubic-bezier(.76,0,.24,1) .1s forwards, stripeOut .6s cubic-bezier(.76,0,.24,1) 1.5s forwards}
+.preloader-stripe-2{top:33.33%;height:33.34%;background:#0D1B3E;animation:stripeIn .7s cubic-bezier(.76,0,.24,1) .25s forwards, stripeOut .6s cubic-bezier(.76,0,.24,1) 1.6s forwards}
+.preloader-stripe-3{top:66.66%;height:33.34%;background:#f4732b;animation:stripeIn .7s cubic-bezier(.76,0,.24,1) .4s forwards, stripeOut .6s cubic-bezier(.76,0,.24,1) 1.7s forwards}
+@keyframes stripeIn{to{transform:scaleX(1)}}
+@keyframes stripeOut{from{transform:scaleX(1);transform-origin:right}to{transform:scaleX(0);transform-origin:right}}
+.preloader-bar{position:absolute;left:0;width:100%;height:3px;background:#fff;opacity:0}
+.preloader-bar-1{top:33.3%;animation:barFlash .15s ease .95s forwards, barFade .3s ease 1.15s forwards}
+.preloader-bar-2{top:66.6%;animation:barFlash .15s ease 1.1s forwards, barFade .3s ease 1.3s forwards}
+@keyframes barFlash{to{opacity:1}}
+@keyframes barFade{to{opacity:0}}
+.preloader-logo{position:relative;z-index:2;display:flex;gap:.5em;font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:clamp(1.6rem,5vw,3.2rem);letter-spacing:.02em}
+.pl-word{display:inline-block;color:#fff;opacity:0;transform:translateY(30px);animation:wordIn .6s cubic-bezier(.16,1,.3,1) forwards, wordOut .5s cubic-bezier(.7,0,.84,0) 1.35s forwards}
+.pl-word-1{animation-delay:.85s, 1.35s}
+.pl-word-2{color:#f4732b;animation-delay:.95s, 1.4s}
+.pl-word-3{animation-delay:1.05s, 1.45s}
+@keyframes wordIn{to{opacity:1;transform:translateY(0)}}
+@keyframes wordOut{to{opacity:0;transform:translateY(-24px)}}
+body.pl-lock{overflow:hidden;height:100vh}
+@media(max-width:560px){.preloader-logo{gap:.35em}}
+</style>
+<script>
+document.body.classList.add('pl-lock');
+window.addEventListener('load',()=>{
+  const pl=document.getElementById('tguPreloader');
+  setTimeout(()=>{
+    pl.classList.add('done');
+    document.body.classList.remove('pl-lock');
+    setTimeout(()=>pl.remove(),900);
+  },1650);
+});
+// Safety net — never trap a visitor if load event is slow
+setTimeout(()=>{
+  const pl=document.getElementById('tguPreloader');
+  if(pl && !pl.classList.contains('done')){
+    pl.classList.add('done');
+    document.body.classList.remove('pl-lock');
+    setTimeout(()=>pl.remove(),900);
+  }
+},3500);
+</script>
+
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="container nav-in">
