@@ -516,6 +516,7 @@ html,body{overflow-x:hidden!important;max-width:100vw!important;width:100%!impor
 
         <form id="mainForm" style="display:flex;flex-direction:column;gap:20px" action="https://api.web3forms.com/submit" method="POST" onsubmit="sendForm(event)">
           <input type="hidden" name="access_key" value="25d011e7-d91f-45cc-bbe4-7adc345301ce"/>
+          <input type="hidden" name="referral_code" id="trackedRefCode" value=""/>
           <input type="hidden" name="subject" value="New Enquiry — The Growth Union Website"/>
           <input type="hidden" name="redirect" value="https://thegrowthunion.com/contact.html"/>
 
@@ -854,6 +855,24 @@ async function sendForm(e){
     else throw new Error()
   }catch{btn.textContent='Book My Free Growth Audit';btn.disabled=false;alert('Something went wrong. Please WhatsApp us at +91 95186-04324 or email hello@thegrowthunion.com')}
 }
+</script>
+<script>
+// Referral tracking — captures ?ref=CODE from URL, remembers it for 90 days,
+// and attaches it to the enquiry form automatically.
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+  if(ref){
+    localStorage.setItem('tgu_ref_code', ref);
+    localStorage.setItem('tgu_ref_expiry', Date.now() + (90*24*60*60*1000));
+  }
+  const stored = localStorage.getItem('tgu_ref_code');
+  const expiry = localStorage.getItem('tgu_ref_expiry');
+  const field = document.getElementById('trackedRefCode');
+  if(field && stored && expiry && Date.now() < parseInt(expiry)){
+    field.value = stored;
+  }
+})();
 </script>
 </body>
 </html>

@@ -1025,5 +1025,16 @@ async function sendForm(e){
   ]
 }
 </script>
+<script>
+// Referral tracking — captures ?ref=CODE from URL, remembers it for 90 days.
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+  if(ref){
+    localStorage.setItem('tgu_ref_code', ref);
+    localStorage.setItem('tgu_ref_expiry', Date.now() + (90*24*60*60*1000));
+  }
+})();
+</script>
 </body>
 </html>
