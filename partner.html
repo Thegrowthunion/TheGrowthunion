@@ -118,8 +118,9 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 .tier-ribbon{position:absolute;top:-12px;right:20px;background:#c98a1f;color:var(--white);font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 14px;border-radius:50px}
 
 .trip-gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:56px}
-.trip-gallery img{width:100%;height:100%;object-fit:cover;border-radius:var(--r2)}
+.trip-gallery img{width:100%;height:100%;min-height:140px;object-fit:cover;border-radius:var(--r2);display:block}
 .trip-gallery-a{grid-row:span 2}
+.trip-gallery-a img{min-height:296px}
 
 /* HOW IT WORKS */
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
@@ -131,8 +132,8 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 
 /* WHO TO REFER — image + detail split */
 .wtr-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:16px}
-.wtr-img{border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh2);aspect-ratio:4/4.6}
-.wtr-img img{width:100%;height:100%;object-fit:cover}
+.wtr-img{border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh2);aspect-ratio:4/4.2}
+.wtr-img img{width:100%;height:100%;object-fit:cover;display:block}
 .wtr-list{display:flex;flex-direction:column;gap:0}
 .wtr-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)}
 .wtr-item:first-child{padding-top:0}
@@ -142,13 +143,17 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 .wtr-item p{font-size:.87rem}
 
 /* CALCULATOR */
-.calc-box{background:var(--sand);border-radius:24px;padding:52px 48px;margin-top:64px;position:relative;overflow:hidden}
+.calc-box{background:var(--sand);border-radius:24px;padding:52px 48px;margin-top:64px;position:relative;overflow:hidden;box-sizing:border-box}
 .calc-box::before{content:'';position:absolute;width:340px;height:340px;background:radial-gradient(circle,rgba(244,115,43,.16),transparent 70%);top:-100px;right:-80px;border-radius:50%}
 .calc-in{position:relative;z-index:1}
-.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:32px}
-.calc-controls{display:flex;flex-direction:column;gap:28px}
-.calc-field label{display:flex;justify-content:space-between;font-family:var(--fb);font-size:.85rem;font-weight:600;color:var(--h);margin-bottom:10px}
-.calc-field label span{color:var(--or);font-family:var(--fh);font-size:1.1rem}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:32px;min-width:0}
+.calc-controls{display:flex;flex-direction:column;gap:28px;min-width:0}
+.win-banner{display:none;background:linear-gradient(135deg,#f4732b,#ffb347);border-radius:16px;padding:20px 22px;text-align:center;box-shadow:0 12px 30px rgba(244,115,43,.4);box-sizing:border-box;width:100%}
+.win-banner-emoji{font-size:1.8rem;margin-bottom:4px}
+.win-banner-title{font-family:var(--fh);color:var(--white);font-weight:700;font-size:1.15rem;line-height:1.35}
+.win-banner-sub{color:rgba(255,255,255,.92);font-size:.82rem;margin-top:6px;line-height:1.4}
+.calc-field label{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;font-family:var(--fb);font-size:.85rem;font-weight:600;color:var(--h);margin-bottom:10px;min-width:0}
+.calc-field label span{color:var(--or);font-family:var(--fh);font-size:1.1rem;white-space:nowrap}
 .calc-field input[type=range]{width:100%;height:6px;border-radius:10px;background:var(--border);outline:none;-webkit-appearance:none;accent-color:var(--or)}
 .calc-field input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--or);cursor:pointer;border:4px solid var(--white);box-shadow:0 2px 8px rgba(244,115,43,.5)}
 .calc-result{background:var(--white);border-radius:var(--r2);padding:36px;text-align:center;box-shadow:var(--sh2)}
@@ -170,8 +175,8 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 
 /* WHO CAN JOIN — with image */
 .who-split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:16px}
-.who-img{border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh2)}
-.who-img img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.who-img{border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh2);aspect-ratio:5/4}
+.who-img img{width:100%;height:100%;object-fit:cover;display:block}
 .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .who-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--r2);padding:24px 18px;text-align:center;transition:var(--t)}
 .who-item:hover{background:var(--or-lt);border-color:rgba(244,115,43,.3)}
@@ -259,8 +264,13 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 }
 @media(max-width:560px){
   .p-form-wrap{padding:24px 18px}
-  .calc-box{padding:32px 22px}
+  .calc-box{padding:28px 16px}
   .who-grid{grid-template-columns:1fr}
+  .win-banner{padding:16px 14px}
+  .win-banner-title{font-size:1rem}
+  .win-banner-sub{font-size:.76rem}
+  .calc-field label{font-size:.8rem}
+  .calc-field label span{font-size:1rem}
 }
 </style>
 </head>
@@ -300,7 +310,6 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
         <div><b>15%</b><span>Recurring monthly commission</span></div>
         <div><b>₹0</b><span>Cost to join the programme</span></div>
         <div><b>No cap</b><span>On referrals or earnings</span></div>
-        <div><b>🏝️ Thailand</b><span>Grand prize at 10 referrals</span></div>
       </div>
     </div>
   </div>
@@ -369,11 +378,11 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
     </div>
 
     <div class="trip-gallery">
-      <img class="trip-gallery-a" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=700&q=80" alt="Thailand beach and longtail boats"/>
-      <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=500&q=80" alt="Bangkok skyline at sunset"/>
-      <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=500&q=80" alt="Thailand tropical resort pool"/>
-      <img src="https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=500&q=80" alt="Phi Phi islands aerial view"/>
-      <img src="https://images.unsplash.com/photo-1598935888738-cd2622bbca7e?auto=format&fit=crop&w=700&q=80" alt="Thailand temple and culture"/>
+      <img class="trip-gallery-a" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=700&q=80" alt="Thailand beach and longtail boats" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
+      <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=500&q=80" alt="Bangkok skyline at sunset" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
+      <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=500&q=80" alt="Thailand tropical resort pool" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
+      <img src="https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=500&q=80" alt="Phi Phi islands aerial view" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
+      <img src="https://images.unsplash.com/photo-1598935888738-cd2622bbca7e?auto=format&fit=crop&w=700&q=80" alt="Thailand temple and culture" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
     </div>
     <p style="font-size:.78rem;color:var(--muted);margin-top:16px;text-align:center">Grand prize applies to 10+ active referrals maintained within a 12-month period. Full terms confirmed with every Legend-tier partner directly.</p>
   </div>
@@ -419,7 +428,7 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
     </div>
     <div class="wtr-grid">
       <div class="wtr-img rev">
-        <img src="https://raw.githubusercontent.com/Thegrowthunion/TheGrowthunion/refs/heads/main/pexels-leeloothefirst-7873575.jpgt" alt="Business meeting discussing growth strategy"/>
+        <img src="https://raw.githubusercontent.com/Thegrowthunion/TheGrowthunion/refs/heads/main/pexels-leeloothefirst-7873575.jpg" alt="Business meeting discussing growth strategy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22920%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22920%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
       </div>
       <div class="wtr-list rev">
         <div class="wtr-item">
@@ -459,7 +468,8 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 
     <div class="calc-box">
       <div class="calc-in">
-        <canvas id="confettiCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5"></canvas>
+        <canvas id="confettiCanvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999"></canvas>
+
         <div class="calc-grid">
           <div class="calc-controls">
             <div class="calc-field">
@@ -470,10 +480,10 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
               <label>Average Monthly Retainer <span id="retainerLabel">₹50,000</span></label>
               <input type="range" id="retainerAmt" min="30000" max="150000" value="50000" step="5000" oninput="updateCalc()"/>
             </div>
-            <div id="winBanner" style="display:none;background:linear-gradient(135deg,#f4732b,#ffb347);border-radius:16px;padding:20px 22px;text-align:center;box-shadow:0 12px 30px rgba(244,115,43,.4)">
-              <div style="font-size:1.8rem;margin-bottom:4px">🏝️🎉</div>
-              <div style="font-family:var(--fh);color:var(--white);font-weight:700;font-size:1.15rem;line-height:1.3">You Just Unlocked<br/>a Trip to Thailand!</div>
-              <div style="color:rgba(255,255,255,.9);font-size:.82rem;margin-top:6px">10+ referrals wins flights + hotel for two</div>
+            <div id="winBanner" class="win-banner">
+              <div class="win-banner-emoji">🏝️🎉</div>
+              <div class="win-banner-title">You Just Unlocked<br/>a Trip to Thailand!</div>
+              <div class="win-banner-sub">10+ referrals wins flights + hotel for two</div>
             </div>
           </div>
           <div class="calc-result rev">
@@ -518,7 +528,7 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
         </div>
       </div>
       <div class="who-img rev">
-        <img src="https://raw.githubusercontent.com/Thegrowthunion/TheGrowthunion/refs/heads/main/ChatGPT%20Image%20Aug%2019%2C%202026%2C%2002_52_44%20PM.png" alt="Professionals shaking hands over partnership agreement"/>
+        <img src="https://raw.githubusercontent.com/Thegrowthunion/TheGrowthunion/refs/heads/main/ChatGPT%20Image%20Aug%2019%2C%202026%2C%2002_52_44%20PM.png" alt="Professionals shaking hands over partnership agreement" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
       </div>
     </div>
   </div>
@@ -728,60 +738,76 @@ function updateCalc(){
 }
 updateCalc();
 
-// ── Confetti / streamer burst ──
+// ── Confetti / streamer burst — full page ──
 function fireConfetti(){
   const canvas=document.getElementById('confettiCanvas');
-  const box=canvas.parentElement.getBoundingClientRect();
-  canvas.width=box.width; canvas.height=box.height;
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
   const ctx=canvas.getContext('2d');
-  const colors=['#f4732b','#ffb347','#ffd27a','#ffffff','#c98a1f','#ff8fa3'];
+  const colors=['#f4732b','#ffb347','#ffd27a','#ffffff','#c98a1f','#ff8fa3','#ff5c5c','#7ee8c7'];
   const pieces=[];
-  const count=90;
-  for(let i=0;i<count;i++){
-    pieces.push({
-      x: box.width/2 + (Math.random()-0.5)*80,
-      y: box.height*0.35,
-      vx: (Math.random()-0.5)*11,
-      vy: -Math.random()*9-4,
-      size: Math.random()*7+4,
-      color: colors[Math.floor(Math.random()*colors.length)],
-      rot: Math.random()*360,
-      vr: (Math.random()-0.5)*14,
-      shape: Math.random()>0.5?'rect':'strip',
-      gravity: 0.28+Math.random()*0.1,
-      life: 0
-    });
-  }
+  const origins=[0.1,0.3,0.5,0.7,0.9]; // multiple burst points across the top
+  const perOrigin=70;
+
+  origins.forEach(ox=>{
+    for(let i=0;i<perOrigin;i++){
+      pieces.push({
+        x: canvas.width*ox + (Math.random()-0.5)*140,
+        y: -20 - Math.random()*80,
+        vx: (Math.random()-0.5)*14,
+        vy: Math.random()*4+2,
+        size: Math.random()*12+7,
+        color: colors[Math.floor(Math.random()*colors.length)],
+        rot: Math.random()*360,
+        vr: (Math.random()-0.5)*16,
+        shape: Math.random()>0.55?'rect':(Math.random()>0.5?'strip':'circle'),
+        gravity: 0.22+Math.random()*0.12,
+        drift: (Math.random()-0.5)*0.06
+      });
+    }
+  });
+
   let frame=0;
-  const maxFrames=130;
+  const maxFrames=260;
   function animate(){
     frame++;
     ctx.clearRect(0,0,canvas.width,canvas.height);
     pieces.forEach(p=>{
       p.vy += p.gravity;
+      if(p.vy>11) p.vy=11;
+      p.vx += p.drift;
       p.x += p.vx;
       p.y += p.vy;
       p.rot += p.vr;
-      p.life++;
       ctx.save();
       ctx.translate(p.x,p.y);
       ctx.rotate(p.rot*Math.PI/180);
-      ctx.globalAlpha = frame > maxFrames-30 ? Math.max(0,(maxFrames-frame)/30) : 1;
+      ctx.globalAlpha = frame > maxFrames-50 ? Math.max(0,(maxFrames-frame)/50) : 1;
       ctx.fillStyle=p.color;
       if(p.shape==='rect'){
         ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
+      } else if(p.shape==='circle'){
+        ctx.beginPath();
+        ctx.arc(0,0,p.size/2.4,0,Math.PI*2);
+        ctx.fill();
       } else {
-        ctx.fillRect(-p.size/4,-p.size*1.1,p.size/2,p.size*2.2);
+        ctx.fillRect(-p.size/4,-p.size*1.3,p.size/2,p.size*2.6);
       }
       ctx.restore();
     });
-    if(frame<maxFrames){
+    if(frame<maxFrames && pieces.some(p=>p.y<canvas.height+60)){
       requestAnimationFrame(animate);
     } else {
       ctx.clearRect(0,0,canvas.width,canvas.height);
     }
   }
   animate();
+
+  window.addEventListener('resize', function onResize(){
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+    window.removeEventListener('resize', onResize);
+  });
 }
 
 const obs=new IntersectionObserver(entries=>{
