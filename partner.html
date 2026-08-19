@@ -64,7 +64,7 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 
 /* ═══ HERO — full background image ═══ */
 .p-hero{position:relative;padding:0;min-height:640px;display:flex;align-items:center;overflow:hidden}
-.p-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1800&q=80') center 45%/cover no-repeat}
+.p-hero-bg{position:absolute;inset:0;background-color:#0d9488;background-image:url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1800&q=80');background-position:center 45%;background-size:cover;background-repeat:no-repeat}
 .p-hero-ov{position:absolute;inset:0;background:linear-gradient(115deg,rgba(20,15,25,.92) 0%,rgba(43,25,50,.75) 40%,rgba(244,115,43,.45) 100%)}
 .p-hero-glow{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(255,180,80,.35),transparent 70%);top:-120px;right:-80px;border-radius:50%;pointer-events:none;animation:pulse-glow 4s ease-in-out infinite}
 @keyframes pulse-glow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
@@ -92,7 +92,7 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 
 /* ═══ REWARD LADDER / THAILAND ═══ */
 .trip-hero{position:relative;border-radius:28px;overflow:hidden;min-height:520px;display:flex;align-items:flex-end}
-.trip-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1800&q=80') center 40%/cover no-repeat}
+.trip-hero-bg{position:absolute;inset:0;background-color:#0d9488;background-image:linear-gradient(135deg,rgba(13,148,136,.15) 0%,rgba(124,45,18,.15) 100%),url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1800&q=80');background-position:center 40%;background-size:cover;background-repeat:no-repeat}
 .trip-hero-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,15,25,.94) 5%,rgba(43,25,50,.55) 55%,rgba(244,115,43,.15) 100%)}
 .trip-hero-in{position:relative;z-index:1;padding:56px 48px}
 .trip-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#f4732b,#ffb347);color:var(--white);font-family:var(--fb);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 18px;border-radius:50px;margin-bottom:20px;box-shadow:0 6px 20px rgba(244,115,43,.4)}
@@ -118,9 +118,19 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 .tier-ribbon{position:absolute;top:-12px;right:20px;background:#c98a1f;color:var(--white);font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 14px;border-radius:50px}
 
 .trip-gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:56px}
-.trip-gallery img{width:100%;height:100%;min-height:140px;object-fit:cover;border-radius:var(--r2);display:block}
 .trip-gallery-a{grid-row:span 2}
-.trip-gallery-a img{min-height:296px}
+.trip-tile{border-radius:var(--r2);min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(43,38,32,.15)}
+.trip-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.trip-tile::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.18),transparent 55%)}
+.trip-tile-emoji{font-size:2.6rem;position:relative;z-index:1;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+.trip-tile-label{font-family:var(--fb);font-weight:700;color:var(--white);font-size:.9rem;letter-spacing:.02em;position:relative;z-index:1;text-align:center;padding:0 12px}
+.trip-tile-a{grid-row:span 2;min-height:296px;background:linear-gradient(150deg,#0d9488 0%,#0891b2 55%,#155e75 100%)}
+.trip-tile-a .trip-tile-emoji{font-size:3.4rem}
+.trip-tile-a .trip-tile-label{font-size:1.05rem}
+.trip-tile-b{background:linear-gradient(150deg,#f4732b 0%,#d95e18 55%,#7c2d12 100%)}
+.trip-tile-c{background:linear-gradient(150deg,#14b8a6 0%,#0d9488 55%,#134e4a 100%)}
+.trip-tile-d{background:linear-gradient(150deg,#fb923c 0%,#f4732b 55%,#9a3412 100%)}
+.trip-tile-e{background:linear-gradient(150deg,#c98a1f 0%,#a8621a 55%,#4a2e12 100%)}
 
 /* HOW IT WORKS */
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
@@ -201,7 +211,7 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
 
 /* CTA BAND WITH IMAGE */
 .cta-band{position:relative;border-radius:24px;overflow:hidden;margin-top:0}
-.cta-band-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
+.cta-band-bg{position:absolute;inset:0;background-color:#2b2620;background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80');background-position:center;background-size:cover;background-repeat:no-repeat}
 .cta-band-ov{position:absolute;inset:0;background:linear-gradient(120deg,rgba(43,38,32,.85),rgba(244,115,43,.55))}
 .cta-band-in{position:relative;z-index:1;padding:64px 48px;text-align:center}
 .cta-band-in h2{color:var(--white)}
@@ -260,7 +270,9 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
   .tier-ladder{grid-template-columns:1fr 1fr}
   .trip-hero-in{padding:36px 24px}
   .trip-gallery{grid-template-columns:1fr 1fr}
-  .trip-gallery-a{grid-row:span 1}
+  .trip-tile-a{grid-row:span 1;min-height:140px}
+  .trip-tile-a .trip-tile-emoji{font-size:2.6rem}
+  .trip-tile-a .trip-tile-label{font-size:.9rem}
 }
 @media(max-width:560px){
   .p-form-wrap{padding:24px 18px}
@@ -378,11 +390,31 @@ h3{font-size:clamp(1rem,2vw,1.3rem)}p{font-size:.97rem;line-height:1.78}
     </div>
 
     <div class="trip-gallery">
-      <img class="trip-gallery-a" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=700&q=80" alt="Thailand beach and longtail boats" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
-      <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=500&q=80" alt="Bangkok skyline at sunset" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
-      <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=500&q=80" alt="Thailand tropical resort pool" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
-      <img src="https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=500&q=80" alt="Phi Phi islands aerial view" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
-      <img src="https://images.unsplash.com/photo-1598935888738-cd2622bbca7e?auto=format&fit=crop&w=700&q=80" alt="Thailand temple and culture" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23f4732b%22/%3E%3Cstop offset=%22100%25%22 stop-color=%22%232b2620%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22800%22 height=%22600%22 fill=%22url(%23g)%22/%3E%3C/svg%3E'"/>
+      <div class="trip-tile trip-tile-a" data-fallback-emoji="🏖️" data-fallback-label="Thailand Beaches">
+        <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=700&q=80"
+             data-backup="https://images.pexels.com/photos/1450340/pexels-photo-1450340.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Thailand beach and longtail boats" class="trip-photo" onerror="tguImgFallback(this)"/>
+      </div>
+      <div class="trip-tile trip-tile-b" data-fallback-emoji="🌆" data-fallback-label="Bangkok Nights">
+        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=500&q=80"
+             data-backup="https://images.pexels.com/photos/1031659/pexels-photo-1031659.jpeg?auto=compress&cs=tinysrgb&w=500"
+             alt="Bangkok skyline at sunset" class="trip-photo" onerror="tguImgFallback(this)"/>
+      </div>
+      <div class="trip-tile trip-tile-c" data-fallback-emoji="🏝️" data-fallback-label="Island Escapes">
+        <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=500&q=80"
+             data-backup="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=500"
+             alt="Thailand tropical resort pool" class="trip-photo" onerror="tguImgFallback(this)"/>
+      </div>
+      <div class="trip-tile trip-tile-d" data-fallback-emoji="🛥️" data-fallback-label="Longtail Boats">
+        <img src="https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=500&q=80"
+             data-backup="https://images.pexels.com/photos/2130949/pexels-photo-2130949.jpeg?auto=compress&cs=tinysrgb&w=500"
+             alt="Phi Phi islands aerial view" class="trip-photo" onerror="tguImgFallback(this)"/>
+      </div>
+      <div class="trip-tile trip-tile-e" data-fallback-emoji="🛕" data-fallback-label="Culture & Temples">
+        <img src="https://images.unsplash.com/photo-1598935888738-cd2622bbca7e?auto=format&fit=crop&w=700&q=80"
+             data-backup="https://images.pexels.com/photos/3187617/pexels-photo-3187617.jpeg?auto=compress&cs=tinysrgb&w=700"
+             alt="Thailand temple and culture" class="trip-photo" onerror="tguImgFallback(this)"/>
+      </div>
     </div>
     <p style="font-size:.78rem;color:var(--muted);margin-top:16px;text-align:center">Grand prize applies to 10+ active referrals maintained within a 12-month period. Full terms confirmed with every Legend-tier partner directly.</p>
   </div>
@@ -716,6 +748,28 @@ function genCode(){
 }
 document.getElementById('refCode').addEventListener('input',function(){this.dataset.edited='true'});
 
+// ── Image fallback: try a second real photo before ever giving up ──
+function tguImgFallback(img){
+  if(!img.dataset.triedBackup && img.dataset.backup){
+    img.dataset.triedBackup = 'true';
+    img.src = img.dataset.backup;
+  } else {
+    // Both real photos failed — reveal the branded tile placeholder underneath
+    img.style.display = 'none';
+    const tile = img.closest('.trip-tile');
+    if(tile && !tile.querySelector('.trip-tile-emoji')){
+      const emoji = document.createElement('div');
+      emoji.className = 'trip-tile-emoji';
+      emoji.textContent = tile.dataset.fallbackEmoji || '🏝️';
+      const label = document.createElement('div');
+      label.className = 'trip-tile-label';
+      label.textContent = tile.dataset.fallbackLabel || 'Thailand';
+      tile.appendChild(emoji);
+      tile.appendChild(label);
+    }
+  }
+}
+
 function updateCalc(){
   const count=parseInt(document.getElementById('refCount').value);
   const retainer=parseInt(document.getElementById('retainerAmt').value);
@@ -738,51 +792,59 @@ function updateCalc(){
 }
 updateCalc();
 
-// ── Confetti / streamer burst — full page ──
+// ── Confetti — real party-popper burst, not a top-down rain ──
 function fireConfetti(){
   const canvas=document.getElementById('confettiCanvas');
   canvas.width=window.innerWidth;
   canvas.height=window.innerHeight;
   const ctx=canvas.getContext('2d');
-  const colors=['#f4732b','#ffb347','#ffd27a','#ffffff','#c98a1f','#ff8fa3','#ff5c5c','#7ee8c7'];
+  const colors=['#f4732b','#ffb347','#ffd27a','#ffffff','#c98a1f','#ff8fa3','#ff5c5c','#7ee8c7','#a78bfa'];
   const pieces=[];
-  const origins=[0.1,0.3,0.5,0.7,0.9]; // multiple burst points across the top
-  const perOrigin=70;
 
-  origins.forEach(ox=>{
-    for(let i=0;i<perOrigin;i++){
+  // Two poppers: bottom-left corner firing up-right, bottom-right corner firing up-left
+  const poppers=[
+    { x: canvas.width*0.06,  y: canvas.height*0.92, baseAngle: -55, spread: 50 },
+    { x: canvas.width*0.94,  y: canvas.height*0.92, baseAngle: -125, spread: 50 },
+    { x: canvas.width*0.5,   y: canvas.height*0.98, baseAngle: -90, spread: 65 }
+  ];
+  const perPopper=110;
+
+  poppers.forEach(pop=>{
+    for(let i=0;i<perPopper;i++){
+      const angleDeg = pop.baseAngle + (Math.random()-0.5)*pop.spread*2;
+      const angleRad = angleDeg*Math.PI/180;
+      const speed = 9 + Math.random()*15;
       pieces.push({
-        x: canvas.width*ox + (Math.random()-0.5)*140,
-        y: -20 - Math.random()*80,
-        vx: (Math.random()-0.5)*14,
-        vy: Math.random()*4+2,
-        size: Math.random()*12+7,
+        x: pop.x,
+        y: pop.y,
+        vx: Math.cos(angleRad)*speed,
+        vy: Math.sin(angleRad)*speed,
+        size: Math.random()*13+7,
         color: colors[Math.floor(Math.random()*colors.length)],
         rot: Math.random()*360,
-        vr: (Math.random()-0.5)*16,
+        vr: (Math.random()-0.5)*22,
         shape: Math.random()>0.55?'rect':(Math.random()>0.5?'strip':'circle'),
-        gravity: 0.22+Math.random()*0.12,
-        drift: (Math.random()-0.5)*0.06
+        gravity: 0.35+Math.random()*0.15,
+        drag: 0.985
       });
     }
   });
 
   let frame=0;
-  const maxFrames=260;
+  const maxFrames=200;
   function animate(){
     frame++;
     ctx.clearRect(0,0,canvas.width,canvas.height);
     pieces.forEach(p=>{
+      p.vx *= p.drag;
       p.vy += p.gravity;
-      if(p.vy>11) p.vy=11;
-      p.vx += p.drift;
       p.x += p.vx;
       p.y += p.vy;
       p.rot += p.vr;
       ctx.save();
       ctx.translate(p.x,p.y);
       ctx.rotate(p.rot*Math.PI/180);
-      ctx.globalAlpha = frame > maxFrames-50 ? Math.max(0,(maxFrames-frame)/50) : 1;
+      ctx.globalAlpha = frame > maxFrames-45 ? Math.max(0,(maxFrames-frame)/45) : 1;
       ctx.fillStyle=p.color;
       if(p.shape==='rect'){
         ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
@@ -795,7 +857,7 @@ function fireConfetti(){
       }
       ctx.restore();
     });
-    if(frame<maxFrames && pieces.some(p=>p.y<canvas.height+60)){
+    if(frame<maxFrames){
       requestAnimationFrame(animate);
     } else {
       ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -807,6 +869,7 @@ function fireConfetti(){
     canvas.width=window.innerWidth;
     canvas.height=window.innerHeight;
     window.removeEventListener('resize', onResize);
+
   });
 }
 
