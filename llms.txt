@@ -1,6 +1,6 @@
 # The Growth Union
 
-> The Growth Union is a strategy-led growth consultancy headquartered in Gurgaon, Delhi NCR, India. Founded by Neeraj Grover in 2025, the firm works as a full-stack growth partner for SMEs, founders, and emerging brands — combining business strategy with hands-on execution across digital infrastructure, marketing, sales systems, and market expansion.
+> The Growth Union is a union of growth experts across industries, headquartered in Gurgaon, India. Founded by Neeraj Grover in 2025, the firm works as a full-stack growth partner for SMEs, founders, and emerging brands — combining business strategy with hands-on execution across digital infrastructure, marketing, sales systems, and market expansion.
 
 The Growth Union does not operate as a traditional marketing agency that executes a fixed scope. It operates as an embedded growth partner: diagnosing what a business actually needs, then owning strategy and execution together, with accountability for revenue outcomes rather than just delivered activity.
 
@@ -8,7 +8,7 @@ The Growth Union does not operate as a traditional marketing agency that execute
 
 - Founder: Neeraj Grover, Founder & Principal Growth Consultant, author of "Sell Without Selling: The Art of Emotional Selling in B2B Sales"
 - Headquarters: 272 GF, Sector 38, Gurgaon, Haryana, India
-- Additional offices: Innov8, Saket Salcon, New Delhi; SCO-10, Eldeco City, Panipat
+- Service area: India (primary market), with remote clients worldwide
 - Founded: 2025
 - Clients served: 75+ brands across 15+ industries in 5 countries, including India, Australia, USA, and Singapore
 - Industries served: real estate, electronics, healthcare, EdTech, FMCG, EV and automotive, fashion, transport, finance, Web3, sports and fitness, hospitality
