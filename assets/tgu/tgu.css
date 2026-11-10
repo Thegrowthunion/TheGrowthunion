@@ -16,3 +16,16 @@ a.tgu-btn{display:inline-block;padding:14px 28px;background:#fff;color:#121c2b!i
 a.tgu-btn:hover{background:#e9e2d8}
 @media(max-width:600px){form.tgu-form p.two{grid-template-columns:1fr}}
 html{overflow-x:clip}
+/* light-background variant (contact and audit pages) */
+form.tgu-form.light{margin:0;padding:34px;background:#fff;box-shadow:0 20px 50px -26px rgba(18,28,43,.35)}
+form.tgu-form.light h3{margin:0 0 6px;font-size:26px;color:#121c2b}
+form.tgu-form.light p.sub{margin:0 0 20px!important;color:#5a6070;font-size:15px}
+form.tgu-form.light input:not(.hp),form.tgu-form.light select,form.tgu-form.light textarea{display:block!important;width:100%!important;padding:14px 16px!important;margin:0!important;background:#f5f5f5!important;border:1px solid #d6d9de!important;border-radius:0!important;color:#121c2b!important;font:inherit!important;font-size:15px!important;box-shadow:none!important;outline:0!important}
+form.tgu-form.light textarea{min-height:130px;resize:vertical}
+form.tgu-form.light input::placeholder,form.tgu-form.light textarea::placeholder{color:#7a8090!important;opacity:1}
+form.tgu-form.light input:not(.hp):focus,form.tgu-form.light select:focus,form.tgu-form.light textarea:focus{border-color:#121c2b!important;background:#fff!important}
+form.tgu-form.light select{background-image:linear-gradient(45deg,transparent 50%,#121c2b 50%),linear-gradient(135deg,#121c2b 50%,transparent 50%)!important;background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%!important;background-size:6px 6px,6px 6px!important;background-repeat:no-repeat!important;-webkit-appearance:none;appearance:none}
+form.tgu-form.light button{background:#121c2b!important;color:#fff!important}
+form.tgu-form.light button:hover{background:#2a3a52!important}
+form.tgu-form.light .msg{background:#fdecea;color:#8a1c14}
+.tgu-formwrap{padding:10px 0}
