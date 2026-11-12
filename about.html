@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-IN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -145,7 +145,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 	SR7.JSON			??= {};
 /*! Slider Revolution 7.0 - Page Processor */
 !function(){"use strict";window.SR7??={},window._tpt??={},SR7.version="Slider Revolution 6.7.16",_tpt.getWinDim=function(t){_tpt.screenHeightWithUrlBar??=window.innerHeight;let e=SR7.F?.modal?.visible&&SR7.M[SR7.F.module.getIdByAlias(SR7.F.modal.requested)];_tpt.scrollBar=window.innerWidth!==document.documentElement.clientWidth||e&&window.innerWidth!==e.c.module.clientWidth,_tpt.winW=window.innerWidth-(_tpt.scrollBar||"prepare"==t?_tpt.scrollBarW??_tpt.mesureScrollBar():0),_tpt.winH=window.innerHeight,_tpt.winWAll=document.documentElement.clientWidth},_tpt.getResponsiveLevel=function(t,e){SR7.M[e];return _tpt.closestGE(t,_tpt.winWAll)},_tpt.mesureScrollBar=function(){let t=document.createElement("div");return t.className="RSscrollbar-measure",t.style.width="100px",t.style.height="100px",t.style.overflow="scroll",t.style.position="absolute",t.style.top="-9999px",document.body.appendChild(t),_tpt.scrollBarW=t.offsetWidth-t.clientWidth,document.body.removeChild(t),_tpt.scrollBarW},_tpt.loadCSS=async function(t,e,s){return s?_tpt.R.fonts.required[e].status=1:(_tpt.R[e]??={},_tpt.R[e].status=1),new Promise(((n,i)=>{if(_tpt.isStylesheetLoaded(t))s?_tpt.R.fonts.required[e].status=2:_tpt.R[e].status=2,n();else{const l=document.createElement("link");l.rel="stylesheet";let o="text",r="css";l["type"]=o+"/"+r,l.href=t,l.onload=()=>{s?_tpt.R.fonts.required[e].status=2:_tpt.R[e].status=2,n()},l.onerror=()=>{s?_tpt.R.fonts.required[e].status=3:_tpt.R[e].status=3,i(new Error(`Failed to load CSS: ${t}`))},document.head.appendChild(l)}}))},_tpt.addContainer=function(t){const{tag:e="div",id:s,class:n,datas:i,textContent:l,iHTML:o}=t,r=document.createElement(e);if(s&&""!==s&&(r.id=s),n&&""!==n&&(r.className=n),i)for(const[t,e]of Object.entries(i))"style"==t?r.style.cssText=e:r.setAttribute(`data-${t}`,e);return l&&(r.textContent=l),o&&(r.innerHTML=o),r},_tpt.collector=function(){return{fragment:new DocumentFragment,add(t){var e=_tpt.addContainer(t);return this.fragment.appendChild(e),e},append(t){t.appendChild(this.fragment)}}},_tpt.isStylesheetLoaded=function(t){let e=t.split("?")[0];return Array.from(document.querySelectorAll('link[rel="stylesheet"], link[rel="preload"]')).some((t=>t.href.split("?")[0]===e))},_tpt.preloader={requests:new Map,preloaderTemplates:new Map,show:function(t,e){if(!e||!t)return;const{type:s,color:n}=e;if(s<0||"off"==s)return;const i=`preloader_${s}`;let l=this.preloaderTemplates.get(i);l||(l=this.build(s,n),this.preloaderTemplates.set(i,l)),this.requests.has(t)||this.requests.set(t,{count:0});const o=this.requests.get(t);clearTimeout(o.timer),o.count++,1===o.count&&(o.timer=setTimeout((()=>{o.preloaderClone=l.cloneNode(!0),o.anim&&o.anim.kill(),void 0!==_tpt.gsap?o.anim=_tpt.gsap.fromTo(o.preloaderClone,1,{opacity:0},{opacity:1}):o.preloaderClone.classList.add("sr7-fade-in"),t.appendChild(o.preloaderClone)}),150))},hide:function(t){if(!this.requests.has(t))return;const e=this.requests.get(t);e.count--,e.count<0&&(e.count=0),e.anim&&e.anim.kill(),0===e.count&&(clearTimeout(e.timer),e.preloaderClone&&(e.preloaderClone.classList.remove("sr7-fade-in"),e.anim=_tpt.gsap.to(e.preloaderClone,.3,{opacity:0,onComplete:function(){e.preloaderClone.remove()}})))},state:function(t){if(!this.requests.has(t))return!1;return this.requests.get(t).count>0},build:(t,e="#ffffff",s="")=>{if(t<0||"off"===t)return null;const n=parseInt(t);if(t="prlt"+n,isNaN(n))return null;if(_tpt.loadCSS(SR7.E.plugin_url+"public/css/preloaders/t"+n+".css","preloader_"+t),isNaN(n)||n<6){const i=`background-color:${e}`,l=1===n||2==n?i:"",o=3===n||4==n?i:"",r=_tpt.collector();["dot1","dot2","bounce1","bounce2","bounce3"].forEach((t=>r.add({tag:"div",class:t,datas:{style:o}})));const d=_tpt.addContainer({tag:"sr7-prl",class:`${t} ${s}`,datas:{style:l}});return r.append(d),d}{let i={};if(7===n){let t;e.startsWith("#")?(t=e.replace("#",""),t=`rgba(${parseInt(t.substring(0,2),16)}, ${parseInt(t.substring(2,4),16)}, ${parseInt(t.substring(4,6),16)}, `):e.startsWith("rgb")&&(t=e.slice(e.indexOf("(")+1,e.lastIndexOf(")")).split(",").map((t=>t.trim())),t=`rgba(${t[0]}, ${t[1]}, ${t[2]}, `),t&&(i.style=`border-top-color: ${t}0.65); border-bottom-color: ${t}0.15); border-left-color: ${t}0.65); border-right-color: ${t}0.15)`)}else 12===n&&(i.style=`background:${e}`);const l=[10,0,4,2,5,9,0,4,4,2][n-6],o=_tpt.collector(),r=o.add({tag:"div",class:"sr7-prl-inner",datas:i});Array.from({length:l}).forEach((()=>r.appendChild(o.add({tag:"span",datas:{style:`background:${e}`}}))));const d=_tpt.addContainer({tag:"sr7-prl",class:`${t} ${s}`});return o.append(d),d}}},SR7.preLoader={show:(t,e)=>{"off"!==(SR7.M[t]?.settings?.pLoader?.type??"off")&&_tpt.preloader.show(e||SR7.M[t].c.module,SR7.M[t]?.settings?.pLoader??{color:"#fff",type:10})},hide:(t,e)=>{"off"!==(SR7.M[t]?.settings?.pLoader?.type??"off")&&_tpt.preloader.hide(e||SR7.M[t].c.module)},state:(t,e)=>_tpt.preloader.state(e||SR7.M[t].c.module)},_tpt.prepareModuleHeight=function(t){window.SR7.M??={},window.SR7.M[t.id]??={},"ignore"==t.googleFont&&(SR7.E.ignoreGoogleFont=!0);let e=window.SR7.M[t.id];if(null==_tpt.scrollBarW&&_tpt.mesureScrollBar(),e.c??={},e.states??={},e.settings??={},e.settings.size??={},t.fixed&&(e.settings.fixed=!0),e.c.module=document.getElementById(t.id),e.c.adjuster=e.c.module.getElementsByTagName("sr7-adjuster")[0],e.c.content=e.c.module.getElementsByTagName("sr7-content")[0],"carousel"==t.type&&(e.c.carousel=e.c.content.getElementsByTagName("sr7-carousel")[0]),null==e.c.module||null==e.c.module)return;t.plType&&t.plColor&&(e.settings.pLoader={type:t.plType,color:t.plColor}),void 0!==t.plType&&"off"!==t.plType&&SR7.preLoader.show(t.id,e.c.module),_tpt.winW||_tpt.getWinDim("prepare"),_tpt.getWinDim();let s=""+e.c.module.dataset?.modal;"modal"==s||"true"==s||"undefined"!==s&&"false"!==s||(e.settings.size.fullWidth=t.size.fullWidth,e.LEV??=_tpt.getResponsiveLevel(window.SR7.G.breakPoints,t.id),t.vpt=_tpt.fillArray(t.vpt,5),e.settings.vPort=t.vpt[e.LEV],void 0!==t.el&&"720"==t.el[4]&&t.gh[4]!==t.el[4]&&"960"==t.el[3]&&t.gh[3]!==t.el[3]&&"768"==t.el[2]&&t.gh[2]!==t.el[2]&&delete t.el,e.settings.size.height=null==t.el||null==t.el[e.LEV]||0==t.el[e.LEV]||"auto"==t.el[e.LEV]?_tpt.fillArray(t.gh,5,-1):_tpt.fillArray(t.el,5,-1),e.settings.size.width=_tpt.fillArray(t.gw,5,-1),e.settings.size.minHeight=_tpt.fillArray(t.mh??[0],5,-1),e.cacheSize={fullWidth:e.settings.size?.fullWidth,fullHeight:e.settings.size?.fullHeight},void 0!==t.off&&(t.off?.t&&(e.settings.size.m??={})&&(e.settings.size.m.t=t.off.t),t.off?.b&&(e.settings.size.m??={})&&(e.settings.size.m.b=t.off.b),t.off?.l&&(e.settings.size.p??={})&&(e.settings.size.p.l=t.off.l),t.off?.r&&(e.settings.size.p??={})&&(e.settings.size.p.r=t.off.r),e.offsetPrepared=!0),_tpt.updatePMHeight(t.id,t,!0))},_tpt.updatePMHeight=(t,e,s)=>{let n=SR7.M[t];var i=n.settings.size.fullWidth?_tpt.winW:n.c.module.parentNode.offsetWidth;i=0===i||isNaN(i)?_tpt.winW:i;let l=n.settings.size.width[n.LEV]||n.settings.size.width[n.LEV++]||n.settings.size.width[n.LEV--]||i,o=n.settings.size.height[n.LEV]||n.settings.size.height[n.LEV++]||n.settings.size.height[n.LEV--]||0,r=n.settings.size.minHeight[n.LEV]||n.settings.size.minHeight[n.LEV++]||n.settings.size.minHeight[n.LEV--]||0;if(o="auto"==o?0:o,o=parseInt(o),"carousel"!==e.type&&(i-=parseInt(e.onw??0)||0),n.MP=!n.settings.size.fullWidth&&i<l||_tpt.winW<l?Math.min(1,i/l):1,e.size.fullScreen||e.size.fullHeight){let t=parseInt(e.fho)||0,s=(""+e.fho).indexOf("%")>-1;e.newh=_tpt.winH-(s?_tpt.winH*t/100:t)}else e.newh=n.MP*Math.max(o,r);if(e.newh+=(parseInt(e.onh??0)||0)+(parseInt(e.carousel?.pt)||0)+(parseInt(e.carousel?.pb)||0),void 0!==e.slideduration&&(e.newh=Math.max(e.newh,parseInt(e.slideduration)/3)),e.shdw&&_tpt.buildShadow(e.id,e),n.c.adjuster.style.height=e.newh+"px",n.c.module.style.height=e.newh+"px",n.c.content.style.height=e.newh+"px",n.states.heightPrepared=!0,n.dims??={},n.dims.moduleRect=n.c.module.getBoundingClientRect(),n.c.content.style.left="-"+n.dims.moduleRect.left+"px",!n.settings.size.fullWidth)return s&&requestAnimationFrame((()=>{i!==n.c.module.parentNode.offsetWidth&&_tpt.updatePMHeight(e.id,e)})),void _tpt.bgStyle(e.id,e,window.innerWidth==_tpt.winW,!0);_tpt.bgStyle(e.id,e,window.innerWidth==_tpt.winW,!0),requestAnimationFrame((function(){s&&requestAnimationFrame((()=>{i!==n.c.module.parentNode.offsetWidth&&_tpt.updatePMHeight(e.id,e)}))})),n.earlyResizerFunction||(n.earlyResizerFunction=function(){requestAnimationFrame((function(){_tpt.getWinDim(),_tpt.moduleDefaults(e.id,e),_tpt.updateSlideBg(t,!0)}))},window.addEventListener("resize",n.earlyResizerFunction))},_tpt.buildShadow=function(t,e){let s=SR7.M[t];null==s.c.shadow&&(s.c.shadow=document.createElement("sr7-module-shadow"),s.c.shadow.classList.add("sr7-shdw-"+e.shdw),s.c.content.appendChild(s.c.shadow))},_tpt.bgStyle=async(t,e,s,n,i)=>{const l=SR7.M[t];if((e=e??l.settings).fixed&&!l.c.module.classList.contains("sr7-top-fixed")&&(l.c.module.classList.add("sr7-top-fixed"),l.c.module.style.position="fixed",l.c.module.style.width="100%",l.c.module.style.top="0px",l.c.module.style.left="0px",l.c.module.style.pointerEvents="none",l.c.module.style.zIndex=5e3,l.c.content.style.pointerEvents="none"),null==l.c.bgcanvas){let t=document.createElement("sr7-module-bg"),o=!1;if("string"==typeof e?.bg?.color&&e?.bg?.color.includes("{"))if(_tpt.gradient&&_tpt.gsap)e.bg.color=_tpt.gradient.convert(e.bg.color);else try{let t=JSON.parse(e.bg.color);(t?.orig||t?.string)&&(e.bg.color=JSON.parse(e.bg.color))}catch(t){return}let r="string"==typeof e?.bg?.color?e?.bg?.color||"transparent":e?.bg?.color?.string??e?.bg?.color?.orig??e?.bg?.color?.color??"transparent";if(t.style["background"+(String(r).includes("grad")?"":"Color")]=r,("transparent"!==r||i)&&(o=!0),l.offsetPrepared&&(t.style.visibility="hidden"),e?.bg?.image?.src&&(t.style.backgroundImage=`url(${e?.bg?.image.src})`,t.style.backgroundSize=""==(e.bg.image?.size??"")?"cover":e.bg.image.size,t.style.backgroundPosition=e.bg.image.position,t.style.backgroundRepeat=""==e.bg.image.repeat||null==e.bg.image.repeat?"no-repeat":e.bg.image.repeat,o=!0),!o)return;l.c.bgcanvas=t,e.size.fullWidth?t.style.width=_tpt.winW-(s&&_tpt.winH<document.body.offsetHeight?_tpt.scrollBarW:0)+"px":n&&(t.style.width=l.c.module.offsetWidth+"px"),e.sbt?.use?l.c.content.appendChild(l.c.bgcanvas):l.c.module.appendChild(l.c.bgcanvas)}l.c.bgcanvas.style.height=void 0!==e.newh?e.newh+"px":("carousel"==e.type?l.dims.module.h:l.dims.content.h)+"px",l.c.bgcanvas.style.left=!s&&e.sbt?.use||l.c.bgcanvas.closest("SR7-CONTENT")?"0px":"-"+(l?.dims?.moduleRect?.left??0)+"px"},_tpt.updateSlideBg=function(t,e){const s=SR7.M[t];let n=s.settings;s?.c?.bgcanvas&&(n.size.fullWidth?s.c.bgcanvas.style.width=_tpt.winW-(e&&_tpt.winH<document.body.offsetHeight?_tpt.scrollBarW:0)+"px":preparing&&(s.c.bgcanvas.style.width=s.c.module.offsetWidth+"px"))},_tpt.moduleDefaults=(t,e)=>{let s=SR7.M[t];null!=s&&null!=s.c&&null!=s.c.module&&(s.dims??={},s.dims.moduleRect=s.c.module.getBoundingClientRect(),s.c.content.style.left="-"+s.dims.moduleRect.left+"px",s.c.content.style.width=_tpt.winW-_tpt.scrollBarW+"px","carousel"==e.type&&(s.c.module.style.overflow="visible"),_tpt.bgStyle(t,e,window.innerWidth==_tpt.winW))},_tpt.getOffset=t=>{var e=t.getBoundingClientRect(),s=window.pageXOffset||document.documentElement.scrollLeft,n=window.pageYOffset||document.documentElement.scrollTop;return{top:e.top+n,left:e.left+s}},_tpt.fillArray=function(t,e){let s,n;t=Array.isArray(t)?t:[t];let i=Array(e),l=t.length;for(n=0;n<t.length;n++)i[n+(e-l)]=t[n],null==s&&"#"!==t[n]&&(s=t[n]);for(let t=0;t<e;t++)void 0!==i[t]&&"#"!=i[t]||(i[t]=s),s=i[t];return i},_tpt.closestGE=function(t,e){let s=Number.MAX_VALUE,n=-1;for(let i=0;i<t.length;i++)t[i]-1>=e&&t[i]-1-e<s&&(s=t[i]-1-e,n=i);return++n}}();</script>
-<style id="pxl_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">#pxl-header-default .pxl-header-branding img, #pxl-header-default #pxl-header-mobile .pxl-header-branding img, #pxl-header-elementor #pxl-header-mobile .pxl-header-branding img, .pxl-logo-mobile img{height:35px;}</style><style id="pxl-page-dynamic-css" data-type="redux-output-css">#pxl-wapper #pxl-main{padding-top:0px;padding-bottom:0px;}</style><title>About The Growth Union | Growth Consultancy, Gurgaon &amp; Delhi</title><meta name="description" content="Meet The Growth Union and its founder Neeraj Grover: a strategy-led growth consultancy helping MSMEs grow and founders launch, from Gurgaon and Delhi."><link rel="canonical" href="https://thegrowthunion.com/about.html"><meta name="robots" content="index, follow, max-image-preview:large"><meta property="og:site_name" content="The Growth Union"><meta property="og:type" content="website"><meta property="og:title" content="About The Growth Union | Growth Consultancy, Gurgaon &amp; Delhi"><meta property="og:description" content="Meet The Growth Union and its founder Neeraj Grover: a strategy-led growth consultancy helping MSMEs grow and founders launch, from Gurgaon and Delhi."><meta property="og:url" content="https://thegrowthunion.com/about.html"><meta property="og:image" content="https://thegrowthunion.com/assets/img/og-image.png"><meta property="og:locale" content="en_IN"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"><link rel="stylesheet" href="/assets/tgu/tgu.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://thegrowthunion.com/#org","name":"The Growth Union","alternateName":"TGU","url":"https://thegrowthunion.com/","logo":"https://thegrowthunion.com/assets/img/logo.png","email":"hello@thegrowthunion.com","telephone":"+91-95186-04324","description":"The Growth Union is a strategy-led growth consultancy for MSMEs, founders and first-time entrepreneurs in India: we help existing businesses grow and help new ones launch, end to end.","founder":{"@type":"Person","name":"Neeraj Grover","jobTitle":"Founder & Principal Consultant","sameAs":["https://www.linkedin.com/in/neerajgrover007"]},"sameAs":["https://www.linkedin.com/company/thegrowthunion","https://www.instagram.com/thegrowth.union"],"areaServed":"IN","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"hello@thegrowthunion.com","telephone":"+91-95186-04324","areaServed":"IN","availableLanguage":["English","Hindi"]}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thegrowthunion.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://thegrowthunion.com/about.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://thegrowthunion.com/about.html#neeraj","name":"Neeraj Grover","jobTitle":"Founder & Principal Consultant","worksFor":{"@id":"https://thegrowthunion.com/#org"},"sameAs":["https://www.linkedin.com/in/neerajgrover007"],"url":"https://thegrowthunion.com/about.html"}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-PRYZ0GP4L2"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-PRYZ0GP4L2');</script><meta name="theme-color" content="#121c2b"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://www.googletagmanager.com"></head>
+<style id="pxl_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">#pxl-header-default .pxl-header-branding img, #pxl-header-default #pxl-header-mobile .pxl-header-branding img, #pxl-header-elementor #pxl-header-mobile .pxl-header-branding img, .pxl-logo-mobile img{height:35px;}</style><style id="pxl-page-dynamic-css" data-type="redux-output-css">#pxl-wapper #pxl-main{padding-top:0px;padding-bottom:0px;}</style><title>About The Growth Union | Growth Consultancy, Gurgaon &amp; Delhi</title><meta name="description" content="Meet The Growth Union and its founder Neeraj Grover: a strategy-led growth consultancy helping MSMEs grow and founders launch, from Gurgaon and Delhi."><link rel="canonical" href="https://thegrowthunion.com/about.html"><meta name="robots" content="index, follow, max-image-preview:large"><meta property="og:site_name" content="The Growth Union"><meta property="og:type" content="website"><meta property="og:title" content="About The Growth Union | Growth Consultancy, Gurgaon &amp; Delhi"><meta property="og:description" content="Meet The Growth Union and its founder Neeraj Grover: a strategy-led growth consultancy helping MSMEs grow and founders launch, from Gurgaon and Delhi."><meta property="og:url" content="https://thegrowthunion.com/about.html"><meta property="og:image" content="https://thegrowthunion.com/assets/img/og-image.png"><meta property="og:locale" content="en_IN"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"><link rel="stylesheet" href="/assets/tgu/tgu.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://thegrowthunion.com/#org","name":"The Growth Union","alternateName":"TGU","url":"https://thegrowthunion.com/","logo":"https://thegrowthunion.com/assets/img/logo.png","email":"hello@thegrowthunion.com","telephone":"+91-95186-04324","description":"The Growth Union is a strategy-led growth consultancy for MSMEs, founders and first-time entrepreneurs in India: we help existing businesses grow and help new ones launch, end to end.","founder":{"@type":"Person","name":"Neeraj Grover","jobTitle":"Founder & Principal Consultant","sameAs":["https://www.linkedin.com/in/neerajgrover007"]},"sameAs":["https://www.linkedin.com/company/thegrowthunion","https://www.instagram.com/thegrowth.union"],"areaServed":["IN","GB","US"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"hello@thegrowthunion.com","telephone":"+91-95186-04324","areaServed":"IN","availableLanguage":["English","Hindi"]},"knowsLanguage":"en"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thegrowthunion.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://thegrowthunion.com/about.html"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://thegrowthunion.com/about.html#neeraj","name":"Neeraj Grover","jobTitle":"Founder & Principal Consultant","worksFor":{"@id":"https://thegrowthunion.com/#org"},"sameAs":["https://www.linkedin.com/in/neerajgrover007"],"url":"https://thegrowthunion.com/about.html"}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-PRYZ0GP4L2"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-PRYZ0GP4L2');</script><meta name="theme-color" content="#121c2b"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="alternate" type="application/rss+xml" title="The Growth Union Insights" href="/feed.xml"></head>
 <body class="page-template-default page page-id-163   pxl-redux-page  body-default-font   heading-default-font   bd-px-header--default  woocommerce-layout-grid elementor-default elementor-kit-6 elementor-page elementor-page-163">
         <div id="pxl-wapper" class="pxl-wapper">
         
@@ -186,7 +186,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
     <div class="pxl-item--inner">
         
                             <div class="pxl-item--icon">
-                                    <a href="https://maps.google.com/?q=Plot+272+Sector+38+Gurgaon+Haryana+122001" target="_blank">
+                                    <a href="https://maps.google.com/?q=Plot+272+Sector+38+Gurgaon+Haryana+122001" target="_blank" rel="noopener">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>                                        </a>
                             </div>
                         <div class="pxl-item--meta">
@@ -235,11 +235,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-e5a1c6e elementor-widget__width-auto elementor-widget elementor-widget-pxl_image" data-id="e5a1c6e" data-element_type="widget" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-e5a1c6e-5297" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-e5a1c6e-3634" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
-                                <img decoding="async" fetchpriority="high" src="/wp-content/uploads/2024/04/l.png" class="no-lazyload attachment-full" alt="" />                                            </div>
+                                <img style="aspect-ratio:11/34" decoding="async" fetchpriority="high" src="/wp-content/uploads/2024/04/l.png" class="no-lazyload attachment-full" alt="" />                                            </div>
                 
     </div>
 </div>		</div>
@@ -264,6 +264,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <ul class="sub-menu">
 	<li id="menu-item-11957" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11957"><a href="/services.html"><span class="pxl-menu-item-text">Grow Your Business<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a></li>
 	<li id="menu-item-11958" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11958"><a href="/launch.html"><span class="pxl-menu-item-text">Launch Your Business<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a></li>
+	<li id="menu-item-12267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12267"><a href="/outsourced-marketing-team.html"><span class="pxl-menu-item-text">Outsourced Marketing Team<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a></li>
 </ul>
 </li>
 <li id="menu-item-11959" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11959"><a href="/packages.html"><span class="pxl-menu-item-text">Packages<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a>
@@ -286,7 +287,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-0f9490a elementor-widget__width-auto ft-gt elementor-widget elementor-widget-pxl_button" data-id="0f9490a" data-element_type="widget" data-widget_type="pxl_button.default">
 				<div class="elementor-widget-container">
-			<div id="pxl-pxl_button-0f9490a-7518" class="pxl-button pxl-atc-link " data-wow-delay="ms">
+			<div id="pxl-pxl_button-0f9490a-7630" class="pxl-button pxl-atc-link " data-wow-delay="ms">
     <a href="/growth-audit.html" class="btn pxl-icon-active btn-text-nanuk btn-default  inline pxl-icon--right" data-wow-delay="ms" data-target=".pxl-page-popup-template-0">
         <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>        <span class="pxl--btn-text" data-text="Free Growth Audit">
             <span>F</span><span>r</span><span>e</span><span>e</span><span class="spacer">&nbsp;</span><span>G</span><span>r</span><span>o</span><span>w</span><span>t</span><span>h</span><span class="spacer">&nbsp;</span><span>A</span><span>u</span><span>d</span><span>i</span><span>t</span>        </span>
@@ -345,6 +346,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11957"><a href="/services.html"><span class="pxl-menu-item-text">Grow Your Business<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11958"><a href="/launch.html"><span class="pxl-menu-item-text">Launch Your Business<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12267"><a href="/outsourced-marketing-team.html"><span class="pxl-menu-item-text">Outsourced Marketing Team<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a></li>
 </ul>
 </li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11959"><a href="/packages.html"><span class="pxl-menu-item-text">Packages<i class="caseicon-angle-arrow-down pxl-hide"></i><span class="pxl-item-menu-icon pxl-hide "></span></span></a>
@@ -367,7 +369,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-a6c08db elementor-widget__width-auto ft-gt elementor-widget elementor-widget-pxl_button" data-id="a6c08db" data-element_type="widget" data-widget_type="pxl_button.default">
 				<div class="elementor-widget-container">
-			<div id="pxl-pxl_button-a6c08db-7431" class="pxl-button pxl-atc-link " data-wow-delay="ms">
+			<div id="pxl-pxl_button-a6c08db-3606" class="pxl-button pxl-atc-link " data-wow-delay="ms">
     <a href="/growth-audit.html" class="btn pxl-icon-active btn-text-nanuk btn-default  inline pxl-icon--right" data-wow-delay="ms" data-target=".pxl-page-popup-template-0">
         <i aria-hidden="true" class="flaticon flaticon-right-arrow"></i>        <span class="pxl--btn-text" data-text="Free Growth Audit">
             <span>F</span><span>r</span><span>e</span><span>e</span><span class="spacer">&nbsp;</span><span>G</span><span>r</span><span>o</span><span>w</span><span>t</span><span>h</span><span class="spacer">&nbsp;</span><span>A</span><span>u</span><span>d</span><span>i</span><span>t</span>        </span>
@@ -393,7 +395,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                 <div class="row">
                                             <div class="pxl-header-mobile-default">
                             <div class="pxl-header-branding">
-                                <a href="/" title="The Growth Union" rel="home"><img decoding="async" loading="lazy" src="/wp-content/uploads/2026/11/tgu-logo.png" alt="The Growth Union"/></a>                            </div>
+                                <a href="/" title="The Growth Union" rel="home"><img style="aspect-ratio:320/149" decoding="async" loading="lazy" src="/wp-content/uploads/2026/11/tgu-logo.png" alt="The Growth Union"/></a>                            </div>
                             <div id="pxl-nav-mobile">
                                 <div class="pxl-nav-mobile-button pxl-anchor-divider pxl-cursor--cta">
                                     <span class="pxl-icon-line pxl-icon-line1"></span>
@@ -406,7 +408,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                         <div class="pxl-header-menu-scroll">
                             <div class="pxl-menu-close pxl-hide-xl pxl-close"></div>
                             <div class="pxl-logo-mobile pxl-hide-xl">
-                                <a href="/" title="The Growth Union" rel="home"><img decoding="async" loading="lazy" src="/wp-content/uploads/2026/11/tgu-logo.png" alt="The Growth Union"/></a>                            </div>
+                                <a href="/" title="The Growth Union" rel="home"><img style="aspect-ratio:320/149" decoding="async" loading="lazy" src="/wp-content/uploads/2026/11/tgu-logo.png" alt="The Growth Union"/></a>                            </div>
                                     
                                 <nav class="pxl-header-nav">
                                 <ul id="menu-menu-primary-2" class="pxl-menu-primary clearfix"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11954"><a href="/"><span>Home</span></a></li>
@@ -415,6 +417,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <ul class="sub-menu">
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11957"><a href="/services.html"><span>Grow Your Business</span></a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11958"><a href="/launch.html"><span>Launch Your Business</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12267"><a href="/outsourced-marketing-team.html"><span>Outsourced Marketing Team</span></a></li>
 </ul>
 </li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11959"><a href="/packages.html"><span>Packages</span></a>
@@ -470,7 +473,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-aa6a662 elementor-widget elementor-widget-pxl_heading" data-id="aa6a662" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-aa6a662-6695" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-aa6a662-8603" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 		
 		<h1 class="pxl-item--title style-default ft-gt highlight-default " data-wow-delay="ms">
@@ -527,7 +530,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                      
         		<div class="elementor-element elementor-element-19329ab elementor-widget__width-auto elementor-absolute animated-slow elementor-invisible elementor-widget elementor-widget-pxl_image" data-id="19329ab" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-19329ab-4970" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-19329ab-1965" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
@@ -538,7 +541,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-5adac16 elementor-widget__width-auto elementor-absolute animated-slow elementor-invisible elementor-widget elementor-widget-pxl_image" data-id="5adac16" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-5adac16-2570" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-5adac16-1249" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
@@ -550,24 +553,24 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="elementor-element elementor-element-5838def ft-gt elementor-widget elementor-widget-pxl_heading" data-id="5838def" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-5838def-2532" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-5838def-8733" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 					<div class="pxl-item--subtitle px-sub-title-default pxl-split-text split-in-fade" data-wow-delay="ms">
 				<span class="pxl-item--subtext">
 										Who We Are				</span>
 			</div>
 		
-		<h3 class="pxl-item--title style-default  highlight-default " data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default  highlight-default " data-wow-delay="ms">
 							A Growth Consultancy Built for the Gap Nobody Was Filling	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
 				</div>
 				<div class="elementor-element elementor-element-a111550 elementor-align-center ft-gt pxl-icon-list  elementor-widget__width-auto elementor-widget elementor-widget-pxl_button" data-id="a111550" data-element_type="widget" data-widget_type="pxl_button.default">
 				<div class="elementor-widget-container">
-			<div id="pxl-pxl_button-a111550-9490" class="pxl-button pxl-atc-link " data-wow-delay="ms">
+			<div id="pxl-pxl_button-a111550-1936" class="pxl-button pxl-atc-link " data-wow-delay="ms">
     <a href="/growth-audit.html" class="btn pxl-icon-active btn-text-nina btn-default  inline pxl-icon--right" data-wow-delay="ms" data-target=".pxl-page-popup-template-0">
                 <span class="pxl--btn-text" data-text="Book A Free Growth Audit">
             <span>B</span><span>o</span><span>o</span><span>k</span><span class="spacer">&nbsp;</span><span>A</span><span class="spacer">&nbsp;</span><span>F</span><span>r</span><span>e</span><span>e</span><span class="spacer">&nbsp;</span><span>G</span><span>r</span><span>o</span><span>w</span><span>t</span><span>h</span><span class="spacer">&nbsp;</span><span>A</span><span>u</span><span>d</span><span>i</span><span>t</span>        </span>
@@ -576,7 +579,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-b43b369 elementor-align-center ft-gt pxl-icon-list  elementor-widget__width-auto elementor-widget elementor-widget-pxl_button" data-id="b43b369" data-element_type="widget" data-widget_type="pxl_button.default">
 				<div class="elementor-widget-container">
-			<div id="pxl-pxl_button-b43b369-7609" class="pxl-button pxl-atc-link " data-wow-delay="ms">
+			<div id="pxl-pxl_button-b43b369-6888" class="pxl-button pxl-atc-link " data-wow-delay="ms">
     <a href="/services.html" class="btn pxl-icon-active  btn-default  inline pxl-icon--right" data-wow-delay="ms" data-target=".pxl-page-popup-template-0">
                 <span class="pxl--btn-text" data-text="View All Services ">
             View All Services         </span>
@@ -652,11 +655,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                      
         		<div class="elementor-element elementor-element-a3d2b48 elementor-widget__width-auto elementor-widget elementor-widget-pxl_image" data-id="a3d2b48" data-element_type="widget" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-a3d2b48-5781" class="pxl-image-single block-blur pxl-disable-parallax-sm pxl-hide-sr-lg  wow skewIn" data-wow-delay="200ms"  >
+			<div id="pxl_image-a3d2b48-6504" class="pxl-image-single block-blur pxl-disable-parallax-sm pxl-hide-sr-lg  wow skewIn" data-wow-delay="200ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image block-blur" data-parallax-value="">
-                                <img loading="lazy" decoding="async" src="/wp-content/uploads/2024/05/ab5.webp" class="no-lazyload attachment-full" alt="" />                                                    <div class="wrap-block">
+                                <img style="aspect-ratio:536/667" loading="lazy" decoding="async" src="/wp-content/uploads/2024/05/ab5.webp" class="no-lazyload attachment-full" alt="" />                                                    <div class="wrap-block">
                                                     <span class="block wow zoomIn"></span>
                             <span class="block wow zoomIn"></span>
                                                                                                                                             </div>
@@ -673,17 +676,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-55107d3 ft-gt elementor-widget elementor-widget-pxl_heading" data-id="55107d3" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-55107d3-7160" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-55107d3-6782" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 					<div class="pxl-item--subtitle px-sub-title-default " data-wow-delay="ms">
 				<span class="pxl-item--subtext">
 										Our Positioning				</span>
 			</div>
 		
-		<h3 class="pxl-item--title style-default  highlight-default pxl-split-text split-in-fade" data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default  highlight-default pxl-split-text split-in-fade" data-wow-delay="ms">
 							The Gap Every Founder Knows, But Nobody Was Filling.	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
@@ -698,7 +701,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-eb0dd02 elementor-align-center ft-gt pxl-icon-list  elementor-widget__width-auto elementor-widget elementor-widget-pxl_button" data-id="eb0dd02" data-element_type="widget" data-widget_type="pxl_button.default">
 				<div class="elementor-widget-container">
-			<div id="pxl-pxl_button-eb0dd02-4755" class="pxl-button pxl-atc-link " data-wow-delay="ms">
+			<div id="pxl-pxl_button-eb0dd02-4872" class="pxl-button pxl-atc-link " data-wow-delay="ms">
     <a href="/services.html" class="btn pxl-icon-active btn-text-nina btn-default  inline pxl-icon--right" data-wow-delay="ms" data-target=".pxl-page-popup-template-0">
                 <span class="pxl--btn-text" data-text="See Our Services">
             <span>S</span><span>e</span><span>e</span><span class="spacer">&nbsp;</span><span>O</span><span>u</span><span>r</span><span class="spacer">&nbsp;</span><span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>        </span>
@@ -742,7 +745,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     <div class="pxl-item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M192,24H96A16,16,0,0,0,80,40V56H64A16,16,0,0,0,48,72V224a8,8,0,0,0,12.65,6.51L112,193.83l51.36,36.68A8,8,0,0,0,176,224V184.69l19.35,13.82A8,8,0,0,0,208,192V40A16,16,0,0,0,192,24ZM160,208.46l-43.36-31a8,8,0,0,0-9.3,0L64,208.45V72h96Zm32-32L176,165V72a16,16,0,0,0-16-16H96V40h96Z"></path></svg>            </div>
                         <div class="pxl-item--holder">
-            <h5 aria-level="4" class="pxl-item--title el-empty">Strategy First</h5>
+            <h5 aria-level="3" class="pxl-item--title el-empty">Strategy First</h5>
             <div class="pxl-item--description el-empty">We never run a campaign before understanding the business. Every action is preceded by a clear strategic rationale.</div>
         </div>
     </div>
@@ -760,7 +763,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     <div class="pxl-item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216Zm-88-40V80a16,16,0,0,1,16-16h40a16,16,0,0,1,16,16v96a16,16,0,0,1-16,16H152A16,16,0,0,1,136,176Zm16,0h40V80H152ZM48,176V40A16,16,0,0,1,64,24h40a16,16,0,0,1,16,16V176a16,16,0,0,1-16,16H64A16,16,0,0,1,48,176Zm16,0h40V40H64Z"></path></svg>            </div>
                         <div class="pxl-item--holder">
-            <h5 aria-level="4" class="pxl-item--title el-empty">Radical Honesty</h5>
+            <h5 aria-level="3" class="pxl-item--title el-empty">Radical Honesty</h5>
             <div class="pxl-item--description el-empty">We tell you what you need to hear, not what you want to. If something isn’t working, we say so and we fix it.</div>
         </div>
     </div>
@@ -778,7 +781,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     <div class="pxl-item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>            </div>
                         <div class="pxl-item--holder">
-            <h5 aria-level="4" class="pxl-item--title el-empty">Outcome Obsession</h5>
+            <h5 aria-level="3" class="pxl-item--title el-empty">Outcome Obsession</h5>
             <div class="pxl-item--description el-empty">Deliverables are not the goal. Revenue, leads, growth: those are the goal. We measure ourselves against real outcomes.</div>
         </div>
     </div>
@@ -802,7 +805,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     <div class="pxl-item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M243.84,76.19a12.08,12.08,0,0,0-13.34-1.7l-50.21,25L138.37,29.86a12.11,12.11,0,0,0-20.74,0L75.71,99.52l-50.19-25A12.11,12.11,0,0,0,8.62,89.12l37,113.36a8,8,0,0,0,11.68,4.4C57.55,206.73,83.12,192,128,192s70.45,14.73,70.68,14.87a8,8,0,0,0,11.71-4.39l37-113.33A12.06,12.06,0,0,0,243.84,76.19ZM198,188.83C186,183.74,162.08,176,128,176s-58,7.74-70,12.83L26.71,93l45.07,22.47a12.17,12.17,0,0,0,15.78-4.59L128,43.66l40.44,67.2a12.17,12.17,0,0,0,15.77,4.59L229.29,93Z"></path></svg>            </div>
                         <div class="pxl-item--holder">
-            <h5 aria-level="4" class="pxl-item--title el-empty">Systems Over Tactics</h5>
+            <h5 aria-level="3" class="pxl-item--title el-empty">Systems Over Tactics</h5>
             <div class="pxl-item--description el-empty">Tactics produce spikes. Systems compound. We build infrastructure that works without constant intervention.</div>
         </div>
     </div>
@@ -820,7 +823,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     <div class="pxl-item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M192,116a12,12,0,1,1-12-12A12,12,0,0,1,192,116ZM152,64H112a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm96,48v32a24,24,0,0,1-24,24h-2.36l-16.21,45.38A16,16,0,0,1,190.36,224H177.64a16,16,0,0,1-15.07-10.62L160.65,208h-57.3l-1.92,5.38A16,16,0,0,1,86.36,224H73.64a16,16,0,0,1-15.07-10.62L46,178.22a87.69,87.69,0,0,1-21.44-48.38A16,16,0,0,0,16,144a8,8,0,0,1-16,0,32,32,0,0,1,24.28-31A88.12,88.12,0,0,1,112,32H216a8,8,0,0,1,0,16H194.61a87.93,87.93,0,0,1,30.17,37c.43,1,.85,2,1.25,3A24,24,0,0,1,248,112Zm-16,0a8,8,0,0,0-8-8h-3.66a8,8,0,0,1-7.64-5.6A71.9,71.9,0,0,0,144,48H112A72,72,0,0,0,58.91,168.64a8,8,0,0,1,1.64,2.71L73.64,208H86.36l3.82-10.69A8,8,0,0,1,97.71,192h68.58a8,8,0,0,1,7.53,5.31L177.64,208h12.72l18.11-50.69A8,8,0,0,1,216,152h8a8,8,0,0,0,8-8Z"></path></svg>            </div>
                         <div class="pxl-item--holder">
-            <h5 aria-level="4" class="pxl-item--title el-empty">One Partner, Six Pillars</h5>
+            <h5 aria-level="3" class="pxl-item--title el-empty">One Partner, Six Pillars</h5>
             <div class="pxl-item--description el-empty">Strategy, marketing, digital, sales, legal and hiring under one roof, working as one connected system.</div>
         </div>
     </div>
@@ -838,7 +841,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     <div class="pxl-item--icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,126.63A112.44,112.44,0,0,0,51.75,53.75a111.56,111.56,0,0,0-35.7,72.88A16,16,0,0,0,32,144h88v56a32,32,0,0,0,64,0,8,8,0,0,0-16,0,16,16,0,0,1-32,0V144h88a16,16,0,0,0,16-17.37ZM32,128l0,0A96.43,96.43,0,0,1,193.4,65.52,95.32,95.32,0,0,1,224,128Z"></path></svg>            </div>
                         <div class="pxl-item--holder">
-            <h5 aria-level="4" class="pxl-item--title el-empty">Fixed Packages</h5>
+            <h5 aria-level="3" class="pxl-item--title el-empty">Fixed Packages</h5>
             <div class="pxl-item--description el-empty">Fixed monthly packages with a clear scope and a clear price, plus a custom option, so there are no surprise bills.</div>
         </div>
     </div>
@@ -986,11 +989,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-69b44ec elementor-widget elementor-widget-pxl_image" data-id="69b44ec" data-element_type="widget" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-69b44ec-2147" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-69b44ec-9398" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
-                                <img loading="lazy" decoding="async" src="/wp-content/uploads/2024/05/ab4.webp" class="no-lazyload attachment-full" alt="" />                                            </div>
+                                <img style="aspect-ratio:465/592" loading="lazy" decoding="async" src="/wp-content/uploads/2024/05/ab4.webp" class="no-lazyload attachment-full" alt="" />                                            </div>
                 
     </div>
 </div>		</div>
@@ -1003,17 +1006,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-bfd924d ft-gt elementor-widget elementor-widget-pxl_heading" data-id="bfd924d" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-bfd924d-7005" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-bfd924d-3592" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 					<div class="pxl-item--subtitle px-sub-title-default pxl-split-text split-in-fade" data-wow-delay="ms">
 				<span class="pxl-item--subtext">
 										Testimonials				</span>
 			</div>
 		
-		<h3 class="pxl-item--title style-default  highlight-default " data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default  highlight-default " data-wow-delay="ms">
 							What Our Clients Say	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
@@ -1324,17 +1327,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-676d7fe ft-gt elementor-widget elementor-widget-pxl_heading" data-id="676d7fe" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-676d7fe-6999" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-676d7fe-4375" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 					<div class="pxl-item--subtitle px-sub-title-default pxl-split-text split-in-fade" data-wow-delay="ms">
 				<span class="pxl-item--subtext">
 										Some of our clients				</span>
 			</div>
 		
-		<h3 class="pxl-item--title style-default  highlight-default " data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default  highlight-default " data-wow-delay="ms">
 							Businesses Trust The Growth Union.	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
@@ -1366,13 +1369,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-ec745b3 ft-gt elementor-widget elementor-widget-pxl_heading" data-id="ec745b3" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-ec745b3-5096" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-ec745b3-3671" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 		
-		<h3 class="pxl-item--title style-default ft-gt highlight-default pxl-split-text split-in-fade" data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default ft-gt highlight-default pxl-split-text split-in-fade" data-wow-delay="ms">
 							Ready to Grow? Let’s Talk.	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
@@ -1387,7 +1390,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				</div>
 				<div class="elementor-element elementor-element-f60ac97 elementor-align-left ft-gt pxl-icon-list  elementor-widget elementor-widget-pxl_button" data-id="f60ac97" data-element_type="widget" data-widget_type="pxl_button.default">
 				<div class="elementor-widget-container">
-			<div id="pxl-pxl_button-f60ac97-9552" class="pxl-button pxl-atc-link " data-wow-delay="ms">
+			<div id="pxl-pxl_button-f60ac97-1932" class="pxl-button pxl-atc-link " data-wow-delay="ms">
     <a href="/growth-audit.html" class="btn pxl-icon-active btn-text-nina btn-default  inline pxl-icon--right" data-wow-delay="ms" data-target=".pxl-page-popup-template-0">
                 <span class="pxl--btn-text" data-text="Book A Free Growth Audit">
             <span>B</span><span>o</span><span>o</span><span>k</span><span class="spacer">&nbsp;</span><span>A</span><span class="spacer">&nbsp;</span><span>F</span><span>r</span><span>e</span><span>e</span><span class="spacer">&nbsp;</span><span>G</span><span>r</span><span>o</span><span>w</span><span>t</span><span>h</span><span class="spacer">&nbsp;</span><span>A</span><span>u</span><span>d</span><span>i</span><span>t</span>        </span>
@@ -1423,44 +1426,44 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                      
         		<div class="elementor-element elementor-element-697548a elementor-widget__width-auto elementor-absolute elementor-invisible elementor-widget elementor-widget-pxl_image" data-id="697548a" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-697548a-2097" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-697548a-5524" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
-                                <img loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f1.png" class="no-lazyload attachment-full" alt="" />                                            </div>
+                                <img style="aspect-ratio:189/91" loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f1.png" class="no-lazyload attachment-full" alt="" />                                            </div>
                 
     </div>
 </div>		</div>
 				</div>
 				<div class="elementor-element elementor-element-d80aea6 elementor-widget__width-auto elementor-absolute elementor-invisible elementor-widget elementor-widget-pxl_image" data-id="d80aea6" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-d80aea6-5921" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-d80aea6-2596" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
-                                <img loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f1.png" class="no-lazyload attachment-full" alt="" />                                            </div>
+                                <img style="aspect-ratio:189/91" loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f1.png" class="no-lazyload attachment-full" alt="" />                                            </div>
                 
     </div>
 </div>		</div>
 				</div>
 				<div class="elementor-element elementor-element-2912b41 elementor-widget__width-auto elementor-absolute elementor-invisible elementor-widget elementor-widget-pxl_image" data-id="2912b41" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-2912b41-6410" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-2912b41-3135" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
-                                <img loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f2.png" class="no-lazyload attachment-full" alt="" />                                            </div>
+                                <img style="aspect-ratio:94/186" loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f2.png" class="no-lazyload attachment-full" alt="" />                                            </div>
                 
     </div>
 </div>		</div>
 				</div>
 				<div class="elementor-element elementor-element-c20047a elementor-widget__width-auto elementor-absolute elementor-invisible elementor-widget elementor-widget-pxl_image" data-id="c20047a" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="pxl_image.default">
 				<div class="elementor-widget-container">
-			<div id="pxl_image-c20047a-2687" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
+			<div id="pxl_image-c20047a-1773" class="pxl-image-single df pxl-disable-parallax-sm pxl-hide-sr-lg  " data-wow-delay="ms"  >
     <div class="pxl-item--inner" data-wow-delay="120ms">
         
                     <div class="pxl-item--image df" data-parallax-value="">
-                                <img loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f2.png" class="no-lazyload attachment-full" alt="" />                                            </div>
+                                <img style="aspect-ratio:94/186" loading="lazy" decoding="async" src="/wp-content/uploads/2024/07/f2.png" class="no-lazyload attachment-full" alt="" />                                            </div>
                 
     </div>
 </div>		</div>
@@ -1486,13 +1489,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-48d39aa elementor-widget__width-inherit elementor-widget elementor-widget-pxl_icon" data-id="48d39aa" data-element_type="widget" data-widget_type="pxl_icon.default">
 				<div class="elementor-widget-container">
 			    <div class="pxl-icon-list pxl-icon1  style-3  " data-wow-delay="ms">
-                                    <a class="elementor-repeater-item-280076d " href="https://www.linkedin.com/company/thegrowthunion" target="_blank">
+                                    <a class="elementor-repeater-item-280076d " href="https://www.linkedin.com/company/thegrowthunion" target="_blank" rel="noopener">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-fab-linkedin-in" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>                                            <span>LinkedIn</span>
                                                         </a>
-                                                <a class="elementor-repeater-item-fd82df9 " href="https://www.instagram.com/thegrowth.union" target="_blank">
+                                                <a class="elementor-repeater-item-fd82df9 " href="https://www.instagram.com/thegrowth.union" target="_blank" rel="noopener">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>                                            <span>Instagram</span>
                                                         </a>
-                                                <a class="elementor-repeater-item-a19bcd6 " href="https://wa.me/919518604324" target="_blank">
+                                                <a class="elementor-repeater-item-a19bcd6 " href="https://wa.me/919518604324" target="_blank" rel="noopener">
                                         <svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>                                            <span>WhatsApp</span>
                                                         </a>
                         </div>
@@ -1502,7 +1505,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         </div>
         			</div>
 		</section>
-				<div class="elementor-element elementor-element-f199d42 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="f199d42" data-element_type="widget" data-widget_type="divider.default">
+				<nav class="tgu-footnav" aria-label="Footer"><div><p>Company</p><a href="/about.html">About us</a><a href="/clients.html">Clients &amp; testimonials</a><a href="/case-studies.html">Case studies</a><a href="/insights.html">Insights</a><a href="/careers.html">Careers</a><a href="/contact.html">Contact</a></div><div><p>Services</p><a href="/services.html">Grow your business</a><a href="/launch.html">Launch your business</a><a href="/outsourced-marketing-team.html">Outsourced marketing team</a><a href="/packages.html">Packages</a><a href="/growth-audit.html">Free growth audit</a><a href="/faq.html">FAQ</a></div><div><p>Offices</p><a href="/gurgaon.html">Gurgaon (head office)</a><a href="/delhi.html">New Delhi (Saket)</a><a href="https://wa.me/919518604324" target="_blank" rel="noopener">WhatsApp +91 95186-04324</a><a href="mailto:hello@thegrowthunion.com">hello@thegrowthunion.com</a></div></nav><div class="elementor-element elementor-element-f199d42 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="f199d42" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-divider">
 			<span class="elementor-divider-separator">
@@ -1520,13 +1523,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-4b800bd elementor-widget elementor-widget-pxl_heading" data-id="4b800bd" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-4b800bd-3867" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-4b800bd-2089" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 		
-		<h3 class="pxl-item--title style-default ft-gt highlight-default " data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default ft-gt highlight-default " data-wow-delay="ms">
 							Contact With Us!	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
@@ -1571,13 +1574,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-7ad90b2 elementor-widget elementor-widget-pxl_heading" data-id="7ad90b2" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-7ad90b2-7197" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-7ad90b2-3453" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 		
-		<h3 class="pxl-item--title style-default ft-gt highlight-default " data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default ft-gt highlight-default " data-wow-delay="ms">
 							Services Quick Links	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
@@ -1586,7 +1589,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="elementor-widget-container">
 			<div class="pxl-link-wrap">
     <h3 class="pxl-widget-title pxl-empty"></h3>
-            <ul id="pxl-link-pxl_link-863950f-8135" class="pxl-link pxl-link-l1 style-default type-vertical">
+            <ul id="pxl-link-pxl_link-863950f-3006" class="pxl-link pxl-link-l1 style-default type-vertical">
                                 <li class="pxl-item--link  ">
                         <a class="" href="/services.html">
                             <i aria-hidden="true" class="far fa-arrow-right"></i>                            <span>Strategy & Positioning</span>
@@ -1623,13 +1626,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
         		<div class="elementor-element elementor-element-199fbb8 elementor-widget elementor-widget-pxl_heading" data-id="199fbb8" data-element_type="widget" data-widget_type="pxl_heading.default">
 				<div class="elementor-widget-container">
 			
-<div id="pxl-pxl_heading-199fbb8-5748" class="pxl-heading px-sub-title-default-style ">
+<div id="pxl-pxl_heading-199fbb8-5405" class="pxl-heading px-sub-title-default-style ">
 	<div class="pxl-heading--inner">
 		
-		<h3 class="pxl-item--title style-default ft-gt highlight-default " data-wow-delay="ms">
+		<h2 class="pxl-item--title style-default ft-gt highlight-default " data-wow-delay="ms">
 							Book A Free Audit	
 				
-		</h3>
+		</h2>
 		
 	</div>
 </div>		</div>
@@ -1741,6 +1744,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel='stylesheet' id='e-animation-fadeInRight-css' href='/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInRight.min.css?ver=3.24.0' type='text/css' media='all' />
 <link rel='stylesheet' id='e-animation-fadeInDown-css' href='/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=3.24.0' type='text/css' media='all' />
 <link rel='stylesheet' id='e-animation-fadeInLeft-css' href='/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInLeft.min.css?ver=3.24.0' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animation-fadeInUp-css' href='/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=3.24.0' type='text/css' media='all' />
 <script type="text/javascript" src="/wp-content/themes/herrington/elements/widgets/js/pxl-countdown.js?ver=1.0.4" id="herrington-countdown-js"></script>
 <script type="text/javascript" src="/wp-content/themes/herrington/elements/widgets/js/Snap.svg.js?ver=0.4.1" id="Snap.svg-js"></script>
 <script type="text/javascript" src="/wp-content/themes/herrington/elements/widgets/js/elementor.js?ver=1.0.4" id="herrington-elementor-js"></script>
