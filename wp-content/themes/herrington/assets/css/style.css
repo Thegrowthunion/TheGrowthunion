@@ -21376,7 +21376,7 @@ body.woocommerce-cart .cart-collaterals .cart_totals .wc-proceed-to-checkout .ch
   line-height: 26px;
   text-transform: uppercase;
   letter-spacing: 2.4px;
-  color: #848b94;
+  color: #5a6070;
 }
 @media (max-width: 991px) {
   .pxl-post-carousel2 .pxl-swiper-slide .pxl-post--inner .pxl-post--meta .pxl-item--author span, .pxl-post-carousel2 .pxl-swiper-slide .pxl-post--inner .pxl-post--meta .pxl-post--category span, .pxl-post-carousel2 .pxl-swiper-slide .pxl-post--inner .pxl-post--meta .pxl-item--author a, .pxl-post-carousel2 .pxl-swiper-slide .pxl-post--inner .pxl-post--meta .pxl-post--category a {
@@ -22766,7 +22766,7 @@ body.woocommerce-cart .cart-collaterals .cart_totals .wc-proceed-to-checkout .ch
 .pxl-service-carousel1 .pxl-swiper-slide .pxl-post--inner .count-pos {
   position: absolute;
   font-size: 17px;
-  color: #848b94;
+  color: #5a6070;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   -khtml-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -24170,7 +24170,7 @@ body.woocommerce-cart .cart-collaterals .cart_totals .wc-proceed-to-checkout .ch
 .pxl-image-carousel2 .pxl-swiper-slide .wrap-content .pxl-item--position {
   font-size: 15px;
   line-height: 28px;
-  color: #848b94;
+  color: #5a6070;
 }
 .pxl-image-carousel3 .pxl-swiper-container {
   margin: 0;
@@ -26647,7 +26647,7 @@ input[type="submit"]:hover {
 .pxl-testimonial-grid1 .pxl-grid-item .pxl-item--position {
   margin-top: 5px;
   font-size: 15px;
-  color: #848b94;
+  color: #5a6070;
 }
 .pxl-testimonial-grid1 .btn--loadmore {
   text-align: center;
@@ -26764,7 +26764,7 @@ input[type="submit"]:hover {
 .pxl-testimonial-grid2 .pxl-grid-item .pxl-item--position {
   margin-top: 2px;
   font-size: 15px;
-  color: #848b94;
+  color: #5a6070;
 }
 .pxl-testimonial-grid2 .pxl-grid-item:nth-child(odd) .pxl-item--inner {
   background-color: #e7e7e7;
@@ -26875,7 +26875,7 @@ input[type="submit"]:hover {
 .pxl-testimonial-carousel1 .pxl-swiper-slide .pxl-item--inner .pxl-item--position {
   margin-top: 3px;
   font-size: 15px;
-  color: #848b94;
+  color: #5a6070;
   font-family: 'public sans', sans-serif;
 }
 .pxl-testimonial-carousel2 .pxl-item--star {
@@ -27079,7 +27079,7 @@ input[type="submit"]:hover {
 .pxl-testimonial-carousel2 .pxl-item--position {
   margin-top: 3px;
   font-size: 15px;
-  color: #848b94;
+  color: #5a6070;
   font-family: 'public sans', sans-serif;
 }
 .pxl-testimonial-carousel2 .pxl-swiper-thumbs .swiper-slide {
@@ -27257,7 +27257,7 @@ input[type="submit"]:hover {
 .pxl-testimonial-carousel3 .pxl-swiper-slide .pxl-item--inner .pxl-item--position {
   margin-top: 3px;
   font-size: 15px;
-  color: #848b94;
+  color: #5a6070;
   font-family: 'public sans', sans-serif;
 }
 .pxl-testimonial-carousel4 .pxl-item--star {
@@ -28303,8 +28303,8 @@ TEAM GRID
   fill: #0a1119;
 }
 .pxl-pricing1 .content-inner .pxl-item--feature .non-active .content, .pxl-pricing1 .content-inner .pxl-item--feature .non-active svg path {
-  color: #848b94;
-  fill: #848b94;
+  color: #5a6070;
+  fill: #5a6070;
 }
 .pxl-pricing1 .content-inner .pxl-item--feature div + div {
   margin-top: 17px;

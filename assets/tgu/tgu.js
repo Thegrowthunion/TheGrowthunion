@@ -31,8 +31,8 @@
 
 /* ---- insights filter + search ---- */
 (function(){
-  var g=document.querySelector('.tgu-pgrid'); if(!g) return;
-  var chips=document.querySelectorAll('.tgu-fchip'), q=document.querySelector('.tgu-fsearch'), none=document.querySelector('.tgu-fnone'), cur='all';
+  var g=document.querySelector('.tgu-pgrid'), q=document.querySelector('.tgu-fsearch'); if(!g||!q) return;
+  var chips=document.querySelectorAll('.tgu-fchip'), none=document.querySelector('.tgu-fnone'), cur='all';
   function run(){ var s=(q.value||'').toLowerCase().trim(), n=0;
     g.querySelectorAll('.tgu-pcard').forEach(function(c){ var ok=(cur==='all'||c.getAttribute('data-cat')===cur)&&(!s||c.getAttribute('data-s').indexOf(s)>-1); c.style.display=ok?'':'none'; if(ok) n++; });
     none.hidden=n>0; }

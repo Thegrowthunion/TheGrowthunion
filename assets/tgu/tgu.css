@@ -22,7 +22,7 @@ form.tgu-form.light h3{margin:0 0 6px;font-size:26px;color:#121c2b}
 form.tgu-form.light p.sub{margin:0 0 20px!important;color:#5a6070;font-size:15px}
 form.tgu-form.light input:not(.hp),form.tgu-form.light select,form.tgu-form.light textarea{display:block!important;width:100%!important;padding:14px 16px!important;margin:0!important;background:#f5f5f5!important;border:1px solid #d6d9de!important;border-radius:0!important;color:#121c2b!important;font:inherit!important;font-size:15px!important;box-shadow:none!important;outline:0!important}
 form.tgu-form.light textarea{min-height:130px;resize:vertical}
-form.tgu-form.light input::placeholder,form.tgu-form.light textarea::placeholder{color:#7a8090!important;opacity:1}
+form.tgu-form.light input::placeholder,form.tgu-form.light textarea::placeholder{color:#5a6070!important;opacity:1}
 form.tgu-form.light input:not(.hp):focus,form.tgu-form.light select:focus,form.tgu-form.light textarea:focus{border-color:#121c2b!important;background:#fff!important}
 form.tgu-form.light select{background-image:linear-gradient(45deg,transparent 50%,#121c2b 50%),linear-gradient(135deg,#121c2b 50%,transparent 50%)!important;background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%!important;background-size:6px 6px,6px 6px!important;background-repeat:no-repeat!important;-webkit-appearance:none;appearance:none}
 form.tgu-form.light button{background:#121c2b!important;color:#fff!important}
@@ -49,7 +49,7 @@ table.tgu-compare thead th.us{background:#2a3a52}
 table.tgu-compare tbody th{text-align:left;font-weight:500}
 table.tgu-compare td.my{color:#1f8a4c;font-weight:700;font-size:20px;background:#f3f8f5}
 table.tgu-compare td.mn{color:#b3b8c2;font-size:20px}
-table.tgu-compare td.mp{color:#8a8f9c;font-size:20px}
+table.tgu-compare td.mp{color:#5a6070;font-size:20px}
 .tgu-legend{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:18px 0 0;color:#5a6070;font-size:14px}
 /* ---- testimonial cards ---- */
 .tgu-tgrid-wrap{max-width:1290px;margin:0 auto}
@@ -59,7 +59,7 @@ figure.tgu-tcard{margin:0;background:#fff;padding:26px 26px 22px;border-top:3px 
 figure.tgu-tcard blockquote{margin:0 0 18px;font-size:16px;line-height:1.65;color:#2a3140;border:0;padding:0}
 figure.tgu-tcard blockquote strong{color:#121c2b}
 figure.tgu-tcard figcaption{display:flex;flex-direction:column;gap:2px;font-size:15px;color:#121c2b}
-figure.tgu-tcard figcaption span{color:#7a8090;font-size:13px}
+figure.tgu-tcard figcaption span{color:#5a6070;font-size:13px}
 @media(max-width:991px){.tgu-tgrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.tgu-tgrid{grid-template-columns:1fr}}
 /* ---- founder card ---- */
@@ -255,12 +255,12 @@ a.tgu-feat .ft-body{padding:46px 44px;display:flex;flex-direction:column;justify
 a.tgu-feat h2{font-size:clamp(26px,2.8vw,36px);line-height:1.18;margin:8px 0 14px;color:var(--tgu-ink)}
 a.tgu-feat p{color:var(--tgu-slate);font-size:17px;line-height:1.65;margin:0 0 18px}
 .pc-cat{display:inline-block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--tgu-slate);font-weight:600}
-.pc-meta{font-size:13.5px;color:#7a8090}
+.pc-meta{font-size:13.5px;color:#5a6070}
 .cc-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--tgu-ink);margin-top:16px}
 .tgu-fbar{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin:0 0 28px}
 .tgu-fchips{display:flex;flex-wrap:wrap;gap:8px}
 button.tgu-fchip{padding:10px 18px;border:1px solid #cfd3da;background:#fff;color:var(--tgu-ink);font:inherit;font-size:14px;cursor:pointer;transition:.2s}
-button.tgu-fchip i{font-style:normal;color:#8a90a0;margin-left:4px;font-size:12.5px}
+button.tgu-fchip i{font-style:normal;color:#5a6070;margin-left:4px;font-size:12.5px}
 button.tgu-fchip:hover{border-color:var(--tgu-ink)}button.tgu-fchip.on{background:var(--tgu-ink);color:#fff;border-color:var(--tgu-ink)}button.tgu-fchip.on i{color:#c9ced8}
 input.tgu-fsearch{padding:12px 16px;border:1px solid #cfd3da;background:#fff;font:inherit;font-size:15px;min-width:260px;color:var(--tgu-ink);outline:0}
 input.tgu-fsearch:focus{border-color:var(--tgu-ink)}
@@ -386,3 +386,35 @@ a.tgu-lwi:hover{border-color:var(--tgu-ink);transform:translateY(-2px)}
 .tgu-cs-logo{background:#fff;border:1px solid var(--tgu-line);width:200px;height:100px;padding:4px;margin-bottom:12px}
 .tgu-cs-logo:empty{display:none}
 .tgu-cs-logo img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* ---- top bar spacing, founder section, logos on testimonials and quotes ---- */
+.custom-for-header + .custom-for-header{margin-left:56px!important}
+.tgu-founder{display:grid;grid-template-columns:230px 1fr;gap:50px;align-items:start;max-width:1020px;margin:0 auto}
+.tgu-f-photo img{width:100%;height:auto;display:block}
+.tgu-f-body h2{margin:6px 0 18px;font-size:clamp(30px,4vw,46px);line-height:1.1;color:var(--tgu-ink)}
+.tgu-f-quote{margin:0 0 20px;padding:0 0 0 20px;border-left:3px solid var(--tgu-ink);font-size:20px;line-height:1.55;color:var(--tgu-ink)}
+.tgu-f-body p{font-size:16.5px;line-height:1.7;color:#3a4252;margin:0 0 14px}
+.tgu-f-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.tgu-f-steps div{background:#fff;border:1px solid var(--tgu-line);padding:16px 18px}
+.tgu-f-steps b{display:block;color:var(--tgu-slate);font-size:12.5px;letter-spacing:.16em;font-weight:600}
+.tgu-f-steps strong{display:block;margin:6px 0 4px;color:var(--tgu-ink);font-size:16px;font-weight:600}
+.tgu-f-steps span{display:block;font-size:14px;color:var(--tgu-slate);line-height:1.5}
+@media(max-width:767px){.tgu-founder{grid-template-columns:1fr;gap:24px}.tgu-f-photo{max-width:190px}.tgu-f-steps{grid-template-columns:1fr}}
+.tgu-tlogo{display:block;height:48px;width:auto;max-width:130px;margin:0 0 14px;object-fit:contain}
+.tgu-q-logo{display:block;background:#fff;width:132px;height:66px;padding:4px;margin:0 0 16px;object-fit:contain}
+
+/* contact detail boxes: icon and text always side by side, nothing wraps under the icon */
+.elementor-widget-pxl_icon_box:not(.custom-for-header) .pxl-icon-box1.style-2 .pxl-item--inner{display:flex!important;flex-wrap:nowrap!important;align-items:flex-start!important;gap:16px}
+.elementor-widget-pxl_icon_box:not(.custom-for-header) .pxl-icon-box1.style-2 .pxl-item--meta{min-width:0;flex:1 1 auto}
+.elementor-widget-pxl_icon_box:not(.custom-for-header) .pxl-icon-box1.style-2 .pxl-item--icon{flex:none}
+
+/* fixes from review: testimonial logo size, founder quote and step text */
+.pxl-testimonial-carousel img.tgu-tlogo,.pxl-item--meta img.tgu-tlogo{display:block!important;height:44px!important;width:auto!important;max-width:130px!important;margin:0 0 14px!important;object-fit:contain!important;position:static!important}
+.tgu-founder .tgu-f-quote{margin:0 0 20px!important;padding:0 0 0 20px!important;border:0!important;border-left:3px solid var(--tgu-ink)!important;background:none!important;color:var(--tgu-ink)!important;font-size:20px!important;line-height:1.55!important}
+.tgu-founder .tgu-f-quote:before,.tgu-founder .tgu-f-quote:after{display:none!important}
+.tgu-f-steps em{display:block;font-style:normal;font-size:14px;color:var(--tgu-slate);line-height:1.55;letter-spacing:normal!important;text-transform:none!important}
+
+.pxl-testimonial-carousel img.tgu-tlogo,.pxl-item--meta img.tgu-tlogo{height:56px!important;max-width:150px!important;margin-left:-8px!important}
+
+/* readable text inside the dark featured pricing card */
+.pxl-pricing.is-popular .pxl-item--feature .non-active .content,.pxl-pricing.is-popular .pxl-item--feature .non-active .content *{color:#aab2bd!important}
